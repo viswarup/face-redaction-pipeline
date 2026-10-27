@@ -375,23 +375,11 @@ with tabs[0]:
                 frame_label_map = {f_idx: f"Frame #{f_idx}" for f_idx in category_frames}
 
             with tag_col2:
-                jump_frame_idx = st.selectbox(
-                    "📍 Jump Directly to Tagged Frame:",
+                selected_frame_idx = st.selectbox(
+                    "📍 Select Tagged Frame to Inspect:",
                     options=category_frames,
                     format_func=lambda x: frame_label_map.get(x, f"Frame #{x}"),
                 )
-
-            # Continuous slider for manual scrubbing
-            scrub_slider_idx = st.slider(
-                "Or Scrub Continuous Timeline (Frame Index):",
-                min_value=0,
-                max_value=max(0, total_frames - 1),
-                value=min(jump_frame_idx, max(0, total_frames - 1)),
-                step=1,
-            )
-
-            # Use slider if user moves it, otherwise use jump frame
-            selected_frame_idx = scrub_slider_idx
 
             # Display Risk Tag Status Banner for current frame
             if selected_frame_idx in red_frame_indices:
