@@ -1,0 +1,152 @@
+{
+  "idempotency_verification": {
+    "tested_job_id": "job_edb8399b7d37",
+    "event_id": "Video 1",
+    "is_duplicate_event": true,
+    "duplicate_request_count": 1,
+    "idempotency_verified": true
+  },
+  "total_snippets": 6,
+  "safe_count": 0,
+  "needs_review_count": 6,
+  "jobs": [
+    {
+      "job_id": "job_edb8399b7d37",
+      "event_id": "Video 1",
+      "video_name": "Uni+ DVR_ch2_main_20250730080000_20250730090000-00.04.59.709-00.05.11.335-seg3.mp4",
+      "input_path": "data/video_snippets/demo_clips/Uni+ DVR_ch2_main_20250730080000_20250730090000-00.04.59.709-00.05.11.335-seg3.mp4",
+      "output_path": "data/outputs/redacted_videos/job_edb8399b7d37_redacted.mp4",
+      "status": "NEEDS_REVIEW",
+      "resolution": [
+        960,
+        1080
+      ],
+      "duration_seconds": 12.1,
+      "total_frames": 181,
+      "video_fps": 14.983443708609272,
+      "processing_fps": 2.43,
+      "elapsed_seconds": 74.61,
+      "total_coasted_boxes": 451,
+      "total_interpolated_boxes": 305,
+      "flagged_leak_count": 10,
+      "blind_spot_warning": false,
+      "failure_reason": "10 potentially visible face instances flagged by RetinaFace.",
+      "duplicate_request_count": 1
+    },
+    {
+      "job_id": "job_da9a5ff7eb78",
+      "event_id": "Video 2",
+      "video_name": "Uni+ DVR_ch3_main_20250730200000_20250730210000-00.02.54.750-00.03.12.576-seg2.mp4",
+      "input_path": "data/video_snippets/demo_clips/Uni+ DVR_ch3_main_20250730200000_20250730210000-00.02.54.750-00.03.12.576-seg2.mp4",
+      "output_path": "data/outputs/redacted_videos/job_da9a5ff7eb78_redacted.mp4",
+      "status": "NEEDS_REVIEW",
+      "resolution": [
+        960,
+        1080
+      ],
+      "duration_seconds": 18.5,
+      "total_frames": 274,
+      "video_fps": 14.826839826839826,
+      "processing_fps": 2.47,
+      "elapsed_seconds": 110.88,
+      "total_coasted_boxes": 552,
+      "total_interpolated_boxes": 121,
+      "flagged_leak_count": 27,
+      "blind_spot_warning": false,
+      "failure_reason": "27 potentially visible face instances flagged by RetinaFace.",
+      "duplicate_request_count": 0
+    },
+    {
+      "job_id": "job_540bd9eaee74",
+      "event_id": "Video 3",
+      "video_name": "Uni+ DVR_ch3_main_20250730200000_20250730210000-00.05.49.973-00.05.59.973-seg6.mp4",
+      "input_path": "data/video_snippets/demo_clips/Uni+ DVR_ch3_main_20250730200000_20250730210000-00.05.49.973-00.05.59.973-seg6.mp4",
+      "output_path": "data/outputs/redacted_videos/job_540bd9eaee74_redacted.mp4",
+      "status": "NEEDS_REVIEW",
+      "resolution": [
+        960,
+        1080
+      ],
+      "duration_seconds": 10.7,
+      "total_frames": 158,
+      "video_fps": 14.738805970149254,
+      "processing_fps": 2.53,
+      "elapsed_seconds": 62.35,
+      "total_coasted_boxes": 591,
+      "total_interpolated_boxes": 209,
+      "flagged_leak_count": 14,
+      "blind_spot_warning": false,
+      "failure_reason": "14 potentially visible face instances flagged by RetinaFace.",
+      "duplicate_request_count": 0
+    },
+    {
+      "job_id": "job_5eb85c6efc1d",
+      "event_id": "Video 4",
+      "video_name": "Uni+ DVR_ch4_main_20250730080000_20250730090000-00.25.23.018-00.25.46.715-seg2.mp4",
+      "input_path": "data/video_snippets/demo_clips/Uni+ DVR_ch4_main_20250730080000_20250730090000-00.25.23.018-00.25.46.715-seg2.mp4",
+      "output_path": "data/outputs/redacted_videos/job_5eb85c6efc1d_redacted.mp4",
+      "status": "NEEDS_REVIEW",
+      "resolution": [
+        960,
+        1080
+      ],
+      "duration_seconds": 24.3,
+      "total_frames": 364,
+      "video_fps": 14.99176276771005,
+      "processing_fps": 2.45,
+      "elapsed_seconds": 148.73,
+      "total_coasted_boxes": 344,
+      "total_interpolated_boxes": 81,
+      "flagged_leak_count": 8,
+      "blind_spot_warning": false,
+      "failure_reason": "8 potentially visible face instances flagged by RetinaFace.",
+      "duplicate_request_count": 0
+    },
+    {
+      "job_id": "job_6b99c51deee6",
+      "event_id": "Video 5",
+      "video_name": "clip_low_light_01.mp4",
+      "input_path": "data/video_snippets/demo_clips/clip_low_light_01.mp4",
+      "output_path": "data/outputs/redacted_videos/job_6b99c51deee6_redacted.mp4",
+      "status": "NEEDS_REVIEW",
+      "resolution": [
+        960,
+        1080
+      ],
+      "duration_seconds": 10.0,
+      "total_frames": 150,
+      "video_fps": 15.0,
+      "processing_fps": 2.55,
+      "elapsed_seconds": 58.72,
+      "total_coasted_boxes": 293,
+      "total_interpolated_boxes": 154,
+      "flagged_leak_count": 13,
+      "blind_spot_warning": false,
+      "failure_reason": "13 potentially visible face instances flagged by RetinaFace.",
+      "duplicate_request_count": 0
+    },
+    {
+      "job_id": "job_37fc09abb6de",
+      "event_id": "Video 6",
+      "video_name": "video_one_copy-00.11.57.426-00.12.55.787-seg5.mp4",
+      "input_path": "data/video_snippets/demo_clips/video_one_copy-00.11.57.426-00.12.55.787-seg5.mp4",
+      "output_path": "data/outputs/redacted_videos/job_37fc09abb6de_redacted.mp4",
+      "status": "NEEDS_REVIEW",
+      "resolution": [
+        960,
+        1080
+      ],
+      "duration_seconds": 58.6,
+      "total_frames": 1453,
+      "video_fps": 24.795221843003414,
+      "processing_fps": 2.52,
+      "elapsed_seconds": 575.9,
+      "total_coasted_boxes": 1717,
+      "total_interpolated_boxes": 715,
+      "flagged_leak_count": 21,
+      "blind_spot_warning": false,
+      "failure_reason": "21 potentially visible face instances flagged by RetinaFace.",
+      "duplicate_request_count": 0
+    }
+  ]
+}
