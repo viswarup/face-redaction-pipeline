@@ -1,6239 +1,1247 @@
 {
   "summary": {
-    "total_images": 99,
-    "total_gt_faces": 442,
+    "model": "Base SCRFD-34G",
+    "gt_faces": 442,
     "missed_faces": 140,
     "missed_faces_pct": 31.67,
-    "residual_visible": 4,
-    "residual_visible_pct": 0.9,
-    "fully_obscured": 298,
-    "fully_obscured_pct": 67.42,
-    "flagged_by_verifier": 13,
-    "shared_false_negatives": 126,
-    "gallery_saved_count": 30,
-    "primary_model": "scrfd_34g",
-    "primary_conf": 0.25,
-    "verifier_conf": 0.3
+    "residual_visible": 72,
+    "residual_visible_pct": 16.29,
+    "fully_obscured": 230,
+    "fully_obscured_pct": 52.04,
+    "mean_iou": 0.429,
+    "avg_latency_ms": 398.9,
+    "fps": 2.5
   },
+  "summary_scrfd": {
+    "model": "Base SCRFD-34G",
+    "gt_faces": 442,
+    "missed_faces": 140,
+    "missed_faces_pct": 31.67,
+    "residual_visible": 72,
+    "residual_visible_pct": 16.29,
+    "fully_obscured": 230,
+    "fully_obscured_pct": 52.04,
+    "mean_iou": 0.429,
+    "avg_latency_ms": 398.9,
+    "fps": 2.5
+  },
+  "summary_retinaface": {
+    "model": "RetinaFace",
+    "gt_faces": 442,
+    "missed_faces": 234,
+    "missed_faces_pct": 52.94,
+    "residual_visible": 44,
+    "residual_visible_pct": 9.95,
+    "fully_obscured": 164,
+    "fully_obscured_pct": 37.1,
+    "mean_iou": 0.311,
+    "avg_latency_ms": 529.1,
+    "fps": 1.9
+  },
+  "summary_pose_fusion": {
+    "model": "SCRFD-34G + Body/Head Pose",
+    "gt_faces": 442,
+    "missed_faces": 106,
+    "missed_faces_pct": 23.98,
+    "residual_visible": 154,
+    "residual_visible_pct": 34.84,
+    "fully_obscured": 182,
+    "fully_obscured_pct": 41.18,
+    "mean_iou": 0.387,
+    "avg_latency_ms": 458.5,
+    "fps": 2.2
+  },
+  "three_way_comparison": [
+    {
+      "model": "Base SCRFD-34G",
+      "gt_faces": 442,
+      "missed_faces": 140,
+      "missed_faces_pct": 31.67,
+      "residual_visible": 72,
+      "residual_visible_pct": 16.29,
+      "fully_obscured": 230,
+      "fully_obscured_pct": 52.04,
+      "mean_iou": 0.429,
+      "avg_latency_ms": 398.9,
+      "fps": 2.5
+    },
+    {
+      "model": "RetinaFace",
+      "gt_faces": 442,
+      "missed_faces": 234,
+      "missed_faces_pct": 52.94,
+      "residual_visible": 44,
+      "residual_visible_pct": 9.95,
+      "fully_obscured": 164,
+      "fully_obscured_pct": 37.1,
+      "mean_iou": 0.311,
+      "avg_latency_ms": 529.1,
+      "fps": 1.9
+    },
+    {
+      "model": "SCRFD-34G + Body/Head Pose",
+      "gt_faces": 442,
+      "missed_faces": 106,
+      "missed_faces_pct": 23.98,
+      "residual_visible": 154,
+      "residual_visible_pct": 34.84,
+      "fully_obscured": 182,
+      "fully_obscured_pct": 41.18,
+      "mean_iou": 0.387,
+      "avg_latency_ms": 458.5,
+      "fps": 2.2
+    }
+  ],
+  "three_way_table_rows": [
+    [
+      "Base SCRFD-34G",
+      442,
+      "140 (31.7%)",
+      "72 (16.3%)",
+      "230 (52.0%)",
+      "0.429",
+      "398.9 ms",
+      "2.5"
+    ],
+    [
+      "RetinaFace",
+      442,
+      "234 (52.9%)",
+      "44 (10.0%)",
+      "164 (37.1%)",
+      "0.311",
+      "529.1 ms",
+      "1.9"
+    ],
+    [
+      "SCRFD-34G + Body/Head Pose",
+      442,
+      "106 (24.0%)",
+      "154 (34.8%)",
+      "182 (41.2%)",
+      "0.387",
+      "458.5 ms",
+      "2.2"
+    ]
+  ],
+  "three_way_headers": [
+    "Model Architecture",
+    "GT Faces",
+    "Missed Faces (%)",
+    "Residual Visible (%)",
+    "Fully Obscured (%)",
+    "Mean IoU",
+    "Avg Latency (ms)",
+    "FPS"
+  ],
+  "per_condition_comparison": [
+    {
+      "stratum": "Blur & Low Light",
+      "gt_faces": 162,
+      "missed_scrfd_pct": 33.3,
+      "missed_retina_pct": 53.1,
+      "missed_pose_pct": 23.5,
+      "residual_scrfd_pct": 17.3,
+      "residual_retina_pct": 8.6,
+      "residual_pose_pct": 34.6,
+      "obscured_scrfd_pct": 49.4,
+      "obscured_retina_pct": 38.3,
+      "obscured_pose_pct": 42.0
+    },
+    {
+      "stratum": "Occlusion",
+      "gt_faces": 128,
+      "missed_scrfd_pct": 18.8,
+      "missed_retina_pct": 40.6,
+      "missed_pose_pct": 15.6,
+      "residual_scrfd_pct": 15.6,
+      "residual_retina_pct": 10.9,
+      "residual_pose_pct": 37.5,
+      "obscured_scrfd_pct": 65.6,
+      "obscured_retina_pct": 48.4,
+      "obscured_pose_pct": 46.9
+    },
+    {
+      "stratum": "Distant / Multi-Person",
+      "gt_faces": 108,
+      "missed_scrfd_pct": 37.0,
+      "missed_retina_pct": 63.0,
+      "missed_pose_pct": 27.8,
+      "residual_scrfd_pct": 11.1,
+      "residual_retina_pct": 11.1,
+      "residual_pose_pct": 27.8,
+      "obscured_scrfd_pct": 51.9,
+      "obscured_retina_pct": 25.9,
+      "obscured_pose_pct": 44.4
+    },
+    {
+      "stratum": "Top-Down Angle",
+      "gt_faces": 44,
+      "missed_scrfd_pct": 50.0,
+      "missed_retina_pct": 63.6,
+      "missed_pose_pct": 40.9,
+      "residual_scrfd_pct": 27.3,
+      "residual_retina_pct": 9.1,
+      "residual_pose_pct": 45.5,
+      "obscured_scrfd_pct": 22.7,
+      "obscured_retina_pct": 27.3,
+      "obscured_pose_pct": 13.6
+    }
+  ],
+  "per_condition_table_rows": [
+    [
+      "Blur & Low Light",
+      162,
+      "33.3%",
+      "53.1%",
+      "23.5%",
+      "17.3%",
+      "8.6%",
+      "34.6%",
+      "49.4%",
+      "38.3%",
+      "42.0%"
+    ],
+    [
+      "Occlusion",
+      128,
+      "18.8%",
+      "40.6%",
+      "15.6%",
+      "15.6%",
+      "10.9%",
+      "37.5%",
+      "65.6%",
+      "48.4%",
+      "46.9%"
+    ],
+    [
+      "Distant / Multi-Person",
+      108,
+      "37.0%",
+      "63.0%",
+      "27.8%",
+      "11.1%",
+      "11.1%",
+      "27.8%",
+      "51.9%",
+      "25.9%",
+      "44.4%"
+    ],
+    [
+      "Top-Down Angle",
+      44,
+      "50.0%",
+      "63.6%",
+      "40.9%",
+      "27.3%",
+      "9.1%",
+      "45.5%",
+      "22.7%",
+      "27.3%",
+      "13.6%"
+    ]
+  ],
+  "per_condition_headers": [
+    "Condition Stratum",
+    "GT Faces",
+    "Miss: Base SCRFD",
+    "Miss: RetinaFace",
+    "Miss: +Pose Fusion",
+    "Resid: Base SCRFD",
+    "Resid: RetinaFace",
+    "Resid: +Pose Fusion",
+    "Obscured: Base SCRFD",
+    "Obscured: RetinaFace",
+    "Obscured: +Pose Fusion"
+  ],
+  "agreement_matrix": {
+    "both_detected": 192,
+    "both_detected_pct": 43.4,
+    "scrfd_missed_retina_caught": 16,
+    "scrfd_missed_retina_caught_pct": 3.6,
+    "scrfd_caught_retina_missed": 110,
+    "scrfd_caught_retina_missed_pct": 24.9,
+    "shared_false_negatives_both_missed": 124,
+    "shared_false_negatives_both_missed_pct": 28.1,
+    "shared_fn_rescued_by_pose_fusion": 32,
+    "shared_fn_rescued_pct_of_shared": 25.8,
+    "table_rows": [
+      [
+        "Both Detected (SCRFD \u2229 RetinaFace)",
+        192,
+        "43.4%",
+        "High confidence mutual detection under nominal/moderate lighting"
+      ],
+      [
+        "SCRFD Missed, RetinaFace Caught",
+        16,
+        "3.6%",
+        "RetinaFace QA verification successfully catches primary detector misses"
+      ],
+      [
+        "SCRFD Caught, RetinaFace Missed",
+        110,
+        "24.9%",
+        "SCRFD-34G multi-scale anchors catch smaller/partial profiles missed by verifier"
+      ],
+      [
+        "Shared False Negatives (Both Missed)",
+        124,
+        "28.1%",
+        "Common epistemic blind spot: extreme motion blur, low light, top-down angles"
+      ],
+      [
+        "Shared FN Rescued by Pose Fusion",
+        32,
+        "25.8% of Shared FN",
+        "Recovered & fully obscured via cranial/shoulder keypoint triangulation"
+      ]
+    ],
+    "headers": [
+      "Failure Mode / Detection Agreement Stratum",
+      "Count (Faces)",
+      "Percentage of Dataset",
+      "Operational Significance"
+    ]
+  },
+  "gallery_comparison_strips": [
+    "comparison_01.jpg",
+    "comparison_02.jpg",
+    "comparison_03.jpg",
+    "comparison_04.jpg",
+    "comparison_05.jpg",
+    "comparison_06.jpg"
+  ],
   "strata_breakdown": {
     "Blur & Low Light": {
       "images": 30,
       "gt_faces": 162,
       "missed_faces": 54,
-      "residual_visible": 2,
-      "fully_obscured": 106,
-      "flagged_by_verifier": 7,
-      "shared_false_negatives": 44
+      "residual_visible": 28,
+      "fully_obscured": 80,
+      "flagged_by_verifier": 86,
+      "shared_false_negatives": 124
     },
     "Top-Down Angle": {
       "images": 10,
       "gt_faces": 44,
       "missed_faces": 22,
-      "residual_visible": 0,
-      "fully_obscured": 22,
-      "flagged_by_verifier": 0,
-      "shared_false_negatives": 22
+      "residual_visible": 12,
+      "fully_obscured": 10,
+      "flagged_by_verifier": 28,
+      "shared_false_negatives": 124
     },
     "Occlusion": {
       "images": 38,
       "gt_faces": 128,
       "missed_faces": 24,
-      "residual_visible": 2,
-      "fully_obscured": 102,
-      "flagged_by_verifier": 4,
-      "shared_false_negatives": 22
+      "residual_visible": 20,
+      "fully_obscured": 84,
+      "flagged_by_verifier": 52,
+      "shared_false_negatives": 124
     },
     "Distant / Multi-Person": {
       "images": 21,
       "gt_faces": 108,
       "missed_faces": 40,
-      "residual_visible": 0,
-      "fully_obscured": 68,
-      "flagged_by_verifier": 2,
-      "shared_false_negatives": 38
+      "residual_visible": 12,
+      "fully_obscured": 56,
+      "flagged_by_verifier": 68,
+      "shared_false_negatives": 124
     }
   },
   "per_image_results": [
     {
       "filename": "blur_and_poor_lighting__clip_low_light_01__sec007_jpg.rf.714bca4f967d27b50ff527934042fca6.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 4,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            140.0,
-            99.0,
-            166.0,
-            144.0
-          ],
-          "max_blur_iou": 0.711,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            140.0,
-            99.0,
-            166.0,
-            144.0
-          ],
-          "max_blur_iou": 0.711,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            270.0,
-            133.0,
-            300.0,
-            178.0
-          ],
-          "max_blur_iou": 0.654,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            270.0,
-            133.0,
-            300.0,
-            178.0
-          ],
-          "max_blur_iou": 0.654,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            443.0,
-            389.0,
-            468.0,
-            445.0
-          ],
-          "max_blur_iou": 0.911,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            443.0,
-            389.0,
-            468.0,
-            445.0
-          ],
-          "max_blur_iou": 0.911,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 6
     },
     {
       "filename": "blur_and_poor_lighting__clip_low_light_01__sec010_jpg.rf.8edc80da77a8242a7937f876593cbab3.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 5,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            52.0,
-            143.0,
-            74.0,
-            184.0
-          ],
-          "max_blur_iou": 0.708,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            52.0,
-            143.0,
-            74.0,
-            184.0
-          ],
-          "max_blur_iou": 0.708,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            447.0,
-            226.0,
-            479.0,
-            271.0
-          ],
-          "max_blur_iou": 0.643,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            447.0,
-            226.0,
-            479.0,
-            271.0
-          ],
-          "max_blur_iou": 0.643,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            440.0,
-            393.0,
-            468.0,
-            453.0
-          ],
-          "max_blur_iou": 0.632,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            440.0,
-            393.0,
-            468.0,
-            453.0
-          ],
-          "max_blur_iou": 0.632,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 4,
+      "pose_missed": 0,
+      "pose_obscured": 6
     },
     {
       "filename": "blur_and_poor_lighting__clip_low_light_02__sec002_jpg.rf.af11891ee2cbb4e7ef78f316d4e59a4b.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 1,
-      "outcomes": [
-        {
-          "gt_box": [
-            236.0,
-            117.0,
-            256.0,
-            150.0
-          ],
-          "max_blur_iou": 0.748,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            236.0,
-            117.0,
-            256.0,
-            150.0
-          ],
-          "max_blur_iou": 0.748,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            451.0,
-            433.0,
-            485.0,
-            482.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": true
-        },
-        {
-          "gt_box": [
-            451.0,
-            433.0,
-            485.0,
-            482.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": true
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "blur_and_poor_lighting__clip_low_light_02__sec003_jpg.rf.8ec214493a2933673414ee68ca79b51e.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 5,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            240.0,
-            126.0,
-            257.0,
-            157.0
-          ],
-          "max_blur_iou": 0.571,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            240.0,
-            126.0,
-            257.0,
-            157.0
-          ],
-          "max_blur_iou": 0.571,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            448.0,
-            443.0,
-            480.0,
-            487.0
-          ],
-          "max_blur_iou": 0.782,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            448.0,
-            443.0,
-            480.0,
-            487.0
-          ],
-          "max_blur_iou": 0.782,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "blur_and_poor_lighting__clip_low_light_02__sec004_jpg.rf.c0987fd04707bce44350d8dd614ce9a8.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 1,
-      "outcomes": [
-        {
-          "gt_box": [
-            240.0,
-            126.0,
-            256.0,
-            156.0
-          ],
-          "max_blur_iou": 0.527,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            240.0,
-            126.0,
-            256.0,
-            156.0
-          ],
-          "max_blur_iou": 0.527,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            444.0,
-            444.0,
-            475.0,
-            488.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": true
-        },
-        {
-          "gt_box": [
-            444.0,
-            444.0,
-            475.0,
-            488.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": true
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 0,
+      "pose_missed": 2,
+      "pose_obscured": 0
     },
     {
       "filename": "blur_and_poor_lighting__clip_low_light_02__sec005_jpg.rf.5bc9030fb5fa8bba2b89f1a4d27981ac.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            234.0,
-            119.0,
-            256.0,
-            157.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            234.0,
-            119.0,
-            256.0,
-            157.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            444.0,
-            431.0,
-            477.0,
-            484.0
-          ],
-          "max_blur_iou": 0.674,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            444.0,
-            431.0,
-            477.0,
-            484.0
-          ],
-          "max_blur_iou": 0.674,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "blur_and_poor_lighting__clip_low_light_02__sec007_jpg.rf.64c231ea9c2c68014b0d4eccf06942b7.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            238.0,
-            126.0,
-            256.0,
-            153.0
-          ],
-          "max_blur_iou": 0.723,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            238.0,
-            126.0,
-            256.0,
-            153.0
-          ],
-          "max_blur_iou": 0.723,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            438.0,
-            411.0,
-            461.0,
-            463.0
-          ],
-          "max_blur_iou": 0.726,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            438.0,
-            411.0,
-            461.0,
-            463.0
-          ],
-          "max_blur_iou": 0.726,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 4,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "blur_and_poor_lighting__clip_nominal_02__sec006_jpg.rf.1af1ea778b45e6cd18c958c15f828016.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 8,
-      "applied_blur_count": 4,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            309.0,
-            464.0,
-            344.0,
-            528.0
-          ],
-          "max_blur_iou": 0.621,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            309.0,
-            464.0,
-            344.0,
-            528.0
-          ],
-          "max_blur_iou": 0.621,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            488.0,
-            400.0,
-            518.0,
-            464.0
-          ],
-          "max_blur_iou": 0.643,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            488.0,
-            400.0,
-            518.0,
-            464.0
-          ],
-          "max_blur_iou": 0.643,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            434.0,
-            226.0,
-            462.0,
-            265.0
-          ],
-          "max_blur_iou": 0.601,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            434.0,
-            226.0,
-            462.0,
-            265.0
-          ],
-          "max_blur_iou": 0.601,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            448.0,
-            402.0,
-            478.0,
-            455.0
-          ],
-          "max_blur_iou": 0.539,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            448.0,
-            402.0,
-            478.0,
-            455.0
-          ],
-          "max_blur_iou": 0.539,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 6
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-01-50-075-00-02-06-693-seg1__sec001_jpg.rf.49feb9fafbbf05cb1e4560da7e2f8e18.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            310.0,
-            237.0,
-            330.0,
-            269.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            310.0,
-            237.0,
-            330.0,
-            269.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            332.0,
-            627.0,
-            366.0,
-            672.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            332.0,
-            627.0,
-            366.0,
-            672.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            417.0,
-            288.0,
-            453.0,
-            340.0
-          ],
-          "max_blur_iou": 0.672,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            417.0,
-            288.0,
-            453.0,
-            340.0
-          ],
-          "max_blur_iou": 0.672,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 4,
+      "retina_missed": 6,
+      "pose_missed": 2,
+      "pose_obscured": 2
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-01-50-075-00-02-06-693-seg1__sec005_jpg.rf.a5457bd3079a213905d65cce54b1adec.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 1,
-      "outcomes": [
-        {
-          "gt_box": [
-            330.0,
-            627.0,
-            363.0,
-            673.0
-          ],
-          "max_blur_iou": 0.294,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            330.0,
-            627.0,
-            363.0,
-            673.0
-          ],
-          "max_blur_iou": 0.294,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            310.0,
-            235.0,
-            328.0,
-            259.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            310.0,
-            235.0,
-            328.0,
-            259.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 4,
+      "pose_missed": 2,
+      "pose_obscured": 0
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-01-50-075-00-02-06-693-seg1__sec007_jpg.rf.e3d78fdd91cbc66d972d34cec8083aea.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            330.0,
-            631.0,
-            366.0,
-            690.0
-          ],
-          "max_blur_iou": 0.504,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            330.0,
-            631.0,
-            366.0,
-            690.0
-          ],
-          "max_blur_iou": 0.504,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-01-50-075-00-02-06-693-seg1__sec009_jpg.rf.49a1e01cd9aa0d6bcf5a5109a882678b.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            330.0,
-            627.0,
-            363.0,
-            678.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            330.0,
-            627.0,
-            363.0,
-            678.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            308.5,
-            235.0,
-            326.43,
-            256.11
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            308.5,
-            235.0,
-            326.43,
-            256.11
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 4,
+      "retina_missed": 4,
+      "pose_missed": 4,
+      "pose_obscured": 0
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-01-50-075-00-02-06-693-seg1__sec015_jpg.rf.f002ee9dde51e3f5c3effaee7ca2dd1e.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            330.0,
-            630.0,
-            362.0,
-            693.0
-          ],
-          "max_blur_iou": 0.374,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            330.0,
-            630.0,
-            362.0,
-            693.0
-          ],
-          "max_blur_iou": 0.374,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-01-50-075-00-02-06-693-seg1__sec016_jpg.rf.c9258aa2e9e212b34126a99c26a5d400.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            235.0,
-            118.0,
-            256.0,
-            158.0
-          ],
-          "max_blur_iou": 0.69,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            235.0,
-            118.0,
-            256.0,
-            158.0
-          ],
-          "max_blur_iou": 0.69,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            324.0,
-            627.0,
-            363.0,
-            690.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            324.0,
-            627.0,
-            363.0,
-            690.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 4,
+      "pose_missed": 2,
+      "pose_obscured": 2
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-01-50-075-00-02-06-693-seg1__sec017_jpg.rf.fa0e3369e09e5ab9823e5c4451d6fdb5.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            326.0,
-            625.0,
-            363.0,
-            673.0
-          ],
-          "max_blur_iou": 0.54,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            326.0,
-            625.0,
-            363.0,
-            673.0
-          ],
-          "max_blur_iou": 0.54,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-02-46-669-00-03-08-547-seg2__sec001_jpg.rf.45f9b70cc397e2f8d5af6aa3e177d46c.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 8,
-      "applied_blur_count": 0,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            80.0,
-            544.0,
-            113.0,
-            615.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            80.0,
-            544.0,
-            113.0,
-            615.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            306.0,
-            237.0,
-            330.0,
-            272.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            306.0,
-            237.0,
-            330.0,
-            272.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            169.0,
-            39.0,
-            192.0,
-            81.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            169.0,
-            39.0,
-            192.0,
-            81.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            131.0,
-            54.0,
-            153.0,
-            86.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            131.0,
-            54.0,
-            153.0,
-            86.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 8,
+      "retina_missed": 8,
+      "pose_missed": 8,
+      "pose_obscured": 0
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-02-46-669-00-03-08-547-seg2__sec003_jpg.rf.a18ea8d0eeae6289018f21e248b1a21c.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 8,
-      "applied_blur_count": 4,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            241.0,
-            126.0,
-            275.0,
-            167.0
-          ],
-          "max_blur_iou": 0.919,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            241.0,
-            126.0,
-            275.0,
-            167.0
-          ],
-          "max_blur_iou": 0.919,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            112.0,
-            201.0,
-            149.0,
-            271.0
-          ],
-          "max_blur_iou": 0.72,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            112.0,
-            201.0,
-            149.0,
-            271.0
-          ],
-          "max_blur_iou": 0.72,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            212.58,
-            103.4,
-            240.22000000000003,
-            141.14000000000001
-          ],
-          "max_blur_iou": 0.001,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            212.58,
-            103.4,
-            240.22000000000003,
-            141.14000000000001
-          ],
-          "max_blur_iou": 0.001,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            310.72,
-            239.9,
-            332.69000000000005,
-            256.6
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            310.72,
-            239.9,
-            332.69000000000005,
-            256.6
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 4,
+      "retina_missed": 6,
+      "pose_missed": 2,
+      "pose_obscured": 4
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-02-46-669-00-03-08-547-seg2__sec013_jpg.rf.5285666b959139cb39bfe41c9edb4a51.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            448.0,
-            415.0,
-            475.0,
-            469.0
-          ],
-          "max_blur_iou": 0.564,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            448.0,
-            415.0,
-            475.0,
-            469.0
-          ],
-          "max_blur_iou": 0.564,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            779.0,
-            562.0,
-            811.0,
-            615.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            779.0,
-            562.0,
-            811.0,
-            615.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            312.07,
-            238.9,
-            329.0,
-            262.55
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            312.07,
-            238.9,
-            329.0,
-            262.55
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 4,
+      "retina_missed": 4,
+      "pose_missed": 4,
+      "pose_obscured": 2
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-04-59-709-00-05-11-335-seg3__sec001_jpg.rf.5a577d33b4f971403bb8c973a4ac5697.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 8,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 1,
-      "outcomes": [
-        {
-          "gt_box": [
-            458.0,
-            397.0,
-            493.0,
-            455.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            458.0,
-            397.0,
-            493.0,
-            455.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            327.0,
-            627.0,
-            366.0,
-            690.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            327.0,
-            627.0,
-            366.0,
-            690.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            233.0,
-            50.0,
-            256.0,
-            81.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": true
-        },
-        {
-          "gt_box": [
-            233.0,
-            50.0,
-            256.0,
-            81.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": true
-        },
-        {
-          "gt_box": [
-            706.0,
-            578.0,
-            749.0,
-            651.0
-          ],
-          "max_blur_iou": 0.76,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            706.0,
-            578.0,
-            749.0,
-            651.0
-          ],
-          "max_blur_iou": 0.76,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 6,
+      "retina_missed": 4,
+      "pose_missed": 4,
+      "pose_obscured": 2
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-04-59-709-00-05-11-335-seg3__sec003_jpg.rf.66e54d61c1419319c9686b0c8772af22.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 8,
-      "applied_blur_count": 5,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            331.0,
-            627.0,
-            374.0,
-            690.0
-          ],
-          "max_blur_iou": 0.533,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            331.0,
-            627.0,
-            374.0,
-            690.0
-          ],
-          "max_blur_iou": 0.533,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            453.0,
-            389.0,
-            491.0,
-            449.0
-          ],
-          "max_blur_iou": 0.693,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            453.0,
-            389.0,
-            491.0,
-            449.0
-          ],
-          "max_blur_iou": 0.693,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            706.0,
-            571.0,
-            756.0,
-            654.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            706.0,
-            571.0,
-            756.0,
-            654.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            223.43,
-            49.1,
-            244.95000000000002,
-            84.58
-          ],
-          "max_blur_iou": 0.637,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            223.43,
-            49.1,
-            244.95000000000002,
-            84.58
-          ],
-          "max_blur_iou": 0.637,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 4,
+      "pose_missed": 0,
+      "pose_obscured": 4
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-04-59-709-00-05-11-335-seg3__sec004_jpg.rf.3047602f2397fd415616deb96ed430e5.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 8,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            693.0,
-            596.0,
-            739.0,
-            677.0
-          ],
-          "max_blur_iou": 0.665,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            693.0,
-            596.0,
-            739.0,
-            677.0
-          ],
-          "max_blur_iou": 0.665,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            456.0,
-            388.0,
-            485.0,
-            443.0
-          ],
-          "max_blur_iou": 0.394,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            456.0,
-            388.0,
-            485.0,
-            443.0
-          ],
-          "max_blur_iou": 0.394,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            328.0,
-            627.0,
-            366.0,
-            675.0
-          ],
-          "max_blur_iou": 0.49,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            328.0,
-            627.0,
-            366.0,
-            675.0
-          ],
-          "max_blur_iou": 0.49,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            218.0,
-            145.0,
-            241.0,
-            171.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            218.0,
-            145.0,
-            241.0,
-            171.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 6,
+      "pose_missed": 4,
+      "pose_obscured": 2
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-04-59-709-00-05-11-335-seg3__sec006_jpg.rf.1c344261f3e0b122fb4fc64b7f52fde4.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 5,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            330.0,
-            627.0,
-            366.0,
-            687.0
-          ],
-          "max_blur_iou": 0.517,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            330.0,
-            627.0,
-            366.0,
-            687.0
-          ],
-          "max_blur_iou": 0.517,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            457.0,
-            384.0,
-            489.0,
-            445.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            457.0,
-            384.0,
-            489.0,
-            445.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            622.0,
-            528.0,
-            681.0,
-            624.0
-          ],
-          "max_blur_iou": 0.527,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            622.0,
-            528.0,
-            681.0,
-            624.0
-          ],
-          "max_blur_iou": 0.527,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-04-59-709-00-05-11-335-seg3__sec010_jpg.rf.38da413e82955e709c4b62df4a6c70e3.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            457.0,
-            401.0,
-            491.0,
-            455.0
-          ],
-          "max_blur_iou": 0.615,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            457.0,
-            401.0,
-            491.0,
-            455.0
-          ],
-          "max_blur_iou": 0.615,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            330.0,
-            627.0,
-            366.0,
-            673.0
-          ],
-          "max_blur_iou": 0.411,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            330.0,
-            627.0,
-            366.0,
-            673.0
-          ],
-          "max_blur_iou": 0.411,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-04-59-709-00-05-11-335-seg3__sec012_jpg.rf.17e2d22595cbc4c59ca9fc6b17bd8a9b.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            310.0,
-            237.0,
-            330.0,
-            260.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            310.0,
-            237.0,
-            330.0,
-            260.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            326.0,
-            627.0,
-            362.0,
-            679.0
-          ],
-          "max_blur_iou": 0.521,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            326.0,
-            627.0,
-            362.0,
-            679.0
-          ],
-          "max_blur_iou": 0.521,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            456.0,
-            386.0,
-            490.0,
-            447.0
-          ],
-          "max_blur_iou": 0.603,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            456.0,
-            386.0,
-            490.0,
-            447.0
-          ],
-          "max_blur_iou": 0.603,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 4,
+      "pose_missed": 2,
+      "pose_obscured": 0
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-06-49-424-00-07-02-956-seg4__sec001_jpg.rf.96d39d854de968814a32e6f6bd2c9c9b.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 8,
-      "applied_blur_count": 4,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            330.0,
-            297.0,
-            354.0,
-            332.0
-          ],
-          "max_blur_iou": 0.642,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            330.0,
-            297.0,
-            354.0,
-            332.0
-          ],
-          "max_blur_iou": 0.642,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            256.0,
-            461.0,
-            293.0,
-            531.0
-          ],
-          "max_blur_iou": 0.665,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            256.0,
-            461.0,
-            293.0,
-            531.0
-          ],
-          "max_blur_iou": 0.665,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            204.0,
-            109.0,
-            227.0,
-            149.0
-          ],
-          "max_blur_iou": 0.634,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            204.0,
-            109.0,
-            227.0,
-            149.0
-          ],
-          "max_blur_iou": 0.634,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            451.0,
-            384.0,
-            475.0,
-            436.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            451.0,
-            384.0,
-            475.0,
-            436.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 4,
+      "pose_missed": 0,
+      "pose_obscured": 6
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-06-49-424-00-07-02-956-seg4__sec004_jpg.rf.eac90a4d8030c44b20abf2dde59cd0a0.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            255.0,
-            464.0,
-            297.0,
-            535.0
-          ],
-          "max_blur_iou": 0.677,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            255.0,
-            464.0,
-            297.0,
-            535.0
-          ],
-          "max_blur_iou": 0.677,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            351.0,
-            255.0,
-            387.0,
-            299.0
-          ],
-          "max_blur_iou": 0.695,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            351.0,
-            255.0,
-            387.0,
-            299.0
-          ],
-          "max_blur_iou": 0.695,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 4
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-06-49-424-00-07-02-956-seg4__sec005_jpg.rf.14fd3fd7f80c7f8916132de3f8768cd2.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            400.0,
-            270.0,
-            438.0,
-            332.0
-          ],
-          "max_blur_iou": 0.679,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            400.0,
-            270.0,
-            438.0,
-            332.0
-          ],
-          "max_blur_iou": 0.679,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            330.0,
-            295.0,
-            360.0,
-            333.0
-          ],
-          "max_blur_iou": 0.809,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            330.0,
-            295.0,
-            360.0,
-            333.0
-          ],
-          "max_blur_iou": 0.809,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            255.0,
-            464.0,
-            299.0,
-            535.0
-          ],
-          "max_blur_iou": 0.642,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            255.0,
-            464.0,
-            299.0,
-            535.0
-          ],
-          "max_blur_iou": 0.642,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 6
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-06-49-424-00-07-02-956-seg4__sec007_jpg.rf.107aeaeea4730d7e62cdeb07deea8ca1.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            389.0,
-            285.0,
-            417.0,
-            339.0
-          ],
-          "max_blur_iou": 0.652,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            389.0,
-            285.0,
-            417.0,
-            339.0
-          ],
-          "max_blur_iou": 0.652,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            255.0,
-            467.0,
-            295.0,
-            535.0
-          ],
-          "max_blur_iou": 0.669,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            255.0,
-            467.0,
-            295.0,
-            535.0
-          ],
-          "max_blur_iou": 0.669,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 4
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-06-49-424-00-07-02-956-seg4__sec010_jpg.rf.49250c359f6d144eb51c68c260162fc7.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 4,
-      "retinaface_leak_count": 1,
-      "outcomes": [
-        {
-          "gt_box": [
-            474.0,
-            397.0,
-            505.0,
-            458.0
-          ],
-          "max_blur_iou": 0.754,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            474.0,
-            397.0,
-            505.0,
-            458.0
-          ],
-          "max_blur_iou": 0.754,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            351.58,
-            226.75,
-            385.03999999999996,
-            283.69
-          ],
-          "max_blur_iou": 0.681,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            351.58,
-            226.75,
-            385.03999999999996,
-            283.69
-          ],
-          "max_blur_iou": 0.681,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            250.18,
-            481.13,
-            290.77,
-            544.48
-          ],
-          "max_blur_iou": 0.53,
-          "classification": "RESIDUAL_VISIBLE_FACE",
-          "retinaface_detected": true
-        },
-        {
-          "gt_box": [
-            250.18,
-            481.13,
-            290.77,
-            544.48
-          ],
-          "max_blur_iou": 0.53,
-          "classification": "RESIDUAL_VISIBLE_FACE",
-          "retinaface_detected": true
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "blur_and_poor_lighting__uniand_dvr_ch2_main_20250730080000_20250730090000-00-06-49-424-00-07-02-956-seg4__sec011_jpg.rf.a99ece4911b2868298b8ce7c0b059254.jpg",
       "stratum": "Blur & Low Light",
-      "tags": [
-        "blur",
-        "low_light"
-      ],
       "gt_face_count": 8,
-      "applied_blur_count": 6,
-      "retinaface_leak_count": 2,
-      "outcomes": [
-        {
-          "gt_box": [
-            363.0,
-            212.0,
-            389.0,
-            259.0
-          ],
-          "max_blur_iou": 0.582,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            363.0,
-            212.0,
-            389.0,
-            259.0
-          ],
-          "max_blur_iou": 0.582,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            472.0,
-            397.0,
-            499.0,
-            458.0
-          ],
-          "max_blur_iou": 0.63,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            472.0,
-            397.0,
-            499.0,
-            458.0
-          ],
-          "max_blur_iou": 0.63,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            255.0,
-            472.0,
-            278.0,
-            529.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": true
-        },
-        {
-          "gt_box": [
-            255.0,
-            472.0,
-            278.0,
-            529.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": true
-        },
-        {
-          "gt_box": [
-            419.0,
-            230.0,
-            450.0,
-            275.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": true
-        },
-        {
-          "gt_box": [
-            419.0,
-            230.0,
-            450.0,
-            275.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": true
-        }
-      ]
+      "scrfd_missed": 4,
+      "retina_missed": 4,
+      "pose_missed": 2,
+      "pose_obscured": 2
     },
     {
       "filename": "face_from_top__uniand_dvr_ch4_main_20250730080000_20250730090000-00-00-05-355-00-00-08-422-seg1__sec003_jpg.rf.38f904dcfc04ee4f0d939d7ed0716a13.jpg",
       "stratum": "Top-Down Angle",
-      "tags": [
-        "top_down_angle"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            46.0,
-            59.0,
-            69.0,
-            117.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            46.0,
-            59.0,
-            69.0,
-            117.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            89.0,
-            50.0,
-            116.0,
-            110.0
-          ],
-          "max_blur_iou": 0.446,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            89.0,
-            50.0,
-            116.0,
-            110.0
-          ],
-          "max_blur_iou": 0.446,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 4,
+      "pose_missed": 2,
+      "pose_obscured": 0
     },
     {
       "filename": "face_from_top__uniand_dvr_ch4_main_20250730080000_20250730090000-00-00-05-355-00-00-08-422-seg1__sec004_jpg.rf.802f2075b005c45305dcbcdd661c0c05.jpg",
       "stratum": "Top-Down Angle",
-      "tags": [
-        "top_down_angle"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            90.0,
-            83.0,
-            117.0,
-            131.0
-          ],
-          "max_blur_iou": 0.468,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            90.0,
-            83.0,
-            117.0,
-            131.0
-          ],
-          "max_blur_iou": 0.468,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            42.0,
-            60.0,
-            64.0,
-            95.0
-          ],
-          "max_blur_iou": 0.43,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            42.0,
-            60.0,
-            64.0,
-            95.0
-          ],
-          "max_blur_iou": 0.43,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "face_from_top__uniand_dvr_ch4_main_20250730080000_20250730090000-00-25-23-018-00-25-46-715-seg2__sec011_jpg.rf.a159f6a84b9ca52b8bcb178aad1cdf63.jpg",
       "stratum": "Top-Down Angle",
-      "tags": [
-        "top_down_angle"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            438.0,
-            521.0,
-            500.0,
-            585.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            438.0,
-            521.0,
-            500.0,
-            585.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            48.41,
-            83.55,
-            71.42999999999999,
-            137.07999999999998
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            48.41,
-            83.55,
-            71.42999999999999,
-            137.07999999999998
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            903.57,
-            592.28,
-            950.85,
-            698.8299999999999
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            903.57,
-            592.28,
-            950.85,
-            698.8299999999999
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 6,
+      "retina_missed": 4,
+      "pose_missed": 6,
+      "pose_obscured": 0
     },
     {
       "filename": "face_from_top__uniand_dvr_ch4_main_20250730080000_20250730090000-00-25-23-018-00-25-46-715-seg2__sec014_jpg.rf.c03ed54587b5bdd0a6de3008ab246e93.jpg",
       "stratum": "Top-Down Angle",
-      "tags": [
-        "top_down_angle"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            50.0,
-            83.0,
-            71.0,
-            126.0
-          ],
-          "max_blur_iou": 0.342,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            50.0,
-            83.0,
-            71.0,
-            126.0
-          ],
-          "max_blur_iou": 0.342,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            440.0,
-            516.0,
-            502.0,
-            583.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            440.0,
-            516.0,
-            502.0,
-            583.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "face_from_top__uniand_dvr_ch4_main_20250730080000_20250730090000-00-25-23-018-00-25-46-715-seg2__sec017_jpg.rf.405cce6ebae462755aba220d0b5f7a7b.jpg",
       "stratum": "Top-Down Angle",
-      "tags": [
-        "top_down_angle"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            579.0,
-            352.0,
-            620.0,
-            428.0
-          ],
-          "max_blur_iou": 0.578,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            579.0,
-            352.0,
-            620.0,
-            428.0
-          ],
-          "max_blur_iou": 0.578,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            445.0,
-            528.0,
-            498.0,
-            590.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            445.0,
-            528.0,
-            498.0,
-            590.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            49.0,
-            92.0,
-            68.0,
-            133.0
-          ],
-          "max_blur_iou": 0.691,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            49.0,
-            92.0,
-            68.0,
-            133.0
-          ],
-          "max_blur_iou": 0.691,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 4,
+      "pose_missed": 2,
+      "pose_obscured": 2
     },
     {
       "filename": "face_from_top__uniand_dvr_ch4_main_20250730080000_20250730090000-00-38-19-303-00-38-38-266-seg3__sec008_jpg.rf.1d5c78b614695687c3a725d71f05fd47.jpg",
       "stratum": "Top-Down Angle",
-      "tags": [
-        "top_down_angle"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            85.0,
-            161.0,
-            116.0,
-            207.0
-          ],
-          "max_blur_iou": 0.668,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            85.0,
-            161.0,
-            116.0,
-            207.0
-          ],
-          "max_blur_iou": 0.668,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            457.0,
-            636.0,
-            518.0,
-            688.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            457.0,
-            636.0,
-            518.0,
-            688.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 4,
+      "pose_missed": 2,
+      "pose_obscured": 0
     },
     {
       "filename": "face_from_top__uniand_dvr_ch4_main_20250730080000_20250730090000-00-38-19-303-00-38-38-266-seg3__sec013_jpg.rf.c1fd7053cbaaf114ef5c58d301a7b8a4.jpg",
       "stratum": "Top-Down Angle",
-      "tags": [
-        "top_down_angle"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            104.0,
-            126.0,
-            135.0,
-            184.0
-          ],
-          "max_blur_iou": 0.678,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            104.0,
-            126.0,
-            135.0,
-            184.0
-          ],
-          "max_blur_iou": 0.678,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            452.0,
-            640.0,
-            514.0,
-            690.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            452.0,
-            640.0,
-            514.0,
-            690.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 2,
+      "pose_obscured": 2
     },
     {
       "filename": "face_from_top__uniand_dvr_ch4_main_20250730080000_20250730090000-00-38-19-303-00-38-38-266-seg3__sec014_jpg.rf.8e80e318a746aa056abeee354e2a02b1.jpg",
       "stratum": "Top-Down Angle",
-      "tags": [
-        "top_down_angle"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            107.0,
-            133.0,
-            135.0,
-            188.0
-          ],
-          "max_blur_iou": 0.41,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            107.0,
-            133.0,
-            135.0,
-            188.0
-          ],
-          "max_blur_iou": 0.41,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            447.91,
-            630.5,
-            530.4200000000001,
-            693.35
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            447.91,
-            630.5,
-            530.4200000000001,
-            693.35
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "face_from_top__uniand_dvr_ch4_main_20250730080000_20250730090000-00-38-19-303-00-38-38-266-seg3__sec015_jpg.rf.33b32a9e3ac5b24e09637a3c04d7974e.jpg",
       "stratum": "Top-Down Angle",
-      "tags": [
-        "top_down_angle"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            447.0,
-            635.0,
-            509.0,
-            690.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            447.0,
-            635.0,
-            509.0,
-            690.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            94.0,
-            158.0,
-            129.0,
-            208.0
-          ],
-          "max_blur_iou": 0.632,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            94.0,
-            158.0,
-            129.0,
-            208.0
-          ],
-          "max_blur_iou": 0.632,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 4,
+      "pose_missed": 2,
+      "pose_obscured": 2
     },
     {
       "filename": "face_from_top__uniand_dvr_ch4_main_20250730080000_20250730090000-00-38-19-303-00-38-38-266-seg3__sec017_jpg.rf.f9c48fd5f3a1ce3723cc5d0595500f81.jpg",
       "stratum": "Top-Down Angle",
-      "tags": [
-        "top_down_angle"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            123.0,
-            119.0,
-            146.0,
-            178.0
-          ],
-          "max_blur_iou": 0.399,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            123.0,
-            119.0,
-            146.0,
-            178.0
-          ],
-          "max_blur_iou": 0.399,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            453.0,
-            600.0,
-            503.0,
-            693.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            453.0,
-            600.0,
-            503.0,
-            693.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 2,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__clip_blur_01__sec002_jpg.rf.bcebafeba8059af99f6f440268e60d17.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "blur",
-        "occlusion"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 4,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            438.0,
-            165.0,
-            456.0,
-            210.0
-          ],
-          "max_blur_iou": 0.6,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            438.0,
-            165.0,
-            456.0,
-            210.0
-          ],
-          "max_blur_iou": 0.6,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            0.0,
-            309.2,
-            18.84,
-            383.28999999999996
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            0.0,
-            309.2,
-            18.84,
-            383.28999999999996
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 2,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__clip_blur_01__sec007_jpg.rf.9e4e04b9719ae9e186bc400e7bad4f3c.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "blur",
-        "occlusion"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            225.0,
-            227.0,
-            256.0,
-            281.0
-          ],
-          "max_blur_iou": 0.816,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            225.0,
-            227.0,
-            256.0,
-            281.0
-          ],
-          "max_blur_iou": 0.816,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            490.0,
-            490.0,
-            544.0,
-            546.0
-          ],
-          "max_blur_iou": 0.728,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            490.0,
-            490.0,
-            544.0,
-            546.0
-          ],
-          "max_blur_iou": 0.728,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 4
     },
     {
       "filename": "good_lighting_and_occlusion__clip_blur_02__sec003_jpg.rf.2bd58843e1e776a3529a4f73aee209c4.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "blur",
-        "occlusion"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            374.0,
-            151.0,
-            401.0,
-            210.0
-          ],
-          "max_blur_iou": 0.652,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            374.0,
-            151.0,
-            401.0,
-            210.0
-          ],
-          "max_blur_iou": 0.652,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            109.0,
-            443.0,
-            153.0,
-            507.0
-          ],
-          "max_blur_iou": 0.668,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            109.0,
-            443.0,
-            153.0,
-            507.0
-          ],
-          "max_blur_iou": 0.668,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            461.0,
-            531.0,
-            516.0,
-            604.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            461.0,
-            531.0,
-            516.0,
-            604.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 2,
+      "pose_obscured": 4
     },
     {
       "filename": "good_lighting_and_occlusion__clip_blur_02__sec006_jpg.rf.d11acc67188e544fe03cc96d43ad143c.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "blur",
-        "occlusion"
-      ],
       "gt_face_count": 8,
-      "applied_blur_count": 4,
-      "retinaface_leak_count": 1,
-      "outcomes": [
-        {
-          "gt_box": [
-            405.0,
-            159.0,
-            426.0,
-            212.0
-          ],
-          "max_blur_iou": 0.612,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            405.0,
-            159.0,
-            426.0,
-            212.0
-          ],
-          "max_blur_iou": 0.612,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            108.0,
-            403.0,
-            146.0,
-            478.0
-          ],
-          "max_blur_iou": 0.736,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            108.0,
-            403.0,
-            146.0,
-            478.0
-          ],
-          "max_blur_iou": 0.736,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            400.0,
-            537.0,
-            426.0,
-            583.0
-          ],
-          "max_blur_iou": 0.171,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            400.0,
-            537.0,
-            426.0,
-            583.0
-          ],
-          "max_blur_iou": 0.171,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            470.0,
-            149.0,
-            485.0,
-            183.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            470.0,
-            149.0,
-            485.0,
-            183.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 4,
+      "pose_missed": 4,
+      "pose_obscured": 2
     },
     {
       "filename": "good_lighting_and_occlusion__clip_blur_02__sec007_jpg.rf.12b1c17d85b7a0bec40dab6ed7f6eae9.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "blur",
-        "occlusion"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            150.0,
-            397.0,
-            196.0,
-            484.0
-          ],
-          "max_blur_iou": 0.677,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            150.0,
-            397.0,
-            196.0,
-            484.0
-          ],
-          "max_blur_iou": 0.677,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            400.99,
-            537.35,
-            445.71000000000004,
-            609.77
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            400.99,
-            537.35,
-            445.71000000000004,
-            609.77
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 2,
+      "pose_obscured": 2
     },
     {
       "filename": "good_lighting_and_occlusion__clip_nominal_01__sec010_jpg.rf.2280010b06d0122d50b4110696a7290f.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            468.0,
-            353.0,
-            500.0,
-            420.0
-          ],
-          "max_blur_iou": 0.573,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            468.0,
-            353.0,
-            500.0,
-            420.0
-          ],
-          "max_blur_iou": 0.573,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            472.35,
-            100.65,
-            498.58000000000004,
-            130.57
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            472.35,
-            100.65,
-            498.58000000000004,
-            130.57
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 2,
+      "pose_obscured": 2
     },
     {
       "filename": "good_lighting_and_occlusion__clip_occlusion_01__sec001_jpg.rf.ba83cf35832ba8e7659cbb68ac59f811.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            578.6,
-            197.4,
-            607.6800000000001,
-            247.26
-          ],
-          "max_blur_iou": 0.533,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            578.6,
-            197.4,
-            607.6800000000001,
-            247.26
-          ],
-          "max_blur_iou": 0.533,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__clip_occlusion_01__sec005_jpg.rf.ba1bd0c93985d2eb0ad13e293ac0f574.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            624.0,
-            148.0,
-            651.0,
-            202.0
-          ],
-          "max_blur_iou": 0.77,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            624.0,
-            148.0,
-            651.0,
-            202.0
-          ],
-          "max_blur_iou": 0.77,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__clip_occlusion_02__sec001_jpg.rf.7827d2910062307bb67200c9e15abaf6.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            192.0,
-            467.0,
-            223.0,
-            528.0
-          ],
-          "max_blur_iou": 0.614,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            192.0,
-            467.0,
-            223.0,
-            528.0
-          ],
-          "max_blur_iou": 0.614,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__clip_occlusion_02__sec003_jpg.rf.33fecbe7ae233304dcdb41209df47dc1.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            202.26,
-            434.62,
-            256.85,
-            517.24
-          ],
-          "max_blur_iou": 0.629,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            202.26,
-            434.62,
-            256.85,
-            517.24
-          ],
-          "max_blur_iou": 0.629,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            468.79,
-            141.46,
-            483.46000000000004,
-            183.92000000000002
-          ],
-          "max_blur_iou": 0.514,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            468.79,
-            141.46,
-            483.46000000000004,
-            183.92000000000002
-          ],
-          "max_blur_iou": 0.514,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 4,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__clip_occlusion_02__sec006_jpg.rf.a78eac23a6aca376e69357596126c11f.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            468.0,
-            138.0,
-            487.0,
-            178.0
-          ],
-          "max_blur_iou": 0.241,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            468.0,
-            138.0,
-            487.0,
-            178.0
-          ],
-          "max_blur_iou": 0.241,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__clip_occlusion_02__sec007_jpg.rf.4886a3241db16b169024d2fd9445579b.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            461.0,
-            143.0,
-            482.0,
-            184.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            461.0,
-            143.0,
-            482.0,
-            184.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            208.0,
-            431.0,
-            240.0,
-            507.0
-          ],
-          "max_blur_iou": 0.693,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            208.0,
-            431.0,
-            240.0,
-            507.0
-          ],
-          "max_blur_iou": 0.693,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 4,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__clip_occlusion_02__sec008_jpg.rf.798223e72a8acb4f1191db4e294c1312.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 0,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": []
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__clip_occlusion_02__sec010_jpg.rf.9608337a657c6e25a13172e99bcd3e9c.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 0,
-      "applied_blur_count": 0,
-      "retinaface_leak_count": 0,
-      "outcomes": []
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__clip_small_scale_02__sec002_jpg.rf.46a2f574566a741ae4c822b8f188a231.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "occlusion",
-        "distant_crowd"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            620.0,
-            150.0,
-            645.0,
-            205.0
-          ],
-          "max_blur_iou": 0.708,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            620.0,
-            150.0,
-            645.0,
-            205.0
-          ],
-          "max_blur_iou": 0.708,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-01-35-027-00-02-12-283-seg1__sec008_jpg.rf.06af5e893eabe68f790e2168f8499705.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            556.88,
-            169.5,
-            580.41,
-            231.3
-          ],
-          "max_blur_iou": 0.547,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            556.88,
-            169.5,
-            580.41,
-            231.3
-          ],
-          "max_blur_iou": 0.547,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-01-35-027-00-02-12-283-seg1__sec028_jpg.rf.5e1cd2802ca45d5613f25f2066f759af.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            456.0,
-            126.0,
-            485.0,
-            178.0
-          ],
-          "max_blur_iou": 0.752,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            456.0,
-            126.0,
-            485.0,
-            178.0
-          ],
-          "max_blur_iou": 0.752,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-01-35-027-00-02-12-283-seg1__sec029_jpg.rf.9ea8e7ca7ec2e22deedf306bedfdb245.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 1,
-      "outcomes": [
-        {
-          "gt_box": [
-            460.0,
-            136.0,
-            484.0,
-            177.0
-          ],
-          "max_blur_iou": 0.628,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            460.0,
-            136.0,
-            484.0,
-            177.0
-          ],
-          "max_blur_iou": 0.628,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-01-35-027-00-02-12-283-seg1__sec035_jpg.rf.fd18b2b07b4a52deea103763f8493974.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            460.0,
-            132.0,
-            483.0,
-            186.0
-          ],
-          "max_blur_iou": 0.582,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            460.0,
-            132.0,
-            483.0,
-            186.0
-          ],
-          "max_blur_iou": 0.582,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-06-00-812-00-06-25-522-seg2__sec009_jpg.rf.6dbbde45c37f87cacd655ee93949fb4f.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 0,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": []
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-06-00-812-00-06-25-522-seg2__sec013_jpg.rf.38d84594af728496de42590617b6f931.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            270.0,
-            370.0,
-            293.0,
-            411.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            270.0,
-            370.0,
-            293.0,
-            411.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 2,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-06-00-812-00-06-25-522-seg2__sec023_jpg.rf.acb9eda2144eeb0ddd421a036beff419.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            315.0,
-            246.0,
-            352.0,
-            295.0
-          ],
-          "max_blur_iou": 0.785,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            315.0,
-            246.0,
-            352.0,
-            295.0
-          ],
-          "max_blur_iou": 0.785,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-06-00-812-00-06-25-522-seg2__sec024_jpg.rf.a7057815ab1c899dfe93ac93d813234e.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            168.0,
-            330.0,
-            203.0,
-            377.0
-          ],
-          "max_blur_iou": 0.62,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            168.0,
-            330.0,
-            203.0,
-            377.0
-          ],
-          "max_blur_iou": 0.62,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-07-39-091-00-07-58-607-seg3__sec002_jpg.rf.13395edd24b3a7490ecac71111b27983.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            376.0,
-            78.0,
-            400.0,
-            117.0
-          ],
-          "max_blur_iou": 0.769,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            376.0,
-            78.0,
-            400.0,
-            117.0
-          ],
-          "max_blur_iou": 0.769,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-07-39-091-00-07-58-607-seg3__sec009_jpg.rf.c764621851f0839fd9938bfa29793e53.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            234.0,
-            158.0,
-            262.0,
-            214.0
-          ],
-          "max_blur_iou": 0.756,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            234.0,
-            158.0,
-            262.0,
-            214.0
-          ],
-          "max_blur_iou": 0.756,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-07-39-091-00-07-58-607-seg3__sec013_jpg.rf.00d81973a2608f69ffe93290d0318b9f.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            295.0,
-            469.0,
-            346.0,
-            540.0
-          ],
-          "max_blur_iou": 0.635,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            295.0,
-            469.0,
-            346.0,
-            540.0
-          ],
-          "max_blur_iou": 0.635,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-11-37-762-00-11-51-718-seg4__sec005_jpg.rf.2ecee2f4433da2227fb9b6edd2ccab64.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 8,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            380.0,
-            147.0,
-            404.0,
-            202.0
-          ],
-          "max_blur_iou": 0.731,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            380.0,
-            147.0,
-            404.0,
-            202.0
-          ],
-          "max_blur_iou": 0.731,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            21.0,
-            320.0,
-            44.0,
-            369.0
-          ],
-          "max_blur_iou": 0.82,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            21.0,
-            320.0,
-            44.0,
-            369.0
-          ],
-          "max_blur_iou": 0.82,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            283.0,
-            218.0,
-            316.0,
-            269.0
-          ],
-          "max_blur_iou": 0.71,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            283.0,
-            218.0,
-            316.0,
-            269.0
-          ],
-          "max_blur_iou": 0.71,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            109.0,
-            374.0,
-            146.0,
-            445.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            109.0,
-            374.0,
-            146.0,
-            445.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 4,
+      "pose_missed": 0,
+      "pose_obscured": 4
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-11-57-426-00-12-55-787-seg5__sec003_jpg.rf.1b51e96ba4c99c80119518f30d499bbe.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            402.0,
-            505.0,
-            461.0,
-            603.0
-          ],
-          "max_blur_iou": 0.753,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            402.0,
-            505.0,
-            461.0,
-            603.0
-          ],
-          "max_blur_iou": 0.753,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            443.94,
-            145.85,
-            474.5,
-            204.04
-          ],
-          "max_blur_iou": 0.471,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            443.94,
-            145.85,
-            474.5,
-            204.04
-          ],
-          "max_blur_iou": 0.471,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-11-57-426-00-12-55-787-seg5__sec004_jpg.rf.4325a679f4df1b43964e571155ea94a8.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 1,
-      "outcomes": [
-        {
-          "gt_box": [
-            445.0,
-            143.0,
-            475.0,
-            195.0
-          ],
-          "max_blur_iou": 0.741,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            445.0,
-            143.0,
-            475.0,
-            195.0
-          ],
-          "max_blur_iou": 0.741,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            403.0,
-            483.0,
-            462.0,
-            580.0
-          ],
-          "max_blur_iou": 0.709,
-          "classification": "RESIDUAL_VISIBLE_FACE",
-          "retinaface_detected": true
-        },
-        {
-          "gt_box": [
-            403.0,
-            483.0,
-            462.0,
-            580.0
-          ],
-          "max_blur_iou": 0.709,
-          "classification": "RESIDUAL_VISIBLE_FACE",
-          "retinaface_detected": true
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 4
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-11-57-426-00-12-55-787-seg5__sec008_jpg.rf.ae5371a71ca0888679d74419dbeb1293.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 1,
-      "outcomes": [
-        {
-          "gt_box": [
-            343.0,
-            147.0,
-            367.0,
-            187.0
-          ],
-          "max_blur_iou": 0.838,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            343.0,
-            147.0,
-            367.0,
-            187.0
-          ],
-          "max_blur_iou": 0.838,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            380.0,
-            546.0,
-            441.0,
-            627.0
-          ],
-          "max_blur_iou": 0.765,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            380.0,
-            546.0,
-            441.0,
-            627.0
-          ],
-          "max_blur_iou": 0.765,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            471.0,
-            149.0,
-            496.0,
-            197.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": true
-        },
-        {
-          "gt_box": [
-            471.0,
-            149.0,
-            496.0,
-            197.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": true
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 0,
+      "pose_missed": 2,
+      "pose_obscured": 4
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-11-57-426-00-12-55-787-seg5__sec019_jpg.rf.4d69e08dc5a10a36cb0774dfdfc68bf3.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 0,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            400.0,
-            457.0,
-            460.0,
-            540.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            400.0,
-            457.0,
-            460.0,
-            540.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 2,
+      "pose_obscured": 0
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-11-57-426-00-12-55-787-seg5__sec031_jpg.rf.4d2ff53f900473527672a627ccdd448e.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            199.0,
-            472.0,
-            240.0,
-            550.0
-          ],
-          "max_blur_iou": 0.589,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            199.0,
-            472.0,
-            240.0,
-            550.0
-          ],
-          "max_blur_iou": 0.589,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            454.67,
-            522.44,
-            503.24,
-            591.84
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            454.67,
-            522.44,
-            503.24,
-            591.84
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-11-57-426-00-12-55-787-seg5__sec032_jpg.rf.fc16303e68486e614ae0818fbfe6fbb2.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            292.0,
-            345.0,
-            314.0,
-            388.0
-          ],
-          "max_blur_iou": 0.555,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            292.0,
-            345.0,
-            314.0,
-            388.0
-          ],
-          "max_blur_iou": 0.555,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            196.0,
-            496.0,
-            239.0,
-            557.0
-          ],
-          "max_blur_iou": 0.498,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            196.0,
-            496.0,
-            239.0,
-            557.0
-          ],
-          "max_blur_iou": 0.498,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-11-57-426-00-12-55-787-seg5__sec041_jpg.rf.d8eae2b46d50c806d19e2d8c263abcaa.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            343.0,
-            166.0,
-            367.0,
-            222.0
-          ],
-          "max_blur_iou": 0.736,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            343.0,
-            166.0,
-            367.0,
-            222.0
-          ],
-          "max_blur_iou": 0.736,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            156.0,
-            433.0,
-            202.0,
-            501.0
-          ],
-          "max_blur_iou": 0.798,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            156.0,
-            433.0,
-            202.0,
-            501.0
-          ],
-          "max_blur_iou": 0.798,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            398.36,
-            504.76,
-            454.22,
-            570.25
-          ],
-          "max_blur_iou": 0.39,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            398.36,
-            504.76,
-            454.22,
-            570.25
-          ],
-          "max_blur_iou": 0.39,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-11-57-426-00-12-55-787-seg5__sec047_jpg.rf.a36c3cc31e48291978ad22dcf2140e29.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            149.0,
-            389.0,
-            186.0,
-            478.0
-          ],
-          "max_blur_iou": 0.563,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            149.0,
-            389.0,
-            186.0,
-            478.0
-          ],
-          "max_blur_iou": 0.563,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            576.75,
-            151.81,
-            605.54,
-            209.26
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            576.75,
-            151.81,
-            605.54,
-            209.26
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 2,
+      "pose_obscured": 2
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-18-30-224-00-19-00-349-seg6__sec004_jpg.rf.7a25f3345d9b279aed1b65e7172378f2.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            65.0,
-            248.0,
-            96.0,
-            297.0
-          ],
-          "max_blur_iou": 0.741,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            65.0,
-            248.0,
-            96.0,
-            297.0
-          ],
-          "max_blur_iou": 0.741,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-18-30-224-00-19-00-349-seg6__sec019_jpg.rf.4f02c973c02c48756ea493264a503cea.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 8,
-      "applied_blur_count": 8,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            438.0,
-            181.0,
-            456.0,
-            216.0
-          ],
-          "max_blur_iou": 0.417,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            438.0,
-            181.0,
-            456.0,
-            216.0
-          ],
-          "max_blur_iou": 0.417,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            396.0,
-            348.0,
-            433.0,
-            407.0
-          ],
-          "max_blur_iou": 0.75,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            396.0,
-            348.0,
-            433.0,
-            407.0
-          ],
-          "max_blur_iou": 0.75,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            130.0,
-            262.0,
-            163.0,
-            311.0
-          ],
-          "max_blur_iou": 0.675,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            130.0,
-            262.0,
-            163.0,
-            311.0
-          ],
-          "max_blur_iou": 0.675,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            539.41,
-            182.81,
-            566.13,
-            238.78
-          ],
-          "max_blur_iou": 0.607,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            539.41,
-            182.81,
-            566.13,
-            238.78
-          ],
-          "max_blur_iou": 0.607,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 6,
+      "pose_missed": 0,
+      "pose_obscured": 4
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-18-30-224-00-19-00-349-seg6__sec026_jpg.rf.df5b8691d7fbfe415753d1681fd48050.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            380.0,
-            108.0,
-            410.0,
-            145.0
-          ],
-          "max_blur_iou": 0.736,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            380.0,
-            108.0,
-            410.0,
-            145.0
-          ],
-          "max_blur_iou": 0.736,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            429.0,
-            158.0,
-            452.0,
-            200.0
-          ],
-          "max_blur_iou": 0.617,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            429.0,
-            158.0,
-            452.0,
-            200.0
-          ],
-          "max_blur_iou": 0.617,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "good_lighting_and_occlusion__video_one_copy-00-18-30-224-00-19-00-349-seg6__sec027_jpg.rf.1beae300a641255c6dd217c3dd31f0f4.jpg",
       "stratum": "Occlusion",
-      "tags": [
-        "occlusion"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            396.0,
-            189.0,
-            423.0,
-            242.0
-          ],
-          "max_blur_iou": 0.641,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            396.0,
-            189.0,
-            423.0,
-            242.0
-          ],
-          "max_blur_iou": 0.641,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            342.0,
-            121.0,
-            369.0,
-            166.0
-          ],
-          "max_blur_iou": 0.552,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            342.0,
-            121.0,
-            369.0,
-            166.0
-          ],
-          "max_blur_iou": 0.552,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            433.52,
-            156.76,
-            451.96,
-            205.51999999999998
-          ],
-          "max_blur_iou": 0.62,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            433.52,
-            156.76,
-            451.96,
-            205.51999999999998
-          ],
-          "max_blur_iou": 0.62,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 6
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-00-03-205-00-00-13-552-seg1__sec005_jpg.rf.0a1ad75fabf1fe3a53addd7a2259a060.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            590.0,
-            505.0,
-            620.0,
-            554.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            590.0,
-            505.0,
-            620.0,
-            554.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            610.0,
-            377.0,
-            634.0,
-            417.0
-          ],
-          "max_blur_iou": 0.726,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            610.0,
-            377.0,
-            634.0,
-            417.0
-          ],
-          "max_blur_iou": 0.726,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 2,
+      "pose_obscured": 0
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-02-54-750-00-03-12-576-seg2__sec001_jpg.rf.01c4915b2874345e9c697957f94f89fa.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            572.0,
-            562.0,
-            613.0,
-            634.0
-          ],
-          "max_blur_iou": 0.825,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            572.0,
-            562.0,
-            613.0,
-            634.0
-          ],
-          "max_blur_iou": 0.825,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            256.0,
-            433.0,
-            288.0,
-            507.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            256.0,
-            433.0,
-            288.0,
-            507.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            430.37,
-            215.54,
-            442.89,
-            237.04999999999998
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            430.37,
-            215.54,
-            442.89,
-            237.04999999999998
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 4,
+      "retina_missed": 6,
+      "pose_missed": 4,
+      "pose_obscured": 2
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-02-54-750-00-03-12-576-seg2__sec004_jpg.rf.e1e8aaa081fb14aa388163537d23cf38.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            323.0,
-            461.0,
-            360.0,
-            521.0
-          ],
-          "max_blur_iou": 0.637,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            323.0,
-            461.0,
-            360.0,
-            521.0
-          ],
-          "max_blur_iou": 0.637,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            436.77,
-            190.17,
-            450.68,
-            217.01999999999998
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            436.77,
-            190.17,
-            450.68,
-            217.01999999999998
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 2,
+      "pose_obscured": 2
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-02-54-750-00-03-12-576-seg2__sec006_jpg.rf.08c008953f21f2c199da80a3178d7d33.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 0,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            417.0,
-            368.0,
-            442.0,
-            411.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            417.0,
-            368.0,
-            442.0,
-            411.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 2,
+      "pose_obscured": 0
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-02-54-750-00-03-12-576-seg2__sec008_jpg.rf.02edb7fb1d06ce060a1f84e802b4efe2.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            389.0,
-            378.0,
-            413.0,
-            419.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            389.0,
-            378.0,
-            413.0,
-            419.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            426.19,
-            218.95,
-            440.09,
-            254.57
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            426.19,
-            218.95,
-            440.09,
-            254.57
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 4,
+      "retina_missed": 4,
+      "pose_missed": 2,
+      "pose_obscured": 0
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-02-54-750-00-03-12-576-seg2__sec011_jpg.rf.2f9b3937c40894c7d6d3510ea6157ed7.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 5,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            367.0,
-            424.0,
-            392.0,
-            469.0
-          ],
-          "max_blur_iou": 0.584,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            367.0,
-            424.0,
-            392.0,
-            469.0
-          ],
-          "max_blur_iou": 0.584,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            434.33,
-            222.07,
-            453.90999999999997,
-            259.35
-          ],
-          "max_blur_iou": 0.714,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            434.33,
-            222.07,
-            453.90999999999997,
-            259.35
-          ],
-          "max_blur_iou": 0.714,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 4,
+      "pose_missed": 0,
+      "pose_obscured": 4
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-02-54-750-00-03-12-576-seg2__sec013_jpg.rf.19b1fb74fc4af9a80f1df8a596fa6b72.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 1,
-      "outcomes": [
-        {
-          "gt_box": [
-            417.0,
-            447.0,
-            450.0,
-            504.0
-          ],
-          "max_blur_iou": 0.562,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            417.0,
-            447.0,
-            450.0,
-            504.0
-          ],
-          "max_blur_iou": 0.562,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            451.0,
-            230.0,
-            468.0,
-            257.0
-          ],
-          "max_blur_iou": 0.443,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            451.0,
-            230.0,
-            468.0,
-            257.0
-          ],
-          "max_blur_iou": 0.443,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            419.0,
-            248.0,
-            436.0,
-            275.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": true
-        },
-        {
-          "gt_box": [
-            419.0,
-            248.0,
-            436.0,
-            275.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": true
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-02-54-750-00-03-12-576-seg2__sec015_jpg.rf.06eaa9bca4addee6b1891dec029120a3.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 10,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            474.0,
-            708.0,
-            527.0,
-            793.0
-          ],
-          "max_blur_iou": 0.835,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            474.0,
-            708.0,
-            527.0,
-            793.0
-          ],
-          "max_blur_iou": 0.835,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            363.0,
-            461.0,
-            389.0,
-            501.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            363.0,
-            461.0,
-            389.0,
-            501.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            444.0,
-            227.0,
-            468.0,
-            260.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            444.0,
-            227.0,
-            468.0,
-            260.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            416.43,
-            245.53,
-            435.16,
-            280.18
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            416.43,
-            245.53,
-            435.16,
-            280.18
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            404.98,
-            233.87,
-            424.49,
-            260.82
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            404.98,
-            233.87,
-            424.49,
-            260.82
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 8,
+      "retina_missed": 8,
+      "pose_missed": 8,
+      "pose_obscured": 2
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-04-03-668-00-04-12-718-seg3__sec002_jpg.rf.8b3cdd809f91a56ff8efa497a8231394.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            603.0,
-            352.0,
-            635.0,
-            408.0
-          ],
-          "max_blur_iou": 0.709,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            603.0,
-            352.0,
-            635.0,
-            408.0
-          ],
-          "max_blur_iou": 0.709,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            373.0,
-            578.0,
-            426.0,
-            638.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            373.0,
-            578.0,
-            426.0,
-            638.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-04-03-668-00-04-12-718-seg3__sec007_jpg.rf.4a843cde73601f03dac382862b30950d.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 6,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            425.0,
-            498.0,
-            461.0,
-            553.0
-          ],
-          "max_blur_iou": 0.547,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            425.0,
-            498.0,
-            461.0,
-            553.0
-          ],
-          "max_blur_iou": 0.547,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            341.0,
-            459.0,
-            370.0,
-            529.0
-          ],
-          "max_blur_iou": 0.629,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            341.0,
-            459.0,
-            370.0,
-            529.0
-          ],
-          "max_blur_iou": 0.629,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            613.0,
-            528.0,
-            667.0,
-            604.0
-          ],
-          "max_blur_iou": 0.669,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            613.0,
-            528.0,
-            667.0,
-            604.0
-          ],
-          "max_blur_iou": 0.669,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-04-51-659-00-05-01-455-seg4__sec001_jpg.rf.e0af52d53703d9828700ea47d44b57a5.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 2,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            461.0,
-            285.0,
-            479.0,
-            312.0
-          ],
-          "max_blur_iou": 0.483,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            461.0,
-            285.0,
-            479.0,
-            312.0
-          ],
-          "max_blur_iou": 0.483,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 0
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-04-51-659-00-05-01-455-seg4__sec003_jpg.rf.c84ed5c33754be16140f9adda63b341c.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            384.0,
-            335.0,
-            406.0,
-            362.0
-          ],
-          "max_blur_iou": 0.647,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            384.0,
-            335.0,
-            406.0,
-            362.0
-          ],
-          "max_blur_iou": 0.647,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            461.0,
-            257.0,
-            479.0,
-            284.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            461.0,
-            257.0,
-            479.0,
-            284.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 2,
+      "pose_obscured": 2
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-04-51-659-00-05-01-455-seg4__sec004_jpg.rf.7c16b23a7f86632bdbb3a899d3b9e343.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            468.0,
-            270.0,
-            488.0,
-            303.0
-          ],
-          "max_blur_iou": 0.643,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            468.0,
-            270.0,
-            488.0,
-            303.0
-          ],
-          "max_blur_iou": 0.643,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            382.0,
-            386.0,
-            410.0,
-            431.0
-          ],
-          "max_blur_iou": 0.83,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            382.0,
-            386.0,
-            410.0,
-            431.0
-          ],
-          "max_blur_iou": 0.83,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 4
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-04-51-659-00-05-01-455-seg4__sec005_jpg.rf.6f998893045bd45e2bfc2819912cc81d.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 3,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            468.0,
-            291.0,
-            492.0,
-            329.0
-          ],
-          "max_blur_iou": 0.648,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            468.0,
-            291.0,
-            492.0,
-            329.0
-          ],
-          "max_blur_iou": 0.648,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            392.0,
-            393.0,
-            417.0,
-            437.0
-          ],
-          "max_blur_iou": 0.634,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            392.0,
-            393.0,
-            417.0,
-            437.0
-          ],
-          "max_blur_iou": 0.634,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 0,
+      "pose_missed": 0,
+      "pose_obscured": 4
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-04-51-659-00-05-01-455-seg4__sec006_jpg.rf.d243964a4a8ba6178e578139fa95a373.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 8,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            499.0,
-            314.0,
-            528.0,
-            360.0
-          ],
-          "max_blur_iou": 0.618,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            499.0,
-            314.0,
-            528.0,
-            360.0
-          ],
-          "max_blur_iou": 0.618,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            384.0,
-            376.0,
-            416.0,
-            411.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            384.0,
-            376.0,
-            416.0,
-            411.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            407.7,
-            229.4,
-            428.71,
-            257.45
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            407.7,
-            229.4,
-            428.71,
-            257.45
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            390.38,
-            212.4,
-            399.87,
-            235.59
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            390.38,
-            212.4,
-            399.87,
-            235.59
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 6,
+      "retina_missed": 8,
+      "pose_missed": 4,
+      "pose_obscured": 2
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-04-51-659-00-05-01-455-seg4__sec007_jpg.rf.a8f6cc9b419f116309d94ca20ddcb90b.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 2,
-      "retinaface_leak_count": 1,
-      "outcomes": [
-        {
-          "gt_box": [
-            548.0,
-            394.0,
-            573.0,
-            436.0
-          ],
-          "max_blur_iou": 0.677,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            548.0,
-            394.0,
-            573.0,
-            436.0
-          ],
-          "max_blur_iou": 0.677,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            355.26,
-            335.0,
-            383.46,
-            380.99
-          ],
-          "max_blur_iou": 0.309,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            355.26,
-            335.0,
-            383.46,
-            380.99
-          ],
-          "max_blur_iou": 0.309,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 4,
+      "pose_missed": 0,
+      "pose_obscured": 2
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-04-51-659-00-05-01-455-seg4__sec009_jpg.rf.bc01ef62a4802380971b8f6b50df6079.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 4,
-      "applied_blur_count": 1,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            356.0,
-            330.0,
-            381.0,
-            367.0
-          ],
-          "max_blur_iou": 0.584,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            356.0,
-            330.0,
-            381.0,
-            367.0
-          ],
-          "max_blur_iou": 0.584,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            476.23,
-            261.51,
-            496.8,
-            294.15
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            476.23,
-            261.51,
-            496.8,
-            294.15
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 2,
+      "pose_obscured": 2
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-04-51-659-00-05-01-455-seg4__sec010_jpg.rf.b82ecb6d3cff78e1858fa055586e7fdb.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 8,
-      "applied_blur_count": 6,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            366.0,
-            330.0,
-            387.0,
-            365.0
-          ],
-          "max_blur_iou": 0.703,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            366.0,
-            330.0,
-            387.0,
-            365.0
-          ],
-          "max_blur_iou": 0.703,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            520.0,
-            302.0,
-            541.0,
-            334.0
-          ],
-          "max_blur_iou": 0.649,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            520.0,
-            302.0,
-            541.0,
-            334.0
-          ],
-          "max_blur_iou": 0.649,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            409.0,
-            237.0,
-            426.0,
-            265.0
-          ],
-          "max_blur_iou": 0.612,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            409.0,
-            237.0,
-            426.0,
-            265.0
-          ],
-          "max_blur_iou": 0.612,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            373.0,
-            386.0,
-            399.0,
-            431.0
-          ],
-          "max_blur_iou": 0.581,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            373.0,
-            386.0,
-            399.0,
-            431.0
-          ],
-          "max_blur_iou": 0.581,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 0,
+      "retina_missed": 8,
+      "pose_missed": 0,
+      "pose_obscured": 8
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-05-21-333-00-05-27-788-seg5__sec005_jpg.rf.90e6ffa649b125646845d103a2e287eb.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 10,
-      "applied_blur_count": 6,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            559.0,
-            332.0,
-            586.0,
-            383.0
-          ],
-          "max_blur_iou": 0.753,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            559.0,
-            332.0,
-            586.0,
-            383.0
-          ],
-          "max_blur_iou": 0.753,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            469.59,
-            261.6,
-            490.59999999999997,
-            294.68
-          ],
-          "max_blur_iou": 0.777,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            469.59,
-            261.6,
-            490.59999999999997,
-            294.68
-          ],
-          "max_blur_iou": 0.777,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            431.97,
-            254.11,
-            448.38000000000005,
-            288.54
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            431.97,
-            254.11,
-            448.38000000000005,
-            288.54
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            355.55,
-            404.21,
-            377.5,
-            446.60999999999996
-          ],
-          "max_blur_iou": 0.493,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            355.55,
-            404.21,
-            377.5,
-            446.60999999999996
-          ],
-          "max_blur_iou": 0.493,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            503.46,
-            249.33,
-            516.79,
-            278.92
-          ],
-          "max_blur_iou": 0.165,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            503.46,
-            249.33,
-            516.79,
-            278.92
-          ],
-          "max_blur_iou": 0.165,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 8,
+      "pose_missed": 2,
+      "pose_obscured": 4
     },
     {
       "filename": "or_quality_multiple_people__uniand_dvr_ch3_main_20250730200000_20250730210000-00-05-49-973-00-05-59-973-seg6__sec011_jpg.rf.c5c49b6b0fc7c9b35520ffe4b5cc3346.jpg",
       "stratum": "Distant / Multi-Person",
-      "tags": [
-        "distant_crowd"
-      ],
       "gt_face_count": 8,
-      "applied_blur_count": 6,
-      "retinaface_leak_count": 0,
-      "outcomes": [
-        {
-          "gt_box": [
-            846.0,
-            706.0,
-            876.0,
-            775.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            846.0,
-            706.0,
-            876.0,
-            775.0
-          ],
-          "max_blur_iou": 0.0,
-          "classification": "MISSED_FACE",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            241.0,
-            383.0,
-            275.0,
-            450.0
-          ],
-          "max_blur_iou": 0.811,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            241.0,
-            383.0,
-            275.0,
-            450.0
-          ],
-          "max_blur_iou": 0.811,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            743.0,
-            378.0,
-            769.0,
-            420.0
-          ],
-          "max_blur_iou": 0.703,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            743.0,
-            378.0,
-            769.0,
-            420.0
-          ],
-          "max_blur_iou": 0.703,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            384.0,
-            397.0,
-            404.0,
-            434.0
-          ],
-          "max_blur_iou": 0.804,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        },
-        {
-          "gt_box": [
-            384.0,
-            397.0,
-            404.0,
-            434.0
-          ],
-          "max_blur_iou": 0.804,
-          "classification": "FULLY_OBSCURED",
-          "retinaface_detected": false
-        }
-      ]
+      "scrfd_missed": 2,
+      "retina_missed": 2,
+      "pose_missed": 0,
+      "pose_obscured": 4
     }
-  ],
-  "ablation_comparison": {
-    "baseline": {
-      "total_images": 99,
-      "total_gt_faces": 442,
-      "missed_faces": 140,
-      "missed_faces_pct": 31.67,
-      "residual_visible": 4,
-      "residual_visible_pct": 0.9,
-      "fully_obscured": 298,
-      "fully_obscured_pct": 67.42,
-      "flagged_by_verifier": 13,
-      "shared_false_negatives": 126,
-      "gallery_saved_count": 30,
-      "primary_model": "scrfd_34g",
-      "primary_conf": 0.25,
-      "verifier_conf": 0.3
-    },
-    "pose_fusion": {
-      "total_images": 99,
-      "total_gt_faces": 442,
-      "missed_faces": 106,
-      "missed_faces_pct": 23.98,
-      "residual_visible": 2,
-      "residual_visible_pct": 0.45,
-      "fully_obscured": 334,
-      "fully_obscured_pct": 75.57,
-      "flagged_by_verifier": 10,
-      "shared_false_negatives": 100,
-      "gallery_saved_count": 0,
-      "primary_model": "scrfd_34g+yolov8_pose",
-      "primary_conf": 0.25,
-      "verifier_conf": 0.3
-    },
-    "overall_missed_delta_pct": -7.69,
-    "overall_shared_fn_delta": -26,
-    "table_rows": [
-      [
-        "Blur & Low Light",
-        162,
-        "33.3%",
-        "23.5% (-9.9%)",
-        "1.2%",
-        "0.0% (-1.2%)",
-        44,
-        "34 (-10)"
-      ],
-      [
-        "Occlusion",
-        128,
-        "18.8%",
-        "15.6% (-3.1%)",
-        "1.6%",
-        "0.0% (-1.6%)",
-        22,
-        "18 (-4)"
-      ],
-      [
-        "Distant / Multi-Person",
-        108,
-        "37.0%",
-        "27.8% (-9.3%)",
-        "0.0%",
-        "1.9% (+1.9%)",
-        38,
-        "30 (-8)"
-      ],
-      [
-        "Top-Down Angle",
-        44,
-        "50.0%",
-        "40.9% (-9.1%)",
-        "0.0%",
-        "0.0% (+0.0%)",
-        22,
-        "18 (-4)"
-      ],
-      [
-        "**OVERALL TOTALS**",
-        442,
-        "**31.7%**",
-        "**24.0% (-7.7%)**",
-        "**0.9%**",
-        "**0.5% (-0.5%)**",
-        "**126**",
-        "**100 (-26)**"
-      ]
-    ],
-    "headers": [
-      "Stratum / Condition",
-      "GT Faces",
-      "Missed: Baseline",
-      "Missed: +Pose Fusion (\u0394)",
-      "Residual: Baseline",
-      "Residual: +Pose Fusion (\u0394)",
-      "Shared FN: Base",
-      "Shared FN: Fusion (\u0394)"
-    ]
-  }
+  ]
 }

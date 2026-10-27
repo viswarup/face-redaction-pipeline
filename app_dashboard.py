@@ -621,12 +621,13 @@ with tabs[1]:
 
 
 # ==============================================================================
-# TAB 3: 100 Hand-Annotated Images Benchmark & Shared Failure Mode Gallery
+# TAB 3: 100 Hand-Annotated Images 3-Way Benchmark & Correlated Blind Spots
 # ==============================================================================
 with tabs[2]:
-    st.header("📊 100-Image Benchmark Evaluation & Correlated Blind Spots")
+    st.header("📊 100-Image Benchmark: 3-Way Model Comparison & Correlated Blind Spots")
     st.caption(
-        "Dual-model evaluation of SCRFD-34G against 442 ground-truth faces and RetinaFace-R50 QA auditing."
+        "Empirical evaluation of Base SCRFD-34G, RetinaFace (standalone detector), and SCRFD-34G + YOLOv8-Pose Fusion "
+        "across 100 hand-annotated images with Ground-Truth faces and RetinaFace QA verification."
     )
 
     summary_file = config.DATA_DIR / "outputs" / "eval_100_summary.json"
@@ -634,111 +635,117 @@ with tabs[2]:
         with open(summary_file, "r", encoding="utf-8") as f:
             eval_data = json.load(f)
 
-        summ = eval_data.get("summary", {})
-        m_col1, m_col2, m_col3, m_col4, m_col5, m_col6 = st.columns(6)
-        m_col1.metric("Images Evaluated", summ.get("total_images", 99))
-        m_col2.metric("Total GT Faces", summ.get("total_gt_faces", 442))
-        m_col3.metric("Fully Obscured Rate", f"{summ.get('fully_obscured_pct', 52.0)}%")
-        m_col4.metric("Partial Residuals", f"{summ.get('residual_visible', 72)}")
-        m_col5.metric("Missed Faces (Unblurred)", f"{summ.get('missed_faces', 140)}")
-        m_col6.metric(
-            "Shared FN (Both Missed)",
-            f"{summ.get('shared_false_negatives', 126)}",
-            help="Faces missed by BOTH SCRFD and RetinaFace (proof of shared epistemic blind spots).",
-        )
+        # 3 Top-Level Model Comparison Cards
+        three_way_list = eval_data.get("three_way_comparison", [])
+        if three_way_list and len(three_way_list) >= 3:
+            m1_data = three_way_list[0]
+            m2_data = three_way_list[1]
+            m3_data = three_way_list[2]
+
+            card1, card2, card3 = st.columns(3)
+            with card1:
+                st.markdown("#### 1️⃣ Base SCRFD-34G")
+                st.caption("Standalone Primary Detector + 28% Dilation")
+                st.metric("Fully Obscured Rate", f"{m1_data.get('fully_obscured_pct', 0.0):.1f}%")
+                st.metric("Missed Faces (Unblurred)", f"{m1_data.get('missed_faces_pct', 0.0):.1f}% ({m1_data.get('missed_faces', 0)} faces)")
+                st.metric("Residual Leaks (Partial)", f"{m1_data.get('residual_visible_pct', 0.0):.1f}%")
+                st.metric("Throughput / Latency", f"{m1_data.get('fps', 0.0):.1f} FPS ({m1_data.get('avg_latency_ms', 0.0):.1f} ms)")
+
+            with card2:
+                st.markdown("#### 2️⃣ RetinaFace Detector")
+                st.caption("Standalone Verifier Backbone + 28% Dilation")
+                st.metric("Fully Obscured Rate", f"{m2_data.get('fully_obscured_pct', 0.0):.1f}%")
+                st.metric("Missed Faces (Unblurred)", f"{m2_data.get('missed_faces_pct', 0.0):.1f}% ({m2_data.get('missed_faces', 0)} faces)")
+                st.metric("Residual Leaks (Partial)", f"{m2_data.get('residual_visible_pct', 0.0):.1f}%")
+                st.metric("Throughput / Latency", f"{m2_data.get('fps', 0.0):.1f} FPS ({m2_data.get('avg_latency_ms', 0.0):.1f} ms)")
+
+            with card3:
+                st.markdown("#### 3️⃣ SCRFD + Pose Fusion")
+                st.caption("SCRFD-34G + YOLOv8-Pose Cranial/Shoulder Fusion")
+                gain_obscured = m3_data.get('fully_obscured_pct', 0.0) - m1_data.get('fully_obscured_pct', 0.0)
+                reduction_miss = m3_data.get('missed_faces_pct', 0.0) - m1_data.get('missed_faces_pct', 0.0)
+                st.metric("Fully Obscured Rate", f"{m3_data.get('fully_obscured_pct', 0.0):.1f}%", delta=f"{gain_obscured:+.1f}%")
+                st.metric("Missed Faces (Unblurred)", f"{m3_data.get('missed_faces_pct', 0.0):.1f}%", delta=f"{reduction_miss:+.1f}%", delta_color="inverse")
+                st.metric("Residual Leaks (Partial)", f"{m3_data.get('residual_visible_pct', 0.0):.1f}%")
+                st.metric("Throughput / Latency", f"{m3_data.get('fps', 0.0):.1f} FPS ({m3_data.get('avg_latency_ms', 0.0):.1f} ms)")
 
         st.markdown("---")
 
-        # Stratified Results Table
-        st.subheader("📑 Stratified Failure Taxonomy by Condition")
-        strata_dict = eval_data.get("strata_breakdown", {})
-        table_rows = []
-        for st_name, stats in strata_dict.items():
-            gt_c = stats.get("gt_faces", 0)
-            miss_c = stats.get("missed_faces", 0)
-            res_c = stats.get("residual_visible", 0)
-            obs_c = stats.get("fully_obscured", 0)
+        # -------------------------------------------------------------
+        # TABLE 1: Overall 3-Way Model Comparison
+        # -------------------------------------------------------------
+        st.subheader("📋 Table 1: Overall 3-Way Model Comparison (All 100 Images)")
+        if "three_way_table_rows" in eval_data and "three_way_headers" in eval_data:
+            df_t1 = pd.DataFrame(eval_data["three_way_table_rows"], columns=eval_data["three_way_headers"])
+            st.dataframe(df_t1, use_container_width=True)
 
-            table_rows.append(
-                {
-                    "Condition Stratum": st_name,
-                    "Images": stats.get("images", 0),
-                    "GT Faces": gt_c,
-                    "Missed Faces": f"{miss_c} ({(miss_c/gt_c*100):.1f}%)" if gt_c else "0",
-                    "Residual Visible": f"{res_c} ({(res_c/gt_c*100):.1f}%)" if gt_c else "0",
-                    "Fully Obscured": f"{obs_c} ({(obs_c/gt_c*100):.1f}%)" if gt_c else "0",
-                    "Flagged by Verifier": stats.get("flagged_by_verifier", 0),
-                    "Shared False Negatives": stats.get("shared_false_negatives", 0),
-                }
-            )
+        # Interactive Comparison Chart
+        if three_way_list:
+            st.markdown("##### 📈 Visual Comparison: Missed vs. Residual vs. Fully Obscured")
+            chart_data = {
+                "Model": [d["model"] for d in three_way_list],
+                "Missed Faces (%)": [d["missed_faces_pct"] for d in three_way_list],
+                "Residual Visible (%)": [d["residual_visible_pct"] for d in three_way_list],
+                "Fully Obscured (%)": [d["fully_obscured_pct"] for d in three_way_list],
+            }
+            df_chart = pd.DataFrame(chart_data).set_index("Model")
+            st.bar_chart(df_chart)
 
-        st.dataframe(pd.DataFrame(table_rows), use_container_width=True)
+        st.markdown("---")
+
+        # -------------------------------------------------------------
+        # TABLE 2: Per-Condition Breakdown Across All 3 Models
+        # -------------------------------------------------------------
+        st.subheader("📑 Table 2: Per-Condition Breakdown Across All 3 Models")
+        st.caption("Stratified analysis across Motion Blur, Low Light, Occlusion, Top-Down Angles, and Nominal conditions.")
+        if "per_condition_table_rows" in eval_data and "per_condition_headers" in eval_data:
+            df_t2 = pd.DataFrame(eval_data["per_condition_table_rows"], columns=eval_data["per_condition_headers"])
+            st.dataframe(df_t2, use_container_width=True)
+
+        st.markdown("---")
+
+        # -------------------------------------------------------------
+        # TABLE 3: Detector Agreement & Correlated Failure Mode Matrix
+        # -------------------------------------------------------------
+        st.subheader("🤝 Table 3: Detector Agreement & Correlated Failure Mode Matrix")
+        st.caption(
+            "Empirical evidence of shared epistemic blind spots between SCRFD-34G and RetinaFace, "
+            "and quantification of faces rescued by YOLOv8-Pose body/head triangulation."
+        )
+        agr = eval_data.get("agreement_matrix", {})
+        if "table_rows" in agr and "headers" in agr:
+            df_t3 = pd.DataFrame(agr["table_rows"], columns=agr["headers"])
+            st.dataframe(df_t3, use_container_width=True)
 
         st.info(
-            "💡 **Key Scientific Insight (Correlated Blind Spots)**: "
-            "In static images, 90.0% (126 of 140) of faces missed by the primary detector were also missed by RetinaFace. "
-            "Under steep top-down camera pitch, 100% (22 of 22) of missed faces were shared blind spots. "
-            "This empirically proves why static cascades fail and temporal ByteTrack gap interpolation is mandatory."
+            f"💡 **Key Scientific Finding**: "
+            f"SCRFD-34G and RetinaFace share {agr.get('shared_false_negatives_both_missed', 0)} false negatives "
+            f"({agr.get('shared_false_negatives_both_missed_pct', 0.0):.1f}% of all GT faces) primarily under severe motion blur and steep top-down camera pitch. "
+            f"Adding YOLOv8-Pose body/head keypoints rescues {agr.get('shared_fn_rescued_by_pose_fusion', 0)} of these shared blind spots "
+            f"({agr.get('shared_fn_rescued_pct_of_shared', 0.0):.1f}% rescue rate) by triangulating cranial boundaries from shoulder and clavicle lines!"
         )
-
-        # Ablation Section: Before vs After Pose-Head Fusion
-        ablation = eval_data.get("ablation_comparison", {})
-        if ablation and "table_rows" in ablation:
-            st.markdown("---")
-            st.subheader("🔬 Before vs. After Ablation: SCRFD-34G vs. SCRFD-34G + YOLOv8-Pose Fusion")
-            st.caption(
-                "Demonstrating how adding body & head context (cranial keypoints + shoulder spans) "
-                "recovers motion-blurred, occluded, and steep-angle faces."
-            )
-
-            abl_headers = ablation.get("headers", [])
-            abl_rows = ablation.get("table_rows", [])
-            df_ablation = pd.DataFrame(abl_rows, columns=abl_headers)
-            st.dataframe(df_ablation, use_container_width=True)
-
-            delta_miss = ablation.get("overall_missed_delta_pct", 0.0)
-            delta_fn = ablation.get("overall_shared_fn_delta", 0)
-            st.success(
-                f"🚀 **Quantitative Impact of Pose Fusion**: "
-                f"Overall Missed Faces dropped by **{abs(delta_miss):.1f}%** ({delta_miss:+.1f}%), "
-                f"and Shared False Negatives were reduced by **{abs(delta_fn)} faces** ({delta_fn:+d})! "
-                f"Body and shoulder keypoints reliably anchor cranial positions even when facial keypoints are completely destroyed by motion blur or extreme tilt."
-            )
 
         st.markdown("---")
 
-        # Failure Gallery
-        st.subheader("🖼️ Visual Failure Gallery (Side-by-Side Composites)")
+        # -------------------------------------------------------------
+        # 4-Panel Visual Failure Strips Gallery
+        # -------------------------------------------------------------
+        st.subheader("🖼️ 4-Panel Visual Comparison Gallery")
+        st.caption(
+            "Side-by-side progression: "
+            "[1. Raw + Hand GT (Green)] | [2. Base SCRFD-34G] | [3. RetinaFace] | [4. SCRFD-34G + Body/Head Pose Fusion (Rescued)]"
+        )
+
         gallery_dir = config.DATA_DIR / "outputs" / "failure_gallery"
-        gallery_images = sorted(list(gallery_dir.glob("*.jpg")))
+        comparison_strips = sorted(list(gallery_dir.glob("comparison_*.jpg")))
 
-        if gallery_images:
-            filter_stratum = st.selectbox(
-                "Filter Gallery by Stratum:",
-                ["All Failure Composites"] + sorted(list(strata_dict.keys())),
-            )
-
-            matched_gallery = []
-            for g_path in gallery_images:
-                if filter_stratum == "All Failure Composites":
-                    matched_gallery.append(g_path)
-                else:
-                    safe_key = filter_stratum.replace(" ", "_").replace("/", "_")
-                    if g_path.name.startswith(safe_key):
-                        matched_gallery.append(g_path)
-
-            st.caption(f"Showing {len(matched_gallery)} failure composites [Raw + GT: Green | Redacted + QA: Red]")
-
-            cols_per_row = 2
-            for i in range(0, len(matched_gallery), cols_per_row):
-                cols = st.columns(cols_per_row)
-                for col_idx in range(cols_per_row):
-                    img_idx = i + col_idx
-                    if img_idx < len(matched_gallery):
-                        comp_path = matched_gallery[img_idx]
-                        with cols[col_idx]:
-                            st.image(str(comp_path), caption=comp_path.name, use_container_width=True)
+        if comparison_strips:
+            for c_path in comparison_strips:
+                st.image(str(c_path), caption=f"4-Panel Comparison: {c_path.name}", use_container_width=True)
         else:
-            st.info("No failure gallery images found in data/outputs/failure_gallery/.")
+            # Fallback to standard failure composites if 4-panel strips not yet populated
+            fallback_images = sorted(list(gallery_dir.glob("*.jpg")))[:6]
+            for f_path in fallback_images:
+                st.image(str(f_path), caption=f"Failure Diagnostic: {f_path.name}", use_container_width=True)
     else:
-        st.warning("Benchmark summary not yet generated. Run `python scripts/evaluate_100_images.py` first.")
+        st.warning("⚠️ `data/outputs/eval_100_summary.json` not found. Run `make eval-images` to generate benchmark data.")

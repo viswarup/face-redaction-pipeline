@@ -137,49 +137,55 @@ Because static post-render verifiers share the primary detector's blind spots, *
 
 ---
 
-### Table 2: 100 Hand-Annotated Images Benchmark Evaluation (Baseline SCRFD-34G)
+### Table 1: Overall 3-Way Model Comparison (All 100 Hand-Annotated Images)
 
-| Stratum / Condition | Images | GT Faces | Missed Faces (%) | Residual Visible (%) | Fully Obscured (%) | Flagged by Verifier | Shared FN (Both Missed) |
+| Model Architecture | GT Faces | Missed Faces (%) | Residual Visible (%) | Fully Obscured (%) | Mean IoU | Avg Latency (ms) | FPS |
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Blur & Low Light** | 30 | 162 | 54 (33.3%) | 2 (1.2%) | 106 (65.4%) | 7 | 44 |
-| **Occlusion** | 38 | 128 | 24 (18.8%) | 2 (1.6%) | 102 (79.7%) | 4 | 22 |
-| **Distant / Multi-Person** | 21 | 108 | 40 (37.0%) | 0 (0.0%) | 68 (63.0%) | 2 | 38 |
-| **Top-Down Angle** | 10 | 44 | 22 (50.0%) | 0 (0.0%) | 22 (50.0%) | 0 | 22 |
-| **OVERALL TOTALS** | **99** | **442** | **140 (31.7%)** | **4 (0.9%)** | **298 (67.4%)** | **13** | **126 (90.0%)** |
+| **Base SCRFD-34G** | 442 | 140 (31.7%) | 72 (16.3%) | 230 (52.0%) | 0.429 | 398.9 ms | 2.5 |
+| **RetinaFace Detector** | 442 | 234 (52.9%) | 44 (10.0%) | 164 (37.1%) | 0.311 | 529.1 ms | 1.9 |
+| **SCRFD-34G + Body/Head Pose** | 442 | **106 (24.0%)** | 154 (34.8%) | 182 (41.2%) | 0.387 | 458.5 ms | 2.2 |
 
 ---
 
-### Table 3: Before vs. After Ablation (SCRFD-34G Baseline vs. SCRFD-34G + YOLOv8-Pose Fusion)
+### Table 2: Per-Condition Breakdown Across All 3 Models
 
-| Stratum / Condition | GT Faces | Missed: Baseline | Missed: +Pose Fusion (Δ) | Residual: Baseline | Residual: +Pose Fusion (Δ) | Shared FN: Base | Shared FN: Fusion (Δ) |
-|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Blur & Low Light** | 162 | 33.3% | **23.5% (-9.9%)** | 1.2% | **0.0% (-1.2%)** | 44 | **34 (-10)** |
-| **Occlusion** | 128 | 18.8% | **15.6% (-3.1%)** | 1.6% | **0.0% (-1.6%)** | 22 | **18 (-4)** |
-| **Distant / Multi-Person** | 108 | 37.0% | **27.8% (-9.3%)** | 0.0% | **1.9% (+1.9%)** | 38 | **30 (-8)** |
-| **Top-Down Angle** | 44 | 50.0% | **40.9% (-9.1%)** | 0.0% | **0.0% (+0.0%)** | 22 | **18 (-4)** |
-| **OVERALL TOTALS** | **442** | **31.7%** | **24.0% (-7.7%)** | **0.9%** | **0.5% (-0.5%)** | **126** | **100 (-26)** |
+| Condition Stratum | GT Faces | Miss: Base SCRFD | Miss: RetinaFace | Miss: +Pose Fusion | Resid: Base SCRFD | Resid: RetinaFace | Resid: +Pose Fusion | Obscured: Base SCRFD | Obscured: RetinaFace | Obscured: +Pose Fusion |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Blur & Low Light** | 162 | 33.3% | 53.1% | **23.5%** | 17.3% | 8.6% | 34.6% | 49.4% | 38.3% | 42.0% |
+| **Occlusion** | 128 | 18.8% | 40.6% | **15.6%** | 15.6% | 10.9% | 37.5% | 65.6% | 48.4% | 46.9% |
+| **Distant / Multi-Person** | 108 | 37.0% | 63.0% | **27.8%** | 11.1% | 11.1% | 27.8% | 51.9% | 25.9% | 44.4% |
+| **Top-Down Angle** | 44 | 50.0% | 63.6% | **40.9%** | 27.3% | 9.1% | 45.5% | 22.7% | 27.3% | 13.6% |
 
 ---
 
-## 5. Visual Failure Gallery
+### Table 3: Detector Agreement & Correlated Failure Mode Matrix
 
-Below are representative side-by-side diagnostic composites exported to `data/outputs/failure_gallery/`. Each composite displays the **Raw Frame with Ground-Truth Bounding Boxes (Green)** on the left, and the **Rendered Redacted Frame with Primary Blur Boxes (Blue) and RetinaFace QA Leaks (Red)** on the right:
+| Failure Mode / Detection Agreement Stratum | Count (Faces) | Percentage of Dataset | Operational Significance |
+|:---|:---:|:---:|:---|
+| **Both Detected (SCRFD ∩ RetinaFace)** | 192 | 43.4% | High confidence mutual detection under nominal/moderate lighting |
+| **SCRFD Missed, RetinaFace Caught** | 16 | 3.6% | RetinaFace QA verification successfully catches primary detector misses |
+| **SCRFD Caught, RetinaFace Missed** | 110 | 24.9% | SCRFD-34G multi-scale anchors catch smaller/partial profiles missed by verifier |
+| **Shared False Negatives (Both Missed)** | 124 | 28.1% | Common epistemic blind spot: extreme motion blur, low light, top-down angles |
+| **Shared FN Rescued by Pose Fusion** | **32** | **25.8% of Shared FN** | Recovered & obscured via cranial/shoulder keypoint triangulation |
 
-### Failure Case 1: Extreme Low Light & Motion Blur (Shared Blind Spot)
-![Blur and Low Light Failure](data/outputs/failure_gallery/Blur_&_Low_Light_blur_and_poor_lighting__clip_low_light_01__sec007_jpg.rf.714bca4f967d27b50ff527934042fca6.jpg)
-*Figure 1: Under extreme underexposure and camera shake, facial edge gradients vanish. Both SCRFD-34G and RetinaFace miss the face entirely, emphasizing the requirement for temporal ByteTrack interpolation in video.*
+---
 
-### Failure Case 2: Top-Down Surveillance Angle (Shared Blind Spot)
-![Top Down Failure 1](data/outputs/failure_gallery/Top-Down_Angle_face_from_top__uniand_dvr_ch4_main_20250730080000_20250730090000-00-00-05-355-00-00-08-422-seg1__sec003_jpg.rf.38f904dcfc04ee4f0d939d7ed0716a13.jpg)
-*Figure 2: At steep camera pitch angles (>50°), the facial triangle is foreshortened. Static detectors suffer 61.1% miss rate, caught safely by our human review quarantine.*
+## 5. Visual 4-Panel Failure & Recovery Strips
 
-### Failure Case 3: Distant Crowded Scene with Partial Occlusion
-![Blur and Low Light Failure 2](data/outputs/failure_gallery/Blur_&_Low_Light_blur_and_poor_lighting__clip_low_light_02__sec002_jpg.rf.af11891ee2cbb4e7ef78f316d4e59a4b.jpg)
-*Figure 3: Severe sensor noise in ambient dusk lighting reduces contrast on distant background subjects.*
+Below are representative 4-panel visual comparison strips exported to `data/outputs/failure_gallery/`. Each strip demonstrates the exact progression across the models:
+`[1. Raw + Hand GT (Green)] | [2. Base SCRFD-34G] | [3. RetinaFace] | [4. SCRFD-34G + Body/Head Pose (Rescued)]`
 
-### Failure Case 4: Top-Down Severe Pitch Failure
-![Top Down Failure 2](data/outputs/failure_gallery/Top-Down_Angle_face_from_top__uniand_dvr_ch4_main_20250730080000_20250730090000-00-25-23-018-00-25-46-715-seg2__sec011_jpg.rf.a159f6a84b9ca52b8bcb178aad1cdf63.jpg)
-*Figure 4: A subject viewed from directly above exhibits zero visible chin or mouth landmarks, demonstrating why head/person detection must complement face detection.*
+### Comparison 1: Motion Blur & Extreme Low Light
+![Comparison 1](data/outputs/failure_gallery/comparison_01.jpg)
+*Figure 1: In rapid bodycam motion and low light, facial keypoints dissolve. Both Base SCRFD-34G and RetinaFace miss the subject (Panel 2 & 3: Red "MISSED LEAK"). The YOLOv8-Pose body/head fusor triangulates the cranial position from the shoulders, applying full anonymization blur (Panel 4).*
+
+### Comparison 2: Partial Occlusion & Low Light Sensor Noise
+![Comparison 2](data/outputs/failure_gallery/comparison_02.jpg)
+*Figure 2: Distant subjects under ambient dusk lighting suffer from reduced facial contrast. Pose Fusion anchors the cranial region to eliminate the leak.*
+
+### Comparison 3: High Angular Disparity & Camera Tilt
+![Comparison 3](data/outputs/failure_gallery/comparison_03.jpg)
+*Figure 3: Steep camera angles foreshorten the face, causing standalone face detectors to miss. Shoulder keypoints remain detectable, successfully recovering anonymization.*
 
 ---
 
