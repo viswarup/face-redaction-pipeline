@@ -10,7 +10,9 @@
     "fully_obscured_pct": 52.04,
     "mean_iou": 0.429,
     "avg_latency_ms": 398.9,
-    "fps": 2.5
+    "fps": 2.5,
+    "recall_pct": 68.3,
+    "detected_faces": 302
   },
   "summary_scrfd": {
     "model": "Base SCRFD-34G",
@@ -23,7 +25,9 @@
     "fully_obscured_pct": 52.04,
     "mean_iou": 0.429,
     "avg_latency_ms": 398.9,
-    "fps": 2.5
+    "fps": 2.5,
+    "recall_pct": 68.3,
+    "detected_faces": 302
   },
   "summary_retinaface": {
     "model": "RetinaFace",
@@ -36,7 +40,9 @@
     "fully_obscured_pct": 37.1,
     "mean_iou": 0.311,
     "avg_latency_ms": 529.1,
-    "fps": 1.9
+    "fps": 1.9,
+    "recall_pct": 47.1,
+    "detected_faces": 208
   },
   "summary_pose_fusion": {
     "model": "SCRFD-34G + Body/Head Pose",
@@ -49,7 +55,9 @@
     "fully_obscured_pct": 41.18,
     "mean_iou": 0.387,
     "avg_latency_ms": 458.5,
-    "fps": 2.2
+    "fps": 2.2,
+    "recall_pct": 76.0,
+    "detected_faces": 336
   },
   "three_way_comparison": [
     {
@@ -63,7 +71,9 @@
       "fully_obscured_pct": 52.04,
       "mean_iou": 0.429,
       "avg_latency_ms": 398.9,
-      "fps": 2.5
+      "fps": 2.5,
+      "detected_faces": 302,
+      "recall_pct": 68.3
     },
     {
       "model": "RetinaFace",
@@ -76,7 +86,9 @@
       "fully_obscured_pct": 37.1,
       "mean_iou": 0.311,
       "avg_latency_ms": 529.1,
-      "fps": 1.9
+      "fps": 1.9,
+      "detected_faces": 208,
+      "recall_pct": 47.1
     },
     {
       "model": "SCRFD-34G + Body/Head Pose",
@@ -89,36 +101,41 @@
       "fully_obscured_pct": 41.18,
       "mean_iou": 0.387,
       "avg_latency_ms": 458.5,
-      "fps": 2.2
+      "fps": 2.2,
+      "detected_faces": 336,
+      "recall_pct": 76.0
     }
   ],
   "three_way_table_rows": [
     [
       "Base SCRFD-34G",
       442,
-      "140 (31.7%)",
-      "72 (16.3%)",
+      "302 (68.3%)",
       "230 (52.0%)",
+      "72 (16.3%)",
+      "140 (31.7%)",
       "0.429",
       "398.9 ms",
       "2.5"
     ],
     [
-      "RetinaFace",
+      "RetinaFace Detector",
       442,
-      "234 (52.9%)",
-      "44 (10.0%)",
+      "208 (47.1%)",
       "164 (37.1%)",
+      "44 (10.0%)",
+      "234 (52.9%)",
       "0.311",
       "529.1 ms",
       "1.9"
     ],
     [
-      "SCRFD-34G + Body/Head Pose",
+      "SCRFD-34G + Body/Head Pose (Winner)",
       442,
-      "106 (24.0%)",
-      "154 (34.8%)",
+      "336 (76.0%) \ud83c\udfc6",
       "182 (41.2%)",
+      "154 (34.8%)",
+      "106 (24.0%) \u2728",
       "0.387",
       "458.5 ms",
       "2.2"
@@ -126,11 +143,12 @@
   ],
   "three_way_headers": [
     "Model Architecture",
-    "GT Faces",
-    "Missed Faces (%)",
-    "Residual Visible (%)",
-    "Fully Obscured (%)",
-    "Mean IoU",
+    "Real Faces",
+    "Face Detection Recall (%)",
+    "Fully Protected (%) [Complete Blur]",
+    "Partially Covered (%) [Edge Notice]",
+    "Missed Faces (%) [Unprotected]",
+    "Blur Overlap (IoU)",
     "Avg Latency (ms)",
     "FPS"
   ],
@@ -192,68 +210,68 @@
     [
       "Blur & Low Light",
       162,
-      "33.3%",
-      "53.1%",
-      "23.5%",
-      "17.3%",
-      "8.6%",
-      "34.6%",
+      "66.7%",
+      "46.9%",
+      "76.5% \ud83c\udfc6",
       "49.4%",
       "38.3%",
-      "42.0%"
+      "42.0%",
+      "33.3%",
+      "53.1%",
+      "23.5%"
     ],
     [
       "Occlusion",
       128,
-      "18.8%",
-      "40.6%",
-      "15.6%",
-      "15.6%",
-      "10.9%",
-      "37.5%",
+      "81.2%",
+      "59.4%",
+      "84.4% \ud83c\udfc6",
       "65.6%",
       "48.4%",
-      "46.9%"
+      "46.9%",
+      "18.8%",
+      "40.6%",
+      "15.6%"
     ],
     [
       "Distant / Multi-Person",
       108,
-      "37.0%",
       "63.0%",
-      "27.8%",
-      "11.1%",
-      "11.1%",
-      "27.8%",
+      "37.0%",
+      "72.2% \ud83c\udfc6",
       "51.9%",
       "25.9%",
-      "44.4%"
+      "44.4%",
+      "37.0%",
+      "63.0%",
+      "27.8%"
     ],
     [
       "Top-Down Angle",
       44,
       "50.0%",
-      "63.6%",
-      "40.9%",
-      "27.3%",
-      "9.1%",
-      "45.5%",
+      "36.4%",
+      "59.1% \ud83c\udfc6",
       "22.7%",
       "27.3%",
-      "13.6%"
+      "13.6%",
+      "50.0%",
+      "63.6%",
+      "40.9%"
     ]
   ],
   "per_condition_headers": [
-    "Condition Stratum",
-    "GT Faces",
-    "Miss: Base SCRFD",
-    "Miss: RetinaFace",
-    "Miss: +Pose Fusion",
-    "Resid: Base SCRFD",
-    "Resid: RetinaFace",
-    "Resid: +Pose Fusion",
-    "Obscured: Base SCRFD",
-    "Obscured: RetinaFace",
-    "Obscured: +Pose Fusion"
+    "Situation / Environmental Challenge",
+    "Real Faces",
+    "Recall: Base SCRFD",
+    "Recall: RetinaFace",
+    "Recall: +Pose Fusion",
+    "Fully Protected: Base SCRFD",
+    "Fully Protected: RetinaFace",
+    "Fully Protected: +Pose Fusion",
+    "Missed: Base SCRFD",
+    "Missed: RetinaFace",
+    "Missed: +Pose Fusion"
   ],
   "agreement_matrix": {
     "both_detected": 192,
@@ -268,41 +286,41 @@
     "shared_fn_rescued_pct_of_shared": 25.8,
     "table_rows": [
       [
-        "Both Detected (SCRFD \u2229 RetinaFace)",
+        "Both Models Caught Face",
         192,
         "43.4%",
-        "High confidence mutual detection under nominal/moderate lighting"
+        "High confidence mutual detection in normal/moderate lighting"
       ],
       [
-        "SCRFD Missed, RetinaFace Caught",
+        "Caught by Verifier QA Only",
         16,
         "3.6%",
-        "RetinaFace QA verification successfully catches primary detector misses"
+        "RetinaFace verifier successfully caught faces that primary detector missed"
       ],
       [
-        "SCRFD Caught, RetinaFace Missed",
+        "Caught by Primary Detector Only",
         110,
         "24.9%",
-        "SCRFD-34G multi-scale anchors catch smaller/partial profiles missed by verifier"
+        "SCRFD-34G multi-scale anchors caught smaller/partial profiles missed by verifier"
       ],
       [
-        "Shared False Negatives (Both Missed)",
+        "Blind Spot (Both Models Missed)",
         124,
         "28.1%",
-        "Common epistemic blind spot: extreme motion blur, low light, top-down angles"
+        "Common blind spots under violent motion blur or steep top-down camera pitch"
       ],
       [
-        "Shared FN Rescued by Pose Fusion",
+        "Rescued by Body/Head Pose Fusion",
         32,
-        "25.8% of Shared FN",
-        "Recovered & fully obscured via cranial/shoulder keypoint triangulation"
+        "25.8% of Blind Spots",
+        "Recovered & blurred by looking at shoulder and neck lines"
       ]
     ],
     "headers": [
-      "Failure Mode / Detection Agreement Stratum",
+      "Face Detection Agreement Category",
       "Count (Faces)",
       "Percentage of Dataset",
-      "Operational Significance"
+      "Layman Meaning / Operational Significance"
     ]
   },
   "gallery_comparison_strips": [

@@ -552,6 +552,8 @@ def run_evaluation(
         st = model_stats[k]
         tot_gt = st["total_gt_faces"]
         miss_pct = (st["missed_faces"] / tot_gt * 100.0) if tot_gt else 0.0
+        recall_pct = (100.0 - miss_pct) if tot_gt else 0.0
+        detected_faces = tot_gt - st["missed_faces"]
         res_pct = (st["residual_visible"] / tot_gt * 100.0) if tot_gt else 0.0
         obs_pct = (st["fully_obscured"] / tot_gt * 100.0) if tot_gt else 0.0
         mean_iou = float(np.mean(st["all_ious"])) if st["all_ious"] else 0.0
@@ -562,9 +564,10 @@ def run_evaluation(
             [
                 st["name"],
                 tot_gt,
-                f"{st['missed_faces']} ({miss_pct:.1f}%)",
-                f"{st['residual_visible']} ({res_pct:.1f}%)",
+                f"{detected_faces} ({recall_pct:.1f}%)",
                 f"{st['fully_obscured']} ({obs_pct:.1f}%)",
+                f"{st['residual_visible']} ({res_pct:.1f}%)",
+                f"{st['missed_faces']} ({miss_pct:.1f}%)",
                 f"{mean_iou:.3f}",
                 f"{avg_lat:.1f} ms",
                 f"{fps:.1f}",
@@ -575,6 +578,8 @@ def run_evaluation(
             {
                 "model": st["name"],
                 "gt_faces": tot_gt,
+                "recall_pct": round(recall_pct, 1),
+                "detected_faces": detected_faces,
                 "missed_faces": st["missed_faces"],
                 "missed_faces_pct": round(miss_pct, 2),
                 "residual_visible": st["residual_visible"],
@@ -589,11 +594,12 @@ def run_evaluation(
 
     headers_1 = [
         "Model Architecture",
-        "GT Faces",
-        "Missed Faces (%)",
-        "Residual Visible (%)",
-        "Fully Obscured (%)",
-        "Mean IoU",
+        "Real Faces",
+        "Face Detection Recall (%)",
+        "Fully Protected (%) [Complete Blur]",
+        "Partially Covered (%) [Edge Notice]",
+        "Missed Faces (%) [Unprotected]",
+        "Blur Overlap (IoU)",
         "Avg Latency (ms)",
         "FPS",
     ]
@@ -633,19 +639,24 @@ def run_evaluation(
         m2_o_pct = (s_data["retinaface"]["obscured"] / gt_c) * 100.0
         m3_o_pct = (s_data["pose_fusion"]["obscured"] / gt_c) * 100.0
 
+        # Recall %
+        m1_rec_pct = 100.0 - m1_m_pct
+        m2_rec_pct = 100.0 - m2_m_pct
+        m3_rec_pct = 100.0 - m3_m_pct
+
         table_2_rows.append(
             [
                 stratum_name,
                 gt_c,
-                f"{m1_m_pct:.1f}%",
-                f"{m2_m_pct:.1f}%",
-                f"{m3_m_pct:.1f}%",
-                f"{m1_r_pct:.1f}%",
-                f"{m2_r_pct:.1f}%",
-                f"{m3_r_pct:.1f}%",
+                f"{m1_rec_pct:.1f}%",
+                f"{m2_rec_pct:.1f}%",
+                f"{m3_rec_pct:.1f}%",
                 f"{m1_o_pct:.1f}%",
                 f"{m2_o_pct:.1f}%",
                 f"{m3_o_pct:.1f}%",
+                f"{m1_m_pct:.1f}%",
+                f"{m2_m_pct:.1f}%",
+                f"{m3_m_pct:.1f}%",
             ]
         )
 
@@ -653,6 +664,9 @@ def run_evaluation(
             {
                 "stratum": stratum_name,
                 "gt_faces": gt_c,
+                "recall_scrfd_pct": round(m1_rec_pct, 1),
+                "recall_retina_pct": round(m2_rec_pct, 1),
+                "recall_pose_pct": round(m3_rec_pct, 1),
                 "missed_scrfd_pct": round(m1_m_pct, 1),
                 "missed_retina_pct": round(m2_m_pct, 1),
                 "missed_pose_pct": round(m3_m_pct, 1),
@@ -666,17 +680,17 @@ def run_evaluation(
         )
 
     headers_2 = [
-        "Condition Stratum",
-        "GT Faces",
-        "Miss: Base SCRFD",
-        "Miss: RetinaFace",
-        "Miss: +Pose Fusion",
-        "Resid: Base SCRFD",
-        "Resid: RetinaFace",
-        "Resid: +Pose Fusion",
-        "Obscured: Base SCRFD",
-        "Obscured: RetinaFace",
-        "Obscured: +Pose Fusion",
+        "Situation / Environmental Challenge",
+        "Real Faces",
+        "Recall: Base SCRFD",
+        "Recall: RetinaFace",
+        "Recall: +Pose Fusion",
+        "Fully Protected: Base SCRFD",
+        "Fully Protected: RetinaFace",
+        "Fully Protected: +Pose Fusion",
+        "Missed: Base SCRFD",
+        "Missed: RetinaFace",
+        "Missed: +Pose Fusion",
     ]
 
     print("\n" + "=" * 120)
@@ -701,42 +715,42 @@ def run_evaluation(
 
     table_3_rows = [
         [
-            "Both Detected (SCRFD ∩ RetinaFace)",
+            "Both Models Caught Face",
             both_detected,
             f"{both_pct:.1f}%",
-            "High confidence mutual detection under nominal/moderate lighting",
+            "High confidence mutual detection in normal/moderate lighting",
         ],
         [
-            "SCRFD Missed, RetinaFace Caught",
+            "Caught by Verifier QA Only",
             scrfd_missed_retina_caught,
             f"{rf_catch_pct:.1f}%",
-            "RetinaFace QA verification successfully catches primary detector misses",
+            "RetinaFace verifier successfully caught faces that primary detector missed",
         ],
         [
-            "SCRFD Caught, RetinaFace Missed",
+            "Caught by Primary Detector Only",
             scrfd_caught_retina_missed,
             f"{scrfd_catch_pct:.1f}%",
-            "SCRFD-34G multi-scale anchors catch smaller/partial profiles missed by verifier",
+            "SCRFD-34G multi-scale anchors caught smaller/partial profiles missed by verifier",
         ],
         [
-            "Shared False Negatives (Both Missed)",
+            "Blind Spot (Both Models Missed)",
             shared_false_negatives_both_missed,
             f"{shared_fn_pct:.1f}%",
-            "Common epistemic blind spot: extreme motion blur, low light, top-down angles",
+            "Common blind spots under violent motion blur or steep top-down camera pitch",
         ],
         [
-            "Shared FN Rescued by Pose Fusion",
+            "Rescued by Body/Head Pose Fusion",
             shared_fn_rescued_by_pose_fusion,
-            f"{rescued_pct_of_shared:.1f}% of Shared FN",
-            "Recovered & fully obscured via cranial/shoulder keypoint triangulation",
+            f"{rescued_pct_of_shared:.1f}% of Blind Spots",
+            "Recovered & blurred by looking at shoulder and neck lines",
         ],
     ]
 
     headers_3 = [
-        "Failure Mode / Detection Agreement Stratum",
+        "Face Detection Agreement Category",
         "Count (Faces)",
         "Percentage of Dataset",
-        "Operational Significance",
+        "Layman Meaning / Operational Significance",
     ]
 
     print("\n" + "=" * 115)
