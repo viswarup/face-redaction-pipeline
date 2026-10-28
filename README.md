@@ -7,9 +7,6 @@
 [![Streamlit](https://img.shields.io/badge/HITL_Dashboard-Streamlit-FF4B4B.svg)](https://streamlit.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> **Submission Deliverable & Walkthrough**:  
-> 🔗 **[Walkthrough Video Link (Loom / Google Drive / Unlisted YouTube)](https://www.loom.com/share/placeholder-bodycam-pipeline-walkthrough)**
-
 ---
 
 ## 1. End-to-End Pipeline Architecture & System Overview
