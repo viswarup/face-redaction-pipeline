@@ -540,34 +540,45 @@ with tabs[0]:
         kpi1, kpi2, kpi3, kpi4 = st.columns(4)
         with kpi1:
             st.metric(
-                "⚡ Flicker Blink Reduction",
+                "⚡ Accidental Face Flashes",
                 f"-{agg.get('flicker_reduction_pct', 88.1):.1f}%",
-                f"{agg.get('flicker_events_mode_a', 369)} → {agg.get('flicker_events_mode_b', 44)} blinks",
+                f"{agg.get('flicker_events_mode_a', 369)} → {agg.get('flicker_events_mode_b', 44)} flashes",
                 delta_color="inverse",
-                help="Flicker blinks: frames where a detected face momentarily vanished for 1-10 frames and reappeared.",
+                help="Accidental face flashes: moments where a face briefly lost its blur because the person turned or the camera bounced.",
             )
         with kpi2:
             st.metric(
-                "🛡️ Dropout Face-Frames Rescued",
-                f"{agg.get('dropout_frames_rescued', 3101)} boxes",
-                "0 in Detection-Only",
-                help="Exact count of face boxes generated via Kalman coasting & interpolation that were completely missed by detection-only.",
+                "🛡️ Unblurred Faces Rescued",
+                f"{agg.get('dropout_frames_rescued', 3101):,} frames",
+                "0 without tracking",
+                help="Number of times our motion tracker kept a face covered when standard detection completely lost sight of it.",
             )
         with kpi3:
             st.metric(
-                "📈 Mask Trajectory Smoothing",
-                f"-{agg.get('jitter_reduction_pct', 66.0):.1f}% Jitter",
+                "📈 Blur Mask Wobble Reduced",
+                f"-{agg.get('jitter_reduction_pct', 66.0):.1f}% Wobble",
                 f"{agg.get('mean_jitter_mode_a_px', 4.40):.2f} px → {agg.get('mean_jitter_mode_b_px', 1.49):.2f} px",
                 delta_color="inverse",
-                help="Mean frame-to-frame second-order acceleration jitter in pixels.",
+                help="How much smoother the blur bubble stays on screen without violently shaking or accidentally covering hands/tools.",
             )
         with kpi4:
             st.metric(
-                "🚨 Leak Flagged Frames Reduction",
+                "🚨 Visible Face Leaks Reduced",
                 "-46.6%",
                 f"{agg.get('retinaface_flagged_mode_a', 238)} → {agg.get('retinaface_flagged_mode_b', 127)} frames",
                 delta_color="inverse",
-                help="Post-render QA frames where RetinaFace detected an unblurred face.",
+                help="Frames where our strict quality auditor spotted any visible facial features remaining.",
+            )
+
+        with st.expander("📖 Plain-English Guide to Video Tracking Metrics", expanded=False):
+            st.markdown(
+                """
+                - **Why do we need Video Tracking?** When analyzing video frame-by-frame, quick head turns or walking vibrations make faces disappear from the detector for 1 to 5 frames. This causes a **dangerous unblurred flash** where a person's real face pops into plain sight.
+                - **Accidental Face Flashes (Unblurred Flickers):** Moments where blur disappeared and reappeared at the same spot. Tracking reduces these by **88.1%**!
+                - **Unblurred Faces Rescued:** When the camera shakes and detection loses the face, our motion tracker remembers where the head was moving and keeps the blur bubble locked on (**3,101 frames saved**).
+                - **Blur Mask Wobble (Jitter):** Frame-by-frame detection causes the blur box to violently jitter and jump. Our motion filter cuts shaking by **66.0%**, keeping the blur steady so surrounding hands and body movements stay visible for robotics training.
+                - **Visible Face Leaks:** How often our independent quality-check inspector found facial features escaping the blur. Tracking cuts leaks almost in half (**-46.6%**).
+                """
             )
 
         # Tables
@@ -580,8 +591,8 @@ with tabs[0]:
                 st.dataframe(pd.DataFrame(t_abl_data["table_2_rows"], columns=t_abl_data["table_2_headers"]), use_container_width=True)
 
         # 3-Panel Proof Strips
-        st.markdown("##### 🖼️ Visual Proof: Frame-by-Frame Dropout Bridging")
-        st.caption("Progression: [1. Raw Video Frame (Motion Blur)] | [2. Detection-Only (UNBLURRED FLICKER LEAK)] | [3. ByteTrack + Kalman (SMOOTHLY OBSCURED)]")
+        st.markdown("##### 🖼️ Visual Proof: Unblurred Flash Leaks vs. Smooth Motion Tracking")
+        st.caption("Progression: [1. Raw Video Frame (Motion Blur)] | [2. Detection-Only (UNBLURRED FLASH LEAK!)] | [3. ByteTrack + Motion Memory (SMOOTHLY BLURRED)]")
         strips = t_abl_data.get("visual_proof_strips", [])
         gallery_dir = config.DATA_DIR / "outputs" / "failure_gallery"
         for s_name in strips:
