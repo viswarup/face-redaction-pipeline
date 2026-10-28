@@ -297,29 +297,109 @@ To solve this, we implemented an optional **Fusion Layer** in `app/pipeline/pose
 
 ---
 
-## 9. Quickstart & Verification Commands
+## 9. Quickstart: How to Clone, Install, Run & Test
 
-All operations are automated via the project `Makefile`:
+Follow these step-by-step instructions to set up the repository from scratch and verify everything is working:
 
+### 1. Prerequisites
+Make sure the machine has:
+* **Python 3.10+** (tested on Python 3.11, 3.12, 3.13)
+* **Git**
+* **FFmpeg** (required by OpenCV for fast video decoding and rendering):
+  * **macOS:** `brew install ffmpeg`
+  * **Ubuntu/Debian:** `sudo apt update && sudo apt install -y ffmpeg`
+  * **Windows:** `winget install Gyan.FFmpeg` (or download from [ffmpeg.org](https://ffmpeg.org))
+
+---
+
+### 2. Clone the Repository
 ```bash
-# 1. Install dependencies
+git clone https://github.com/viswarup/face-redaction-pipeline.git
+cd face-redaction-pipeline
+```
+
+---
+
+### 3. Setup Virtual Environment & Install Dependencies
+We provide an automated `Makefile` command that creates the virtual environment (`.venv`) and installs all dependencies:
+```bash
 make install
+```
 
-# 2. Run test suite (17 unit and integration tests)
+*(Alternatively, without `make`:)*
+```bash
+python3 -m venv .venv
+source .venv/bin/activate       # On Windows: .venv\Scripts\activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+---
+
+### 4. How to Test Whether It Is Working
+
+We provide 3 levels of automated and visual verification:
+
+#### Level A: Run the Complete Automated Test Suite (Fast Smoke Test)
+```bash
 make test
+```
+* **What it does:** Runs all 17 unit and integration tests via `pytest` covering fail-closed quarantining, SQLite idempotency deduplication, pipeline detection/blur rendering, and benchmark calculations.
+* **Expected Output:**
+  ```text
+  tests/test_fail_closed.py::test_fail_closed_on_corrupt_file PASSED
+  tests/test_idempotency.py::test_duplicate_upload_same_job_id PASSED
+  tests/test_pipeline_step2.py::test_detection_and_redaction_pipeline PASSED
+  tests/test_evaluation_step4.py::test_benchmark_metrics PASSED
+  ===================== 17 passed in ~4s =====================
+  ```
 
-# 3. Run 100-image benchmark evaluation & failure taxonomy
-make eval-images
-
-# 4. Process the 5 demo video clips with idempotency verification
-make run-snippets
-
-# 5. Launch Human Reviewer Dashboard
-make dashboard
-
-# 6. Verify full submission compliance (zero /Users/ paths, DB state, outputs, tests)
+#### Level B: Run the Full Submission Compliance Audit
+```bash
 make verify-submission
 ```
+* **What it does:** Automatically audits the entire repository across 4 strict phases:
+  1. Verifies all deliverable JSON summaries, rendered MP4 videos, and failure galleries exist on disk.
+  2. Verifies the SQLite database has recorded duplicate upload idempotency proofs.
+  3. Scans all source code, JSONs, and databases to guarantee **zero forbidden `/Users/` paths**.
+  4. Runs the full test suite.
+* **Expected Output:**
+  ```text
+  ================================================================================
+  >>> ALL VERIFICATION CHECKS PASSED: REPOSITORY IS READY FOR SUBMISSION! <<<
+  ================================================================================
+  ```
+
+#### Level C: Launch the Interactive Reviewer Dashboard (Visual Test)
+```bash
+make dashboard
+```
+* **What it does:** Opens the Streamlit Human-in-the-Loop review app in your browser at **`http://localhost:8501`**.
+* **How to test it visually:**
+  1. **Tab 1 (Audit Queue):** Select any of the 6 processed bodycam videos to watch the synchronized raw vs. redacted playback side-by-side, scrub to red flagged frames, and test the one-click reviewer approval button.
+  2. **Tab 2 (Upload & Idempotency):** Upload any MP4 video or select an existing snippet and hit "Process Video" twice in rapid succession. It will prove zero duplicate compute by returning the cached job with `duplicate_request_count: 1`.
+  3. **Tab 3 (Evaluation & Ablation):** View the 3-Way Model Comparison benchmark table, the video tracking ablation table, and the failure gallery.
+
+---
+
+### 5. Running the Pipeline on Data (Optional Commands)
+
+```bash
+# Process the 5 demo video clips through the full redaction & QA pipeline:
+make run-snippets
+
+# Run the 100-Image 3-Way Model Benchmark (SCRFD vs. RetinaFace vs. Pose Fusion):
+make eval-images
+
+# Run the Video Tracking vs. Detection-Only ablation experiment:
+python scripts/evaluate_tracking_ablation.py
+
+# Re-build the visual HTML and PDF presentation slide deck:
+make slides
+```
+
+* **Interactive Presentation Slides:** Open **`slides.html`** in your browser, or view the 10-page landscape PDF at **`Safety_Critical_Pipeline_Slides.pdf`**.
+* **Comprehensive Written Report:** Available in **`REPORT.md`** and the executive PDF at **`Safety_Critical_Face_Redaction_Pipeline_Report.pdf`**.
 
 ---
 
