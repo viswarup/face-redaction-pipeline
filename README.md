@@ -332,3 +332,63 @@ make dashboard
 # 6. Verify full submission compliance (zero /Users/ paths, DB state, outputs, tests)
 make verify-submission
 ```
+
+---
+
+## 10. Appendix: Plain-English Glossary of Every Metric, Formula & Equation
+
+To ensure complete clarity for compliance officers, legal auditors, and non-technical stakeholders, below is a complete guide to every metric, formula, and equation used in this system:
+
+### 1. Overlap Score / Intersection over Union (IoU)
+$$\text{IoU}(A, B) = \frac{\text{Area}(A \cap B)}{\text{Area}(A \cup B)}$$
+* **What it means in plain English:** Measures how accurately the blur bubble sits on top of the real human face. It divides the shared overlapping area by the total combined area.
+  * **$1.0$ ($100\%$):** Perfect bullseye match.
+  * **$\ge 0.55$:** Solid, high-quality coverage where the face is fully obscured.
+  * **$0.10 \le \text{IoU} < 0.55$:** Partial coverage (some skin or boundary may be exposed; automatically flagged for review).
+  * **$< 0.10$:** Complete miss (danger: zero blur applied to the face).
+
+### 2. Face Detection Recall (Safety Catch Rate)
+$$\text{Recall} = \frac{\text{Real Faces Caught}}{\text{Total Real Faces in Video}} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}}$$
+* **What it means in plain English:** The single most important safety metric. Out of 100 real human faces present across all frames, what percentage did our system actually detect and blur?
+  * *Example:* Our Pose Fusion pipeline achieves **76.0% recall (336 / 442 faces)**, compared to only 47.1% for RetinaFace and 68.3% for Base SCRFD. Higher recall means fewer people left accidentally exposed.
+
+### 3. Bounding Box Dilation (+28% Expansion)
+$$x_1' = \max\left(0, x_1 - \frac{0.28 w}{2}\right), \quad x_2' = \min\left(W, x_2 + \frac{0.28 w}{2}\right)$$
+$$y_1' = \max\left(0, y_1 - \frac{0.28 h}{2}\right), \quad y_2' = \min\left(H, y_2 + \frac{0.28 h}{2}\right)$$
+$$\text{Total Blurred Area Expansion} = (1 + 0.28)^2 = 1.28 \times 1.28 \approx 1.64\times \quad (+63.8\% \text{ area})$$
+* **What it means in plain English:** Standard AI face detectors only draw a tight box around eyes, nose, and mouth. But privacy regulations require blurring the forehead, hairline, sideburns, jawline, and ears. By expanding the box by 28% in both width and height, the total blurred surface area grows by **+63.8%**, absorbing sudden head movements and preventing peripheral ear/chin leaks.
+
+### 4. Blur Mask Shaking / Acceleration Jitter
+$$\text{Jitter}_t = \|c_{t+1} - 2 c_t + c_{t-1}\|_2 = \sqrt{(x_{t+1} - 2x_t + x_{t-1})^2 + (y_{t+1} - 2y_t + y_{t-1})^2}$$
+* **What it means in plain English:** Measures how violently the blur box shakes, jumps, or jitters between consecutive frames. If a box is at center position $c_{t-1}$ in frame 1, $c_t$ in frame 2, and $c_{t+1}$ in frame 3, this formula measures its sudden jerking motion.
+  * *Real-world impact:* Frame-by-frame detection violently wobbles at **4.40 pixels** of jitter. Our motion smoothing cuts this by **66.0% down to 1.49 pixels**, creating a calm, stable blur bubble that doesn't accidentally cover hands or tools needed for robotics training.
+
+### 5. Gap Bridging / Bidirectional Linear Interpolation
+$$\text{bbox}(t) = \text{bbox}(t_1) + \frac{t - t_1}{t_2 - t_1} \cdot \left(\text{bbox}(t_2) - \text{bbox}(t_1)\right)$$
+* **What it means in plain English:** If someone's face is detected at frame $t_1$, momentarily vanishes for 1 to 12 frames because they turned around or the camera shook, and reappears at frame $t_2$, this equation connects the dots in a straight line. It fills in the missing frames so the person never flashes into plain sight unblurred.
+
+### 6. Motion Tracking Memory (Kalman Filter State Vector)
+$$\mathbf{x} = \begin{bmatrix} x & y & a & h & \dot{x} & \dot{y} & \dot{a} & \dot{h} \end{bmatrix}^T$$
+* **What it means in plain English:** The tracker maintains a mathematical "memory" of where the person is moving:
+  * $x, y$: Center position of the head right now.
+  * $a, h$: Aspect ratio and height of the head.
+  * $\dot{x}, \dot{y}$: How fast the head is moving horizontally and vertically (velocity).
+  * $\dot{a}, \dot{h}$: How fast the head is turning or growing closer/further.
+  * *Why this matters:* If a heavy camera bounce blinds the camera sensor for 3 frames, the tracker uses physics to coast the blur box along the head's expected trajectory, rescuing **3,101 frames** from zero blur.
+
+### 7. Body/Head Pose Cranial Estimation
+$$\text{cranial\_width} = 0.90 \times \|\text{shoulder}_{\text{left}} - \text{shoulder}_{\text{right}}\|_2$$
+$$\text{head\_center} = \text{neck\_center} - 0.70 \times \text{cranial\_width} \cdot \hat{\mathbf{u}}_{\text{up}}$$
+* **What it means in plain English:** When lighting is too dim or someone turns away, facial features (eyes, nose, mouth) disappear completely. However, their shoulders are almost always visible. Because human head width is naturally about 90% of shoulder span, this formula uses the body's skeleton to calculate where the head must be and places a protective blur over it.
+
+### 8. Heavy Gaussian Blur Formula
+$$G(x, y) = \frac{1}{2\pi \sigma^2} \exp\left(-\frac{x^2 + y^2}{2\sigma^2}\right), \quad \text{with } \sigma=25 \text{ and kernel size } = 51 \times 51 \text{ pixels}$$
+* **What it means in plain English:** The mathematical equation used to create the heavy frosted-glass blur. A high strength value ($\sigma=25$) blends every pixel with its neighbors across a wide 51×51 pixel window. This completely destroys facial identity and biometric recognition while leaving surrounding lighting and room context visible.
+
+### 9. File Fingerprinting / SHA-256 Idempotency
+$$\text{Job ID} = \text{"job\_"} + \text{SHA256}(\text{Raw Video File Bytes})[:12]$$
+* **What it means in plain English:** A unique digital fingerprint generated from the exact bytes of the video file. If an automated system or user uploads the exact same 500 MB video twice, the system recognizes the fingerprint instantly, returns the existing processed video, and increments a duplicate counter without wasting time or electrical power re-running AI models.
+
+### 10. Fail-Closed Compliance Gatekeeper Logic
+$$\text{Safety Status} = \begin{cases} \text{SAFE}, & \text{if } \text{Flagged Face Leaks} = 0 \text{ and } \text{Lighting Quality} \ge 40 \\ \text{NEEDS\_REVIEW}, & \text{otherwise} \end{cases}$$
+* **What it means in plain English:** A strict "zero-trust" safety rule. The system never assumes a video is safe. If our independent inspector AI spots even a single frame with an exposed face, or if the video is too dark to verify automatically, the video is quarantined in `NEEDS_REVIEW` status so a human privacy officer must inspect and approve it before release.
