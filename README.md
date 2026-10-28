@@ -12,50 +12,41 @@
 
 ---
 
-## 1. System Architecture Overview
+## 1. End-to-End Pipeline Architecture & System Overview
 
-Body-worn camera (BWC) footage presents severe optical challenges: fast non-holonomic motion blur, dynamic exposure changes, rolling-shutter artifacts, high camera tilt angles, and occlusions. Standard off-the-shelf detectors fail silently on single frames, creating catastrophic privacy leaks.
+Body-worn camera (BWC) footage presents severe optical challenges: fast non-holonomic motion blur, dynamic exposure changes, rolling-shutter artifacts, steep camera tilt angles, and occlusions. Standard off-the-shelf face detectors fail silently on single frames, creating catastrophic privacy leaks.
 
 This repository implements a **Fail-Closed, Dual-Engine Asynchronous Anonymization & Verification Architecture**:
-1. **Primary Spatio-Temporal Redaction Engine**: Combines **SCRFD-34G** (deep anchor-free face detector) with a high-dimensional **ByteTrack Kalman filter** and a **Two-Pass Trajectory Smoother** (12-frame bidirectional gap interpolation + 3-frame interior birth/death coasting), followed by **28% bounding box dilation** and adaptive Gaussian/mosaic obfuscation.
-2. **Independent Post-Render QA Verifier**: A separate **RetinaFace (ResNet-50)** verifier decoding rendered H.264 MP4 videos directly from disk. Any residual face detection triggers an immediate quarantine (`NEEDS_REVIEW`) and saves diagnostic snapshots with leak classification (`RESIDUAL_DILATION_LEAK` vs. `UNBLURRED_MISSED_FACE`).
-3. **Idempotent Asynchronous Job API**: FastAPI worker with SQLite WAL mode where identical upload events produce exactly one logical job result (`duplicate_request_count` incremented, background duplicate avoided).
-4. **Human-in-the-Loop (HITL) Streamlit Audit Dashboard**: Complete reviewer UI featuring dual video players, frame-level risk scrubbing, 3-column diagnostic overlays, and blind-spot risk alerting.
+
+### Visual End-to-End Pipeline Diagram:
+![End-to-End Pipeline Architecture](data/outputs/diagrams/pipeline_architecture.svg)
+
+---
+
+### Core Pipeline Stages:
+1. **Cryptographic Ingestion & Idempotent Deduplication**: Ingested MP4 videos are hashed via SHA-256 before decoding. Identical upload events map to a single background job, returning the existing processed video with an incremented duplicate counter without wasting GPU cycles.
+2. **Stage 1: Multi-Scale Detection & Body Pose Fusion**: Combines **SCRFD-34G** (anchor-based face detector with 34 GFLOPs of multi-scale capacity) with **YOLOv8n-Pose** cranial/shoulder keypoint fusion (`PoseHeadFusor`). If facial features dissolve in motion blur or turn away, shoulder keypoints estimate cranial position and inject a protective head mask, rescuing **25.8% of shared blind spots**.
+3. **Stage 2: Motion Tracking Memory & Temporal Smoothing**: **ByteTrack** associates high- and low-score detections (`0.08 ≤ conf < 0.25`) to persistent tracks. An 8-state **Kalman filter** coasts blur bubbles through sensor vibrations, and **Two-Pass Bidirectional Gap Interpolation** bridges 1–12 frame dropouts, eliminating **88.1% of accidental face flashes**.
+4. **Stage 3: Heavy Redaction with +28% Box Dilation**: Automatically expands face bounding boxes by **+28%** in width and height (+63.8% total area) to cover foreheads, hairlines, jawlines, and ears, followed by irreversible **Gaussian blur ($\sigma=25$, kernel $51\times 51$)**.
+5. **Stage 4: Zero-Trust Post-Render QA Auditor**: An independent **RetinaFace (ResNet-50)** verifier decodes the rendered H.264 MP4 file directly from disk. If any residual face features are detected, the video is quarantined into `NEEDS_REVIEW`.
+6. **Stage 5: Human-in-the-Loop (HITL) Streamlit Audit Dashboard**: Enables compliance officers to review quarantined footage with synchronized side-by-side playback, a risk-flag timeline scrubber, and one-click audit approval.
 
 ```mermaid
-flowchart TD
-    A[BWC Video Upload / Event] --> B{Idempotency Check\nSQLite WAL}
-    B -- Duplicate Event --> C[Increment Counter\nReturn Cached Job]
-    B -- New Event --> D[Queue Background Job]
+flowchart LR
+    A["🎬 Input Bodycam Video\n(SHA-256 Digest)"] --> B{"Idempotency\nCheck"}
+    B -- "Duplicate" --> C["Return Cached Job\n(Increment Counter)"]
+    B -- "New Clip" --> D["1. Dual Detection\nSCRFD-34G + YOLOv8-Pose"]
     
-    subgraph Primary Spatio-Temporal Redaction
-        D --> E[Decode Video & Compute Luminance/Blur Telemetry]
-        E --> F[SCRFD-34G Deep Face Detection\nconf_thresh=0.25]
-        F --> G[ByteTrack Multi-Object Tracking]
-        G --> H[Two-Pass Trajectory Smoother\n12-Frame Interpolation + 3-Frame Coasting]
-        H --> I[28% Bounding Box Dilation\nForehead, Hairline, Ears, Motion Lag]
-        I --> J[Adaptive Gaussian / Mosaic Obfuscation]
-        J --> K[Encode Browser-Compatible H.264 MP4\nlibx264 +faststart]
-        K --> L[Emit Companion .tracks.json]
-    end
+    D --> E["2. Motion Tracking\nByteTrack + Kalman Memory"]
+    E --> F["3. Heavy Redaction\n+28% Dilation & Blur σ=25"]
+    F --> G["Encode H.264 MP4\n(Browser-Ready)"]
     
-    subgraph Independent QA Verifier & State Machine
-        K --> M[Decode Rendered MP4 from Disk\nOpenCV VideoCapture]
-        M --> N[RetinaFace ResNet-50 QA Verifier\nconf_thresh=0.30, stride=2]
-        N --> O{Any Leak Flagged?}
-        O -- Leak Detected --> P[Flag Diagnostic Frame\nIoU >= 0.10: Dilation Leak\nIoU < 0.10: Missed Face\nStatus: NEEDS_REVIEW]
-        O -- Zero Leaks --> Q{Luminance < 40 or\nLaplacian < 100?}
-        Q -- Extreme Degradation --> R[Status: SAFE\nBlind-Spot Reviewer Banner]
-        Q -- Nominal Quality --> S[Status: SAFE]
-    end
+    G --> H["4. Independent QA Auditor\nRetinaFace (Zero-Trust)"]
+    H -- "Zero Leaks Caught" --> I["✅ Status: SAFE\n(Approved for Release)"]
+    H -- "Visible Leak Detected" --> J["🚨 Status: NEEDS_REVIEW\n(Quarantined to Dashboard)"]
     
-    subgraph Human Reviewer Dashboard
-        P --> T[Streamlit HITL Audit Queue]
-        R --> T
-        S --> T
-        T --> U[Inspect Flagged / Coasted Frames]
-        U --> V[Reviewer Override / Approval]
-    end
+    J --> K["5. Human Reviewer\n(Streamlit HITL Dashboard)"]
+    K --> L["One-Click Approval\n(Audit Trail in SQLite)"]
 ```
 
 ---
@@ -122,7 +113,7 @@ Because static post-render verifiers share the primary detector's blind spots, *
 
 ## 4. Execution & Benchmark Results
 
-### Table 1: Final 6 Demo Video Clips Evaluation
+### Table 1A: Final 6 Demo Video Clips Evaluation
 
 | Event ID | Job ID | Video Clip | Resolution | Duration | FPS | Status | Coasted/Interp Boxes | Flagged Leaks | Blind Spot Warning |
 |:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -171,7 +162,7 @@ Because static post-render verifiers share the primary detector's blind spots, *
 
 ---
 
-### Table 1: Overall 3-Way Model Comparison (All 100 Hand-Annotated Images)
+### Table 2A: Overall 3-Way Model Comparison (All 100 Hand-Annotated Images)
 
 | Model Architecture | Real Faces | Face Detection Recall (%) | Fully Protected (%) | Partially Covered (%) | Missed Faces (%) | Blur Overlap (IoU) | Avg Latency (ms) | Speed (FPS) |
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -186,7 +177,7 @@ Because static post-render verifiers share the primary detector's blind spots, *
 
 ---
 
-### Table 2: Per-Condition Performance Across All 3 Models
+### Table 2B: Per-Condition Performance Across All 3 Models
 
 | Situation / Environmental Challenge | Real Faces | Recall: Base SCRFD | Recall: RetinaFace | Recall: +Pose Fusion (Winner) | Missed: Base SCRFD | Missed: RetinaFace | Missed: +Pose Fusion | Fully Protected: Base SCRFD | Fully Protected: RetinaFace | Fully Protected: +Pose Fusion |
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -197,7 +188,7 @@ Because static post-render verifiers share the primary detector's blind spots, *
 
 ---
 
-### Table 3: Model Agreement & How Pose Fusion Rescues Blind Spots
+### Table 2C: Model Agreement & How Pose Fusion Rescues Blind Spots
 
 | Face Detection Agreement Category | Count (Faces) | Percentage of Dataset | Layman Meaning / Operational Significance |
 |:---|:---:|:---:|:---|
