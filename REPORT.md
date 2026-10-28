@@ -208,15 +208,33 @@ Diagnostic composites exported to `data/outputs/failure_gallery/` provide indisp
 
 ### 1. Tracking vs. Detection-Only Proof Strips (3-Panel Diagnostics)
 Each strip displays: `[1. Raw Video Frame] | [2. Detection-Only (UNBLURRED FLICKER LEAK)] | [3. ByteTrack + Kalman (SMOOTHLY OBSCURED)]`
-* **Figure 1 (`tracking_vs_notracking_01.jpg`)**: Video 1 (Frame #143) – Rapid head turning causes Detection-Only to drop below threshold, exposing the face in plain sight. Mode B smoothly coasts through the turn.
-* **Figure 2 (`tracking_vs_notracking_02.jpg`)**: Video 2 (Frame #1) – Distant subject in poor lighting missed by per-frame detection, but tracked and blurred in Mode B.
-* **Figure 3 (`tracking_vs_notracking_03.jpg`)**: Video 4 (Frame #104) – Camera shake during walking causes high-frequency detection dropout, fully bridged by the Kalman interpolator.
+
+#### Figure 1: Rapid Head Movement & Turning (Video 1, Frame #143)
+![Figure 1: Tracking vs No Tracking](data/outputs/failure_gallery/tracking_vs_notracking_01.jpg)
+*Figure 1: During rapid motion and abrupt head turning, Detection-Only (Panel 2) drops below the confidence threshold, causing an unblurred face flash (Red Box). ByteTrack with Kalman coasting (Panel 3) bridges the gap and maintains a continuous protective blur (Blue Box).*
+
+#### Figure 2: Low-Contrast Distant Face (Video 2, Frame #1)
+![Figure 2: Tracking vs No Tracking](data/outputs/failure_gallery/tracking_vs_notracking_02.jpg)
+*Figure 2: In multi-subject surveillance scenes, Detection-Only misses distant subjects on initial frames. Tracked mode associates detections across time to eliminate flicker leaks.*
+
+#### Figure 3: Motion Blur During Camera Movement (Video 4, Frame #104)
+![Figure 3: Tracking vs No Tracking](data/outputs/failure_gallery/tracking_vs_notracking_03.jpg)
+*Figure 3: Walking bounce and bodycam sensor shudder dissolve facial boundary contrast. The tracker maintains track continuity across 12-frame dropout windows, preventing catastrophic exposure.*
 
 ### 2. Model Progression Proof Strips (4-Panel Diagnostics)
 Each strip displays: `[1. Raw + GT] | [2. Base SCRFD-34G] | [3. RetinaFace] | [4. SCRFD-34G + Pose Fusion]`
-* **Figure 4 (`comparison_01.jpg`)**: Low Light & Motion Blur – Facial landmarks completely dissolved. Both standalone face detectors miss (Red "MISSED LEAK"). The YOLOv8-Pose fusor identifies the shoulder plane and projects a cranial mask, successfully obscuring the subject.
-* **Figure 5 (`comparison_02.jpg`)**: Distant Crowds & Partial Occlusion – Small facial boundaries lost in noise; Pose Fusion anchors the cranial region.
-* **Figure 6 (`comparison_03.jpg`)**: Steep Tilt Angles – Extreme perspective distortion causes face-only classifiers to fail; shoulder topology remains robust.
+
+#### Figure 4: Low Light & Motion Blur (comparison_01.jpg)
+![Figure 4: 4-Panel Model Comparison](data/outputs/failure_gallery/comparison_01.jpg)
+*Figure 4: Low Light & Motion Blur – Facial landmarks completely dissolved. Both standalone face detectors miss (Red "MISSED LEAK"). The YOLOv8-Pose fusor identifies the shoulder plane and projects a cranial mask, successfully obscuring the subject.*
+
+#### Figure 5: Distant Crowds & Partial Occlusion (comparison_02.jpg)
+![Figure 5: 4-Panel Model Comparison](data/outputs/failure_gallery/comparison_02.jpg)
+*Figure 5: Distant Crowds & Partial Occlusion – Small facial boundaries lost in noise; Pose Fusion anchors the cranial region.*
+
+#### Figure 6: Steep Tilt Angles (comparison_03.jpg)
+![Figure 6: 4-Panel Model Comparison](data/outputs/failure_gallery/comparison_03.jpg)
+*Figure 6: Steep Tilt Angles – Extreme perspective distortion causes face-only classifiers to fail; shoulder topology remains robust.*
 
 ---
 
