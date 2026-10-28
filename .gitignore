@@ -53,4 +53,5 @@ data/video_snippets/a74ecf63*.mp4
 # Temporary run outputs
 data/outputs/eval_100_redacted/
 data/outputs/diagnostics/
+data/outputs/ablation_no_track/*.mp4
 *.tmp

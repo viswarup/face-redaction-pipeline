@@ -1,0 +1,9541 @@
+{
+  "metadata": {
+    "input_video_path": "data/video_snippets/demo_clips/Uni+ DVR_ch3_main_20250730200000_20250730210000-00.02.54.750-00.03.12.576-seg2.mp4",
+    "output_video_path": "data/outputs/ablation_no_track/clip_2_notrack.mp4",
+    "resolution": [
+      960,
+      1080
+    ],
+    "fps": 14.826839826839826,
+    "total_frames": 274,
+    "elapsed_seconds": 116.88,
+    "processing_fps": 2.34,
+    "mean_y_luminance": 103.44,
+    "mean_laplacian_blur_variance": 1076.03,
+    "total_detections": 466,
+    "total_interpolated_boxes": 0,
+    "total_coasted_boxes": 0,
+    "detector_model": "scrfd_34g",
+    "detector_weight_path": "weights/scrfd_34g.onnx"
+  },
+  "frames": [
+    {
+      "frame_index": 0,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            558.9,
+            607.73,
+            592.07,
+            658.77
+          ],
+          "dilated_bbox": [
+            554,
+            600,
+            597,
+            666
+          ],
+          "score": 0.3167,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 1,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 2,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            561.87,
+            594.74,
+            608.21,
+            655.54
+          ],
+          "dilated_bbox": [
+            555,
+            586,
+            615,
+            665
+          ],
+          "score": 0.3457,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 3,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 4,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            573.67,
+            592.15,
+            607.97,
+            639.54
+          ],
+          "dilated_bbox": [
+            568,
+            585,
+            613,
+            647
+          ],
+          "score": 0.4843,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 5,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            572.39,
+            596.01,
+            606.66,
+            642.9
+          ],
+          "dilated_bbox": [
+            567,
+            589,
+            612,
+            650
+          ],
+          "score": 0.4933,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 6,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            574.13,
+            592.3,
+            606.18,
+            634.96
+          ],
+          "dilated_bbox": [
+            569,
+            586,
+            611,
+            641
+          ],
+          "score": 0.4061,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            568.01,
+            726.05,
+            590.71,
+            751.34
+          ],
+          "dilated_bbox": [
+            564,
+            722,
+            594,
+            755
+          ],
+          "score": 0.2715,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 7,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            574.75,
+            573.87,
+            607.31,
+            631.4
+          ],
+          "dilated_bbox": [
+            570,
+            565,
+            612,
+            640
+          ],
+          "score": 0.5977,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 8,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            573.63,
+            570.53,
+            607.98,
+            627.77
+          ],
+          "dilated_bbox": [
+            568,
+            562,
+            613,
+            636
+          ],
+          "score": 0.4624,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 9,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            570.96,
+            581.09,
+            602.73,
+            629.09
+          ],
+          "dilated_bbox": [
+            566,
+            574,
+            608,
+            636
+          ],
+          "score": 0.531,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 10,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            564.3,
+            559.14,
+            601.07,
+            618.54
+          ],
+          "dilated_bbox": [
+            559,
+            550,
+            607,
+            627
+          ],
+          "score": 0.423,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 11,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 12,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 13,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            547.21,
+            555.23,
+            585.28,
+            602.19
+          ],
+          "dilated_bbox": [
+            541,
+            548,
+            591,
+            609
+          ],
+          "score": 0.3076,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 14,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 15,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 16,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            425.94,
+            222.38,
+            439.75,
+            239.95
+          ],
+          "dilated_bbox": [
+            424,
+            219,
+            442,
+            243
+          ],
+          "score": 0.4037,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 17,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            424.55,
+            221.24,
+            438.67,
+            239.21
+          ],
+          "dilated_bbox": [
+            422,
+            218,
+            441,
+            242
+          ],
+          "score": 0.3982,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            422.11,
+            304.46,
+            438.76,
+            322.49
+          ],
+          "dilated_bbox": [
+            419,
+            301,
+            442,
+            326
+          ],
+          "score": 0.2542,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 18,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            424.39,
+            221.19,
+            438.4,
+            238.92
+          ],
+          "dilated_bbox": [
+            422,
+            218,
+            441,
+            242
+          ],
+          "score": 0.4454,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 19,
+      "box_count": 5,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            424.32,
+            221.58,
+            437.41,
+            238.28
+          ],
+          "dilated_bbox": [
+            422,
+            219,
+            440,
+            241
+          ],
+          "score": 0.4573,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            314.69,
+            209.34,
+            326.86,
+            224.27
+          ],
+          "dilated_bbox": [
+            312,
+            207,
+            329,
+            227
+          ],
+          "score": 0.3337,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            329.77,
+            232.8,
+            340.4,
+            245.8
+          ],
+          "dilated_bbox": [
+            328,
+            230,
+            342,
+            248
+          ],
+          "score": 0.3173,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            346.78,
+            370.7,
+            355.82,
+            381.63
+          ],
+          "dilated_bbox": [
+            345,
+            369,
+            358,
+            384
+          ],
+          "score": 0.2826,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            419.45,
+            303.9,
+            437.68,
+            322.88
+          ],
+          "dilated_bbox": [
+            416,
+            301,
+            441,
+            326
+          ],
+          "score": 0.2577,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 20,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            423.61,
+            221.27,
+            437.92,
+            239.01
+          ],
+          "dilated_bbox": [
+            421,
+            218,
+            440,
+            242
+          ],
+          "score": 0.5379,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            313.95,
+            209.13,
+            327.17,
+            225.18
+          ],
+          "dilated_bbox": [
+            312,
+            206,
+            330,
+            228
+          ],
+          "score": 0.305,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            418.41,
+            303.5,
+            436.62,
+            323.16
+          ],
+          "dilated_bbox": [
+            415,
+            300,
+            440,
+            326
+          ],
+          "score": 0.2714,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 21,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            423.46,
+            221.45,
+            436.69,
+            238.07
+          ],
+          "dilated_bbox": [
+            421,
+            219,
+            439,
+            241
+          ],
+          "score": 0.4189,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            314.83,
+            209.79,
+            326.95,
+            224.58
+          ],
+          "dilated_bbox": [
+            313,
+            207,
+            329,
+            227
+          ],
+          "score": 0.3301,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 22,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            423.23,
+            221.55,
+            436.65,
+            238.4
+          ],
+          "dilated_bbox": [
+            421,
+            219,
+            439,
+            241
+          ],
+          "score": 0.3437,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            412.98,
+            302.54,
+            432.25,
+            322.86
+          ],
+          "dilated_bbox": [
+            410,
+            299,
+            435,
+            326
+          ],
+          "score": 0.2916,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            315.09,
+            210.05,
+            326.76,
+            224.17
+          ],
+          "dilated_bbox": [
+            313,
+            208,
+            329,
+            227
+          ],
+          "score": 0.2675,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 23,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            422.45,
+            221.67,
+            435.99,
+            238.83
+          ],
+          "dilated_bbox": [
+            420,
+            219,
+            438,
+            242
+          ],
+          "score": 0.4827,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            313.89,
+            209.56,
+            326.92,
+            225.65
+          ],
+          "dilated_bbox": [
+            312,
+            207,
+            329,
+            228
+          ],
+          "score": 0.3583,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            517.71,
+            227.46,
+            530.01,
+            245.56
+          ],
+          "dilated_bbox": [
+            515,
+            224,
+            532,
+            249
+          ],
+          "score": 0.3389,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            328.99,
+            232.43,
+            340.18,
+            246.09
+          ],
+          "dilated_bbox": [
+            327,
+            230,
+            342,
+            249
+          ],
+          "score": 0.2685,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 24,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            314.74,
+            209.35,
+            326.7,
+            223.86
+          ],
+          "dilated_bbox": [
+            313,
+            207,
+            329,
+            226
+          ],
+          "score": 0.2748,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            411.71,
+            304.76,
+            430.03,
+            325.22
+          ],
+          "dilated_bbox": [
+            409,
+            301,
+            433,
+            329
+          ],
+          "score": 0.256,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 25,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 26,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 27,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 28,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 29,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 30,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 31,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 32,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 33,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 34,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 35,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 36,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            430.91,
+            193.26,
+            444.17,
+            212.09
+          ],
+          "dilated_bbox": [
+            429,
+            190,
+            447,
+            215
+          ],
+          "score": 0.4227,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 37,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 38,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            430.11,
+            193.72,
+            442.16,
+            211.18
+          ],
+          "dilated_bbox": [
+            428,
+            191,
+            444,
+            214
+          ],
+          "score": 0.4239,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 39,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            429.67,
+            194.53,
+            441.94,
+            211.71
+          ],
+          "dilated_bbox": [
+            427,
+            192,
+            444,
+            215
+          ],
+          "score": 0.3279,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 40,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            429.86,
+            194.2,
+            441.8,
+            211.32
+          ],
+          "dilated_bbox": [
+            428,
+            191,
+            444,
+            214
+          ],
+          "score": 0.4213,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            318.34,
+            487.61,
+            337.31,
+            510.32
+          ],
+          "dilated_bbox": [
+            315,
+            484,
+            340,
+            514
+          ],
+          "score": 0.3526,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 41,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            429.3,
+            194.49,
+            441.2,
+            211.69
+          ],
+          "dilated_bbox": [
+            427,
+            192,
+            443,
+            215
+          ],
+          "score": 0.3841,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 42,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            316.75,
+            460.29,
+            345.13,
+            501.69
+          ],
+          "dilated_bbox": [
+            312,
+            454,
+            350,
+            508
+          ],
+          "score": 0.6135,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            429.95,
+            193.7,
+            442.21,
+            211.32
+          ],
+          "dilated_bbox": [
+            428,
+            191,
+            444,
+            214
+          ],
+          "score": 0.4571,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 43,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            313.79,
+            452.52,
+            344.23,
+            497.66
+          ],
+          "dilated_bbox": [
+            309,
+            446,
+            349,
+            504
+          ],
+          "score": 0.6761,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            429.96,
+            193.83,
+            442.25,
+            211.66
+          ],
+          "dilated_bbox": [
+            428,
+            191,
+            444,
+            215
+          ],
+          "score": 0.4473,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 44,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            314.08,
+            448.24,
+            344.86,
+            495.94
+          ],
+          "dilated_bbox": [
+            309,
+            441,
+            350,
+            503
+          ],
+          "score": 0.7578,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            430.34,
+            193.56,
+            442.27,
+            211.16
+          ],
+          "dilated_bbox": [
+            428,
+            191,
+            444,
+            214
+          ],
+          "score": 0.3838,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 45,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            313.47,
+            447.22,
+            340.66,
+            489.21
+          ],
+          "dilated_bbox": [
+            309,
+            441,
+            345,
+            496
+          ],
+          "score": 0.7185,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            430.66,
+            193.67,
+            442.86,
+            212.1
+          ],
+          "dilated_bbox": [
+            428,
+            191,
+            445,
+            215
+          ],
+          "score": 0.4003,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 46,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            314.74,
+            447.85,
+            340.9,
+            495.25
+          ],
+          "dilated_bbox": [
+            311,
+            441,
+            345,
+            502
+          ],
+          "score": 0.68,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 47,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            316.9,
+            445.62,
+            347.43,
+            499.79
+          ],
+          "dilated_bbox": [
+            312,
+            438,
+            352,
+            508
+          ],
+          "score": 0.7847,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 48,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            318.49,
+            450.42,
+            346.84,
+            507.84
+          ],
+          "dilated_bbox": [
+            314,
+            442,
+            351,
+            516
+          ],
+          "score": 0.7919,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            308.52,
+            571.14,
+            333.77,
+            600.95
+          ],
+          "dilated_bbox": [
+            304,
+            566,
+            338,
+            606
+          ],
+          "score": 0.2519,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 49,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            323.23,
+            455.78,
+            352.51,
+            510.77
+          ],
+          "dilated_bbox": [
+            319,
+            448,
+            357,
+            519
+          ],
+          "score": 0.7375,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 50,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            323.19,
+            458.61,
+            354.01,
+            513.42
+          ],
+          "dilated_bbox": [
+            318,
+            450,
+            359,
+            522
+          ],
+          "score": 0.7409,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 51,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            326.8,
+            461.22,
+            358.47,
+            524.37
+          ],
+          "dilated_bbox": [
+            322,
+            452,
+            363,
+            534
+          ],
+          "score": 0.6897,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            476.57,
+            445.34,
+            511.04,
+            487.82
+          ],
+          "dilated_bbox": [
+            471,
+            439,
+            516,
+            494
+          ],
+          "score": 0.356,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 52,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            325.77,
+            464.47,
+            360.6,
+            524.97
+          ],
+          "dilated_bbox": [
+            320,
+            456,
+            366,
+            534
+          ],
+          "score": 0.6876,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            435.15,
+            195.3,
+            446.66,
+            212.33
+          ],
+          "dilated_bbox": [
+            433,
+            192,
+            449,
+            215
+          ],
+          "score": 0.2558,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 53,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            331.09,
+            470.59,
+            361.56,
+            531.93
+          ],
+          "dilated_bbox": [
+            326,
+            462,
+            366,
+            541
+          ],
+          "score": 0.681,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            482.46,
+            427.21,
+            524.95,
+            479.91
+          ],
+          "dilated_bbox": [
+            476,
+            419,
+            531,
+            488
+          ],
+          "score": 0.5828,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 54,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            330.75,
+            478.05,
+            359.69,
+            532.73
+          ],
+          "dilated_bbox": [
+            326,
+            470,
+            364,
+            541
+          ],
+          "score": 0.6998,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            438.6,
+            221.05,
+            451.13,
+            237.19
+          ],
+          "dilated_bbox": [
+            436,
+            218,
+            453,
+            240
+          ],
+          "score": 0.492,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            487.1,
+            437.6,
+            521.58,
+            478.13
+          ],
+          "dilated_bbox": [
+            482,
+            431,
+            527,
+            484
+          ],
+          "score": 0.4199,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            430.98,
+            193.98,
+            442.01,
+            209.34
+          ],
+          "dilated_bbox": [
+            429,
+            191,
+            444,
+            212
+          ],
+          "score": 0.3528,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 55,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            336.17,
+            475.35,
+            368.5,
+            537.26
+          ],
+          "dilated_bbox": [
+            331,
+            466,
+            374,
+            546
+          ],
+          "score": 0.5593,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            430.17,
+            193.65,
+            439.83,
+            206.73
+          ],
+          "dilated_bbox": [
+            428,
+            191,
+            442,
+            209
+          ],
+          "score": 0.2973,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 56,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            332.96,
+            473.61,
+            359.35,
+            524.59
+          ],
+          "dilated_bbox": [
+            329,
+            466,
+            364,
+            532
+          ],
+          "score": 0.7121,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            428.02,
+            195.68,
+            438.11,
+            210.44
+          ],
+          "dilated_bbox": [
+            426,
+            193,
+            440,
+            213
+          ],
+          "score": 0.2847,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 57,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            326.68,
+            465.85,
+            354.67,
+            523.49
+          ],
+          "dilated_bbox": [
+            322,
+            457,
+            359,
+            532
+          ],
+          "score": 0.6376,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            442.93,
+            222.92,
+            453.6,
+            237.67
+          ],
+          "dilated_bbox": [
+            441,
+            220,
+            456,
+            240
+          ],
+          "score": 0.3025,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 58,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            323.03,
+            475.01,
+            350.71,
+            518.99
+          ],
+          "dilated_bbox": [
+            319,
+            468,
+            355,
+            526
+          ],
+          "score": 0.6485,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            442.98,
+            220.91,
+            454.15,
+            235.8
+          ],
+          "dilated_bbox": [
+            441,
+            218,
+            456,
+            238
+          ],
+          "score": 0.4561,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 59,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            317.29,
+            468.31,
+            346.3,
+            521.63
+          ],
+          "dilated_bbox": [
+            313,
+            460,
+            351,
+            530
+          ],
+          "score": 0.7131,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            443.05,
+            220.52,
+            454.37,
+            235.36
+          ],
+          "dilated_bbox": [
+            441,
+            218,
+            456,
+            238
+          ],
+          "score": 0.3983,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 60,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            315.0,
+            463.89,
+            343.51,
+            521.64
+          ],
+          "dilated_bbox": [
+            311,
+            455,
+            348,
+            530
+          ],
+          "score": 0.7285,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            417.43,
+            192.02,
+            429.68,
+            208.75
+          ],
+          "dilated_bbox": [
+            415,
+            189,
+            432,
+            212
+          ],
+          "score": 0.341,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            442.93,
+            220.51,
+            454.36,
+            235.76
+          ],
+          "dilated_bbox": [
+            441,
+            218,
+            456,
+            238
+          ],
+          "score": 0.3097,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            455.77,
+            407.72,
+            492.31,
+            455.11
+          ],
+          "dilated_bbox": [
+            450,
+            401,
+            498,
+            462
+          ],
+          "score": 0.2594,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 61,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            307.43,
+            463.51,
+            337.95,
+            520.43
+          ],
+          "dilated_bbox": [
+            303,
+            455,
+            343,
+            529
+          ],
+          "score": 0.727,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            444.02,
+            219.97,
+            454.58,
+            234.47
+          ],
+          "dilated_bbox": [
+            442,
+            217,
+            457,
+            237
+          ],
+          "score": 0.2824,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 62,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            307.97,
+            463.45,
+            336.85,
+            515.75
+          ],
+          "dilated_bbox": [
+            303,
+            456,
+            341,
+            524
+          ],
+          "score": 0.6677,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            450.99,
+            403.67,
+            486.48,
+            446.37
+          ],
+          "dilated_bbox": [
+            446,
+            397,
+            492,
+            453
+          ],
+          "score": 0.3322,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            291.03,
+            350.79,
+            303.9,
+            366.35
+          ],
+          "dilated_bbox": [
+            289,
+            348,
+            306,
+            369
+          ],
+          "score": 0.3162,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            316.01,
+            211.18,
+            326.46,
+            223.49
+          ],
+          "dilated_bbox": [
+            314,
+            209,
+            328,
+            226
+          ],
+          "score": 0.2529,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 63,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            300.44,
+            460.23,
+            330.96,
+            519.97
+          ],
+          "dilated_bbox": [
+            296,
+            451,
+            336,
+            529
+          ],
+          "score": 0.6939,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            451.51,
+            407.51,
+            472.82,
+            440.02
+          ],
+          "dilated_bbox": [
+            448,
+            402,
+            476,
+            445
+          ],
+          "score": 0.3078,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            291.14,
+            350.97,
+            303.93,
+            366.46
+          ],
+          "dilated_bbox": [
+            289,
+            348,
+            306,
+            369
+          ],
+          "score": 0.3016,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 64,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            303.57,
+            462.82,
+            330.72,
+            512.91
+          ],
+          "dilated_bbox": [
+            299,
+            455,
+            335,
+            520
+          ],
+          "score": 0.7059,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            455.39,
+            398.13,
+            484.56,
+            437.49
+          ],
+          "dilated_bbox": [
+            451,
+            392,
+            489,
+            444
+          ],
+          "score": 0.4524,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            291.13,
+            351.08,
+            303.75,
+            366.42
+          ],
+          "dilated_bbox": [
+            289,
+            348,
+            306,
+            369
+          ],
+          "score": 0.2622,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 65,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            302.03,
+            465.07,
+            327.52,
+            514.2
+          ],
+          "dilated_bbox": [
+            298,
+            458,
+            332,
+            522
+          ],
+          "score": 0.5802,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            291.2,
+            350.6,
+            304.02,
+            366.53
+          ],
+          "dilated_bbox": [
+            289,
+            348,
+            306,
+            369
+          ],
+          "score": 0.2929,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            444.21,
+            221.62,
+            454.97,
+            235.51
+          ],
+          "dilated_bbox": [
+            442,
+            219,
+            457,
+            238
+          ],
+          "score": 0.28,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            400.33,
+            250.69,
+            409.43,
+            261.72
+          ],
+          "dilated_bbox": [
+            399,
+            249,
+            411,
+            264
+          ],
+          "score": 0.2508,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 66,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            300.7,
+            463.04,
+            327.8,
+            513.17
+          ],
+          "dilated_bbox": [
+            296,
+            456,
+            332,
+            521
+          ],
+          "score": 0.6904,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            455.74,
+            384.36,
+            479.72,
+            422.3
+          ],
+          "dilated_bbox": [
+            452,
+            379,
+            484,
+            428
+          ],
+          "score": 0.4534,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            444.24,
+            222.34,
+            454.79,
+            236.67
+          ],
+          "dilated_bbox": [
+            442,
+            220,
+            457,
+            239
+          ],
+          "score": 0.3818,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            291.32,
+            351.27,
+            303.8,
+            366.2
+          ],
+          "dilated_bbox": [
+            289,
+            349,
+            306,
+            369
+          ],
+          "score": 0.2799,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 67,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            298.84,
+            462.54,
+            326.83,
+            517.37
+          ],
+          "dilated_bbox": [
+            294,
+            454,
+            331,
+            526
+          ],
+          "score": 0.6768,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            457.98,
+            374.42,
+            481.08,
+            418.1
+          ],
+          "dilated_bbox": [
+            454,
+            368,
+            485,
+            425
+          ],
+          "score": 0.4927,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            444.52,
+            223.03,
+            455.03,
+            237.29
+          ],
+          "dilated_bbox": [
+            443,
+            221,
+            457,
+            240
+          ],
+          "score": 0.3127,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            410.39,
+            197.34,
+            422.6,
+            214.45
+          ],
+          "dilated_bbox": [
+            408,
+            194,
+            425,
+            217
+          ],
+          "score": 0.3033,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 68,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            301.23,
+            466.98,
+            325.55,
+            512.94
+          ],
+          "dilated_bbox": [
+            297,
+            460,
+            329,
+            520
+          ],
+          "score": 0.6598,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            457.81,
+            369.11,
+            482.35,
+            419.56
+          ],
+          "dilated_bbox": [
+            454,
+            362,
+            486,
+            427
+          ],
+          "score": 0.3234,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            291.36,
+            351.25,
+            303.76,
+            366.15
+          ],
+          "dilated_bbox": [
+            289,
+            349,
+            306,
+            369
+          ],
+          "score": 0.2909,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 69,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            297.95,
+            466.89,
+            326.06,
+            519.5
+          ],
+          "dilated_bbox": [
+            294,
+            459,
+            330,
+            527
+          ],
+          "score": 0.6499,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            425.06,
+            254.75,
+            436.93,
+            268.88
+          ],
+          "dilated_bbox": [
+            423,
+            252,
+            439,
+            271
+          ],
+          "score": 0.3217,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            411.36,
+            197.27,
+            423.46,
+            214.75
+          ],
+          "dilated_bbox": [
+            409,
+            194,
+            426,
+            218
+          ],
+          "score": 0.3124,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 70,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            300.46,
+            468.03,
+            328.62,
+            521.78
+          ],
+          "dilated_bbox": [
+            296,
+            460,
+            333,
+            530
+          ],
+          "score": 0.7282,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            411.68,
+            197.68,
+            422.49,
+            212.87
+          ],
+          "dilated_bbox": [
+            410,
+            195,
+            425,
+            215
+          ],
+          "score": 0.2938,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 71,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            299.36,
+            468.13,
+            327.45,
+            523.09
+          ],
+          "dilated_bbox": [
+            295,
+            460,
+            332,
+            531
+          ],
+          "score": 0.6821,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            411.49,
+            197.81,
+            422.55,
+            213.49
+          ],
+          "dilated_bbox": [
+            409,
+            195,
+            425,
+            216
+          ],
+          "score": 0.3168,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 72,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            299.64,
+            469.62,
+            328.62,
+            524.33
+          ],
+          "dilated_bbox": [
+            295,
+            461,
+            333,
+            532
+          ],
+          "score": 0.7027,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            445.78,
+            367.85,
+            473.75,
+            414.13
+          ],
+          "dilated_bbox": [
+            441,
+            361,
+            478,
+            421
+          ],
+          "score": 0.3184,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            411.34,
+            198.49,
+            423.04,
+            214.37
+          ],
+          "dilated_bbox": [
+            409,
+            196,
+            425,
+            217
+          ],
+          "score": 0.2747,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 73,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            303.19,
+            472.58,
+            329.81,
+            523.96
+          ],
+          "dilated_bbox": [
+            299,
+            465,
+            334,
+            532
+          ],
+          "score": 0.7091,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            410.85,
+            197.47,
+            422.04,
+            213.35
+          ],
+          "dilated_bbox": [
+            409,
+            195,
+            424,
+            216
+          ],
+          "score": 0.3053,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 74,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            301.35,
+            467.96,
+            330.95,
+            527.58
+          ],
+          "dilated_bbox": [
+            297,
+            459,
+            336,
+            536
+          ],
+          "score": 0.6968,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            410.69,
+            197.49,
+            422.47,
+            213.43
+          ],
+          "dilated_bbox": [
+            409,
+            195,
+            425,
+            216
+          ],
+          "score": 0.3493,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 75,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            303.8,
+            470.52,
+            330.61,
+            526.37
+          ],
+          "dilated_bbox": [
+            300,
+            462,
+            335,
+            535
+          ],
+          "score": 0.6646,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 76,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            304.87,
+            470.28,
+            332.11,
+            524.74
+          ],
+          "dilated_bbox": [
+            301,
+            462,
+            336,
+            533
+          ],
+          "score": 0.7052,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 77,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            305.0,
+            473.47,
+            330.35,
+            522.63
+          ],
+          "dilated_bbox": [
+            301,
+            466,
+            334,
+            530
+          ],
+          "score": 0.6492,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 78,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            303.34,
+            471.09,
+            325.99,
+            521.37
+          ],
+          "dilated_bbox": [
+            300,
+            464,
+            330,
+            529
+          ],
+          "score": 0.5315,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 79,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            300.86,
+            467.47,
+            322.49,
+            512.95
+          ],
+          "dilated_bbox": [
+            297,
+            461,
+            326,
+            520
+          ],
+          "score": 0.5982,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 80,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            291.35,
+            454.6,
+            318.81,
+            501.26
+          ],
+          "dilated_bbox": [
+            287,
+            448,
+            323,
+            508
+          ],
+          "score": 0.4356,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 81,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 82,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 83,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 84,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            405.9,
+            378.35,
+            428.08,
+            409.24
+          ],
+          "dilated_bbox": [
+            402,
+            374,
+            432,
+            414
+          ],
+          "score": 0.4025,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 85,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            402.41,
+            373.47,
+            422.27,
+            396.99
+          ],
+          "dilated_bbox": [
+            399,
+            370,
+            426,
+            401
+          ],
+          "score": 0.4014,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 86,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            297.79,
+            428.69,
+            317.9,
+            456.53
+          ],
+          "dilated_bbox": [
+            294,
+            424,
+            321,
+            461
+          ],
+          "score": 0.2911,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 87,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            399.24,
+            366.52,
+            421.42,
+            397.39
+          ],
+          "dilated_bbox": [
+            396,
+            362,
+            425,
+            402
+          ],
+          "score": 0.36,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 88,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            400.92,
+            365.27,
+            421.77,
+            391.83
+          ],
+          "dilated_bbox": [
+            398,
+            361,
+            425,
+            396
+          ],
+          "score": 0.5377,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 89,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            402.59,
+            368.66,
+            423.13,
+            397.12
+          ],
+          "dilated_bbox": [
+            399,
+            364,
+            427,
+            402
+          ],
+          "score": 0.3944,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 90,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            404.6,
+            362.87,
+            426.2,
+            394.81
+          ],
+          "dilated_bbox": [
+            401,
+            358,
+            430,
+            400
+          ],
+          "score": 0.3401,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 91,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            403.83,
+            358.46,
+            428.53,
+            397.85
+          ],
+          "dilated_bbox": [
+            400,
+            352,
+            432,
+            404
+          ],
+          "score": 0.7126,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 92,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            319.56,
+            456.12,
+            344.79,
+            482.33
+          ],
+          "dilated_bbox": [
+            316,
+            452,
+            349,
+            486
+          ],
+          "score": 0.3976,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            411.74,
+            368.56,
+            429.52,
+            391.64
+          ],
+          "dilated_bbox": [
+            409,
+            365,
+            433,
+            395
+          ],
+          "score": 0.3374,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            412.33,
+            383.31,
+            429.11,
+            404.25
+          ],
+          "dilated_bbox": [
+            409,
+            380,
+            432,
+            408
+          ],
+          "score": 0.3368,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 93,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            413.25,
+            371.68,
+            432.07,
+            398.87
+          ],
+          "dilated_bbox": [
+            410,
+            367,
+            435,
+            403
+          ],
+          "score": 0.3761,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            556.46,
+            277.37,
+            569.33,
+            293.28
+          ],
+          "dilated_bbox": [
+            554,
+            275,
+            572,
+            296
+          ],
+          "score": 0.3067,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 94,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            412.48,
+            359.1,
+            435.24,
+            399.14
+          ],
+          "dilated_bbox": [
+            409,
+            353,
+            439,
+            405
+          ],
+          "score": 0.5826,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            555.44,
+            273.19,
+            569.52,
+            291.96
+          ],
+          "dilated_bbox": [
+            553,
+            270,
+            572,
+            295
+          ],
+          "score": 0.2851,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 95,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            412.99,
+            360.97,
+            436.14,
+            398.93
+          ],
+          "dilated_bbox": [
+            409,
+            355,
+            440,
+            405
+          ],
+          "score": 0.4898,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 96,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            413.67,
+            356.7,
+            436.7,
+            397.94
+          ],
+          "dilated_bbox": [
+            410,
+            350,
+            440,
+            404
+          ],
+          "score": 0.4076,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 97,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            414.31,
+            360.54,
+            435.44,
+            396.18
+          ],
+          "dilated_bbox": [
+            411,
+            355,
+            439,
+            402
+          ],
+          "score": 0.2573,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 98,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            414.14,
+            358.79,
+            435.67,
+            397.84
+          ],
+          "dilated_bbox": [
+            411,
+            353,
+            439,
+            404
+          ],
+          "score": 0.4522,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 99,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            411.0,
+            356.39,
+            434.56,
+            397.97
+          ],
+          "dilated_bbox": [
+            407,
+            350,
+            438,
+            404
+          ],
+          "score": 0.5643,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 100,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            411.45,
+            356.79,
+            431.79,
+            392.01
+          ],
+          "dilated_bbox": [
+            408,
+            351,
+            435,
+            397
+          ],
+          "score": 0.2893,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 101,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            406.72,
+            353.36,
+            431.94,
+            394.88
+          ],
+          "dilated_bbox": [
+            403,
+            347,
+            436,
+            401
+          ],
+          "score": 0.5839,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            558.41,
+            248.14,
+            570.64,
+            263.45
+          ],
+          "dilated_bbox": [
+            556,
+            245,
+            573,
+            266
+          ],
+          "score": 0.2679,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 102,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            558.74,
+            248.96,
+            571.14,
+            263.76
+          ],
+          "dilated_bbox": [
+            557,
+            246,
+            573,
+            266
+          ],
+          "score": 0.3149,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            408.02,
+            355.58,
+            429.25,
+            389.89
+          ],
+          "dilated_bbox": [
+            405,
+            350,
+            433,
+            395
+          ],
+          "score": 0.288,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            599.2,
+            306.56,
+            612.08,
+            322.87
+          ],
+          "dilated_bbox": [
+            597,
+            304,
+            614,
+            326
+          ],
+          "score": 0.2649,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 103,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            561.4,
+            247.04,
+            573.72,
+            262.64
+          ],
+          "dilated_bbox": [
+            559,
+            244,
+            576,
+            265
+          ],
+          "score": 0.4003,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            406.19,
+            361.37,
+            425.71,
+            391.2
+          ],
+          "dilated_bbox": [
+            403,
+            357,
+            429,
+            396
+          ],
+          "score": 0.2509,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 104,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            401.75,
+            349.79,
+            424.86,
+            388.84
+          ],
+          "dilated_bbox": [
+            398,
+            344,
+            429,
+            395
+          ],
+          "score": 0.5393,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            562.88,
+            247.0,
+            574.73,
+            262.61
+          ],
+          "dilated_bbox": [
+            561,
+            244,
+            577,
+            265
+          ],
+          "score": 0.433,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            361.63,
+            441.02,
+            377.81,
+            458.57
+          ],
+          "dilated_bbox": [
+            359,
+            438,
+            381,
+            462
+          ],
+          "score": 0.2803,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 105,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            398.75,
+            355.97,
+            419.48,
+            387.85
+          ],
+          "dilated_bbox": [
+            395,
+            351,
+            423,
+            393
+          ],
+          "score": 0.2638,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            346.5,
+            370.78,
+            357.48,
+            384.5
+          ],
+          "dilated_bbox": [
+            344,
+            368,
+            360,
+            387
+          ],
+          "score": 0.2518,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 106,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            394.26,
+            350.14,
+            417.93,
+            390.29
+          ],
+          "dilated_bbox": [
+            390,
+            344,
+            422,
+            396
+          ],
+          "score": 0.6045,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 107,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            397.35,
+            372.68,
+            414.55,
+            396.26
+          ],
+          "dilated_bbox": [
+            394,
+            369,
+            417,
+            400
+          ],
+          "score": 0.5473,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 108,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            391.94,
+            356.63,
+            415.41,
+            394.06
+          ],
+          "dilated_bbox": [
+            388,
+            351,
+            419,
+            400
+          ],
+          "score": 0.3469,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 109,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 110,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 111,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 112,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 113,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 114,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            430.93,
+            219.6,
+            442.4,
+            234.68
+          ],
+          "dilated_bbox": [
+            429,
+            217,
+            445,
+            237
+          ],
+          "score": 0.2948,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 115,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 116,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 117,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 118,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            331.66,
+            235.47,
+            341.05,
+            246.52
+          ],
+          "dilated_bbox": [
+            330,
+            233,
+            343,
+            249
+          ],
+          "score": 0.2755,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 119,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 120,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            331.2,
+            235.6,
+            340.57,
+            246.31
+          ],
+          "dilated_bbox": [
+            329,
+            234,
+            342,
+            248
+          ],
+          "score": 0.2835,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            314.81,
+            210.17,
+            327.1,
+            224.61
+          ],
+          "dilated_bbox": [
+            313,
+            208,
+            329,
+            227
+          ],
+          "score": 0.2568,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 121,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            315.59,
+            210.52,
+            326.77,
+            223.59
+          ],
+          "dilated_bbox": [
+            314,
+            208,
+            329,
+            226
+          ],
+          "score": 0.2964,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            428.13,
+            239.16,
+            439.4,
+            254.11
+          ],
+          "dilated_bbox": [
+            426,
+            237,
+            441,
+            257
+          ],
+          "score": 0.2605,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 122,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 123,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            427.89,
+            237.02,
+            441.17,
+            253.91
+          ],
+          "dilated_bbox": [
+            426,
+            234,
+            444,
+            257
+          ],
+          "score": 0.3042,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 124,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 125,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            429.37,
+            221.17,
+            439.41,
+            233.84
+          ],
+          "dilated_bbox": [
+            427,
+            219,
+            441,
+            236
+          ],
+          "score": 0.3235,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 126,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            429.61,
+            220.43,
+            440.58,
+            233.86
+          ],
+          "dilated_bbox": [
+            428,
+            218,
+            443,
+            236
+          ],
+          "score": 0.3718,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            604.62,
+            262.99,
+            618.87,
+            279.44
+          ],
+          "dilated_bbox": [
+            602,
+            260,
+            621,
+            282
+          ],
+          "score": 0.2702,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 127,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            381.38,
+            430.35,
+            403.36,
+            460.97
+          ],
+          "dilated_bbox": [
+            378,
+            426,
+            407,
+            466
+          ],
+          "score": 0.2692,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            430.2,
+            221.64,
+            442.33,
+            236.98
+          ],
+          "dilated_bbox": [
+            428,
+            219,
+            445,
+            240
+          ],
+          "score": 0.2595,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 128,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 129,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 130,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 131,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            439.73,
+            229.77,
+            452.77,
+            247.99
+          ],
+          "dilated_bbox": [
+            437,
+            227,
+            455,
+            251
+          ],
+          "score": 0.3086,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 132,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 133,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 134,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            448.95,
+            237.38,
+            462.92,
+            255.14
+          ],
+          "dilated_bbox": [
+            446,
+            234,
+            465,
+            258
+          ],
+          "score": 0.2549,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 135,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 136,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 137,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            630.65,
+            252.42,
+            640.18,
+            265.62
+          ],
+          "dilated_bbox": [
+            629,
+            250,
+            642,
+            268
+          ],
+          "score": 0.3427,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            451.95,
+            226.41,
+            464.34,
+            243.03
+          ],
+          "dilated_bbox": [
+            450,
+            224,
+            467,
+            246
+          ],
+          "score": 0.2557,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 138,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            630.71,
+            252.57,
+            640.17,
+            265.61
+          ],
+          "dilated_bbox": [
+            629,
+            250,
+            642,
+            268
+          ],
+          "score": 0.395,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            453.83,
+            224.59,
+            463.57,
+            237.19
+          ],
+          "dilated_bbox": [
+            452,
+            222,
+            465,
+            239
+          ],
+          "score": 0.2825,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 139,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            377.07,
+            421.11,
+            402.45,
+            457.6
+          ],
+          "dilated_bbox": [
+            373,
+            416,
+            407,
+            463
+          ],
+          "score": 0.5326,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            630.62,
+            253.02,
+            639.93,
+            265.42
+          ],
+          "dilated_bbox": [
+            629,
+            251,
+            642,
+            268
+          ],
+          "score": 0.3586,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            454.34,
+            234.22,
+            466.84,
+            250.28
+          ],
+          "dilated_bbox": [
+            452,
+            231,
+            469,
+            253
+          ],
+          "score": 0.3011,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 140,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            377.4,
+            418.46,
+            400.25,
+            449.91
+          ],
+          "dilated_bbox": [
+            374,
+            414,
+            404,
+            455
+          ],
+          "score": 0.4876,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            453.75,
+            234.68,
+            465.7,
+            251.02
+          ],
+          "dilated_bbox": [
+            452,
+            232,
+            468,
+            254
+          ],
+          "score": 0.4337,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            630.03,
+            252.86,
+            639.51,
+            265.59
+          ],
+          "dilated_bbox": [
+            628,
+            251,
+            641,
+            268
+          ],
+          "score": 0.332,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            454.8,
+            224.29,
+            464.93,
+            238.31
+          ],
+          "dilated_bbox": [
+            453,
+            222,
+            467,
+            241
+          ],
+          "score": 0.2681,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 141,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            630.44,
+            253.41,
+            639.33,
+            265.3
+          ],
+          "dilated_bbox": [
+            629,
+            251,
+            641,
+            267
+          ],
+          "score": 0.3038,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 142,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            629.97,
+            252.81,
+            639.52,
+            265.81
+          ],
+          "dilated_bbox": [
+            628,
+            250,
+            641,
+            268
+          ],
+          "score": 0.2582,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 143,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            453.92,
+            252.17,
+            464.32,
+            264.64
+          ],
+          "dilated_bbox": [
+            452,
+            250,
+            466,
+            267
+          ],
+          "score": 0.2518,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 144,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            372.66,
+            458.36,
+            385.52,
+            477.66
+          ],
+          "dilated_bbox": [
+            370,
+            455,
+            388,
+            481
+          ],
+          "score": 0.286,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            451.71,
+            250.91,
+            463.09,
+            264.46
+          ],
+          "dilated_bbox": [
+            450,
+            249,
+            465,
+            267
+          ],
+          "score": 0.2536,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 145,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 146,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            366.69,
+            457.7,
+            381.57,
+            480.71
+          ],
+          "dilated_bbox": [
+            364,
+            454,
+            384,
+            484
+          ],
+          "score": 0.262,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            446.8,
+            239.39,
+            461.7,
+            258.72
+          ],
+          "dilated_bbox": [
+            444,
+            236,
+            464,
+            262
+          ],
+          "score": 0.2505,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 147,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            447.34,
+            236.84,
+            460.44,
+            255.62
+          ],
+          "dilated_bbox": [
+            445,
+            234,
+            463,
+            259
+          ],
+          "score": 0.2583,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 148,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 149,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 150,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            440.64,
+            225.02,
+            452.5,
+            238.84
+          ],
+          "dilated_bbox": [
+            438,
+            223,
+            455,
+            241
+          ],
+          "score": 0.3092,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            359.79,
+            440.9,
+            378.16,
+            463.71
+          ],
+          "dilated_bbox": [
+            357,
+            437,
+            381,
+            467
+          ],
+          "score": 0.3038,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            378.54,
+            476.93,
+            397.88,
+            511.18
+          ],
+          "dilated_bbox": [
+            375,
+            472,
+            401,
+            516
+          ],
+          "score": 0.2826,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            441.53,
+            239.46,
+            454.76,
+            256.0
+          ],
+          "dilated_bbox": [
+            439,
+            237,
+            457,
+            259
+          ],
+          "score": 0.2719,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 151,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            439.9,
+            224.49,
+            451.0,
+            238.43
+          ],
+          "dilated_bbox": [
+            438,
+            222,
+            453,
+            241
+          ],
+          "score": 0.2802,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 152,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            438.16,
+            224.54,
+            450.18,
+            240.67
+          ],
+          "dilated_bbox": [
+            436,
+            222,
+            452,
+            243
+          ],
+          "score": 0.2513,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 153,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            357.64,
+            444.39,
+            372.48,
+            464.27
+          ],
+          "dilated_bbox": [
+            355,
+            441,
+            375,
+            468
+          ],
+          "score": 0.3772,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            373.9,
+            453.27,
+            389.29,
+            470.41
+          ],
+          "dilated_bbox": [
+            371,
+            450,
+            392,
+            473
+          ],
+          "score": 0.3574,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            440.53,
+            328.19,
+            450.68,
+            340.51
+          ],
+          "dilated_bbox": [
+            439,
+            326,
+            453,
+            343
+          ],
+          "score": 0.3108,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            345.41,
+            369.05,
+            358.31,
+            385.19
+          ],
+          "dilated_bbox": [
+            343,
+            366,
+            361,
+            388
+          ],
+          "score": 0.2607,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 154,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            370.97,
+            435.25,
+            390.33,
+            466.4
+          ],
+          "dilated_bbox": [
+            368,
+            430,
+            394,
+            471
+          ],
+          "score": 0.4211,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            345.31,
+            369.22,
+            357.87,
+            385.47
+          ],
+          "dilated_bbox": [
+            343,
+            366,
+            360,
+            388
+          ],
+          "score": 0.3202,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            439.27,
+            326.6,
+            450.56,
+            339.84
+          ],
+          "dilated_bbox": [
+            437,
+            324,
+            453,
+            342
+          ],
+          "score": 0.2759,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            353.13,
+            434.01,
+            374.79,
+            461.9
+          ],
+          "dilated_bbox": [
+            350,
+            430,
+            378,
+            466
+          ],
+          "score": 0.2666,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 155,
+      "box_count": 6,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            365.65,
+            432.56,
+            389.6,
+            467.07
+          ],
+          "dilated_bbox": [
+            362,
+            427,
+            393,
+            472
+          ],
+          "score": 0.4484,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            344.58,
+            412.05,
+            374.8,
+            450.88
+          ],
+          "dilated_bbox": [
+            340,
+            406,
+            380,
+            457
+          ],
+          "score": 0.3468,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            433.37,
+            226.87,
+            450.12,
+            251.25
+          ],
+          "dilated_bbox": [
+            431,
+            223,
+            453,
+            255
+          ],
+          "score": 0.311,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            344.85,
+            368.53,
+            358.8,
+            385.79
+          ],
+          "dilated_bbox": [
+            342,
+            366,
+            361,
+            389
+          ],
+          "score": 0.2577,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            355.85,
+            424.24,
+            383.85,
+            459.27
+          ],
+          "dilated_bbox": [
+            351,
+            419,
+            388,
+            465
+          ],
+          "score": 0.2546,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            439.48,
+            326.31,
+            450.94,
+            340.06
+          ],
+          "dilated_bbox": [
+            437,
+            324,
+            453,
+            342
+          ],
+          "score": 0.2541,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 156,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            349.87,
+            421.06,
+            374.58,
+            459.74
+          ],
+          "dilated_bbox": [
+            346,
+            415,
+            379,
+            466
+          ],
+          "score": 0.605,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            363.49,
+            422.31,
+            387.1,
+            462.2
+          ],
+          "dilated_bbox": [
+            360,
+            416,
+            391,
+            468
+          ],
+          "score": 0.5773,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            432.57,
+            227.82,
+            449.29,
+            251.57
+          ],
+          "dilated_bbox": [
+            430,
+            224,
+            452,
+            255
+          ],
+          "score": 0.3272,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 157,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            358.91,
+            416.5,
+            385.37,
+            460.83
+          ],
+          "dilated_bbox": [
+            355,
+            410,
+            390,
+            468
+          ],
+          "score": 0.6823,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            433.73,
+            227.8,
+            449.71,
+            251.45
+          ],
+          "dilated_bbox": [
+            431,
+            224,
+            452,
+            255
+          ],
+          "score": 0.3811,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            560.71,
+            246.51,
+            575.83,
+            265.48
+          ],
+          "dilated_bbox": [
+            558,
+            243,
+            578,
+            269
+          ],
+          "score": 0.2549,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 158,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            365.9,
+            421.94,
+            385.23,
+            457.97
+          ],
+          "dilated_bbox": [
+            363,
+            416,
+            388,
+            464
+          ],
+          "score": 0.4952,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            345.03,
+            418.9,
+            368.25,
+            459.51
+          ],
+          "dilated_bbox": [
+            341,
+            413,
+            372,
+            466
+          ],
+          "score": 0.4597,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            433.47,
+            227.99,
+            449.15,
+            251.87
+          ],
+          "dilated_bbox": [
+            431,
+            224,
+            452,
+            256
+          ],
+          "score": 0.4075,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            355.25,
+            409.84,
+            379.52,
+            452.91
+          ],
+          "dilated_bbox": [
+            351,
+            403,
+            383,
+            459
+          ],
+          "score": 0.2976,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 159,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            341.88,
+            411.13,
+            367.69,
+            463.9
+          ],
+          "dilated_bbox": [
+            338,
+            403,
+            372,
+            472
+          ],
+          "score": 0.6873,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            367.7,
+            426.83,
+            384.85,
+            457.27
+          ],
+          "dilated_bbox": [
+            365,
+            422,
+            388,
+            462
+          ],
+          "score": 0.4811,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            433.18,
+            227.68,
+            449.13,
+            251.8
+          ],
+          "dilated_bbox": [
+            430,
+            224,
+            452,
+            256
+          ],
+          "score": 0.4665,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            622.71,
+            252.05,
+            637.52,
+            269.07
+          ],
+          "dilated_bbox": [
+            620,
+            249,
+            640,
+            272
+          ],
+          "score": 0.2738,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 160,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            343.37,
+            413.75,
+            367.05,
+            459.83
+          ],
+          "dilated_bbox": [
+            340,
+            407,
+            371,
+            467
+          ],
+          "score": 0.6518,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            364.04,
+            415.9,
+            385.05,
+            455.68
+          ],
+          "dilated_bbox": [
+            361,
+            410,
+            388,
+            462
+          ],
+          "score": 0.637,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 161,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            363.79,
+            416.04,
+            384.47,
+            453.64
+          ],
+          "dilated_bbox": [
+            360,
+            410,
+            388,
+            459
+          ],
+          "score": 0.7016,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            344.6,
+            416.59,
+            368.35,
+            460.62
+          ],
+          "dilated_bbox": [
+            341,
+            410,
+            372,
+            467
+          ],
+          "score": 0.6473,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            434.81,
+            228.05,
+            449.52,
+            250.88
+          ],
+          "dilated_bbox": [
+            432,
+            224,
+            452,
+            255
+          ],
+          "score": 0.5178,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            416.35,
+            249.85,
+            429.63,
+            267.92
+          ],
+          "dilated_bbox": [
+            414,
+            247,
+            432,
+            271
+          ],
+          "score": 0.2778,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 162,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            363.99,
+            419.36,
+            388.26,
+            464.12
+          ],
+          "dilated_bbox": [
+            360,
+            413,
+            392,
+            471
+          ],
+          "score": 0.6744,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            347.6,
+            419.8,
+            371.69,
+            465.91
+          ],
+          "dilated_bbox": [
+            344,
+            413,
+            376,
+            473
+          ],
+          "score": 0.5628,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            438.71,
+            229.6,
+            452.44,
+            251.53
+          ],
+          "dilated_bbox": [
+            436,
+            226,
+            455,
+            255
+          ],
+          "score": 0.395,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 163,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            346.69,
+            421.37,
+            372.27,
+            473.18
+          ],
+          "dilated_bbox": [
+            343,
+            414,
+            376,
+            481
+          ],
+          "score": 0.6311,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            363.89,
+            422.3,
+            386.3,
+            463.59
+          ],
+          "dilated_bbox": [
+            360,
+            416,
+            390,
+            470
+          ],
+          "score": 0.3756,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 164,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            351.01,
+            426.71,
+            376.73,
+            475.2
+          ],
+          "dilated_bbox": [
+            347,
+            419,
+            381,
+            482
+          ],
+          "score": 0.5201,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            441.2,
+            237.84,
+            454.22,
+            254.99
+          ],
+          "dilated_bbox": [
+            439,
+            235,
+            457,
+            258
+          ],
+          "score": 0.3468,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            362.35,
+            428.01,
+            385.94,
+            469.7
+          ],
+          "dilated_bbox": [
+            359,
+            422,
+            390,
+            476
+          ],
+          "score": 0.3349,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            415.59,
+            250.27,
+            430.18,
+            271.18
+          ],
+          "dilated_bbox": [
+            413,
+            247,
+            433,
+            275
+          ],
+          "score": 0.2742,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 165,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            354.34,
+            424.61,
+            378.6,
+            473.23
+          ],
+          "dilated_bbox": [
+            350,
+            417,
+            382,
+            481
+          ],
+          "score": 0.4661,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            440.98,
+            228.79,
+            457.39,
+            252.84
+          ],
+          "dilated_bbox": [
+            438,
+            225,
+            460,
+            257
+          ],
+          "score": 0.3221,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 166,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            357.93,
+            431.04,
+            386.24,
+            484.18
+          ],
+          "dilated_bbox": [
+            353,
+            423,
+            391,
+            492
+          ],
+          "score": 0.63,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 167,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            361.27,
+            431.34,
+            384.37,
+            473.34
+          ],
+          "dilated_bbox": [
+            358,
+            425,
+            388,
+            480
+          ],
+          "score": 0.3342,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 168,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            444.25,
+            231.1,
+            461.62,
+            256.07
+          ],
+          "dilated_bbox": [
+            441,
+            227,
+            465,
+            260
+          ],
+          "score": 0.3749,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            364.85,
+            438.74,
+            386.51,
+            473.6
+          ],
+          "dilated_bbox": [
+            361,
+            433,
+            390,
+            479
+          ],
+          "score": 0.313,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 169,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            359.99,
+            436.93,
+            390.0,
+            494.46
+          ],
+          "dilated_bbox": [
+            355,
+            428,
+            395,
+            503
+          ],
+          "score": 0.724,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 170,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            357.29,
+            438.88,
+            389.69,
+            496.0
+          ],
+          "dilated_bbox": [
+            352,
+            430,
+            395,
+            504
+          ],
+          "score": 0.5769,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 171,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            365.5,
+            443.07,
+            393.81,
+            499.71
+          ],
+          "dilated_bbox": [
+            361,
+            435,
+            398,
+            508
+          ],
+          "score": 0.6846,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 172,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            366.79,
+            446.74,
+            393.56,
+            499.24
+          ],
+          "dilated_bbox": [
+            363,
+            439,
+            398,
+            507
+          ],
+          "score": 0.6804,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            452.06,
+            244.01,
+            464.19,
+            260.39
+          ],
+          "dilated_bbox": [
+            450,
+            241,
+            466,
+            263
+          ],
+          "score": 0.2667,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 173,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            370.99,
+            445.97,
+            402.71,
+            499.81
+          ],
+          "dilated_bbox": [
+            366,
+            438,
+            408,
+            508
+          ],
+          "score": 0.5885,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            449.91,
+            240.76,
+            463.52,
+            260.1
+          ],
+          "dilated_bbox": [
+            448,
+            238,
+            466,
+            263
+          ],
+          "score": 0.2991,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            417.8,
+            250.59,
+            430.42,
+            267.03
+          ],
+          "dilated_bbox": [
+            416,
+            248,
+            433,
+            270
+          ],
+          "score": 0.2877,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 174,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            373.48,
+            451.28,
+            400.9,
+            500.13
+          ],
+          "dilated_bbox": [
+            369,
+            444,
+            405,
+            507
+          ],
+          "score": 0.5698,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 175,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            379.61,
+            451.2,
+            409.19,
+            501.55
+          ],
+          "dilated_bbox": [
+            375,
+            444,
+            414,
+            509
+          ],
+          "score": 0.3588,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            454.07,
+            227.96,
+            463.09,
+            239.8
+          ],
+          "dilated_bbox": [
+            452,
+            226,
+            465,
+            242
+          ],
+          "score": 0.279,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            451.58,
+            246.0,
+            463.15,
+            260.53
+          ],
+          "dilated_bbox": [
+            449,
+            243,
+            465,
+            263
+          ],
+          "score": 0.2568,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 176,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            380.32,
+            451.02,
+            410.66,
+            504.27
+          ],
+          "dilated_bbox": [
+            376,
+            443,
+            415,
+            512
+          ],
+          "score": 0.5531,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            416.27,
+            265.34,
+            429.5,
+            282.09
+          ],
+          "dilated_bbox": [
+            414,
+            262,
+            432,
+            285
+          ],
+          "score": 0.34,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            454.35,
+            227.53,
+            462.79,
+            238.64
+          ],
+          "dilated_bbox": [
+            453,
+            225,
+            464,
+            241
+          ],
+          "score": 0.2666,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 177,
+      "box_count": 5,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            388.5,
+            452.92,
+            418.7,
+            509.11
+          ],
+          "dilated_bbox": [
+            384,
+            445,
+            423,
+            517
+          ],
+          "score": 0.709,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            454.04,
+            228.17,
+            463.39,
+            242.04
+          ],
+          "dilated_bbox": [
+            452,
+            226,
+            465,
+            244
+          ],
+          "score": 0.2944,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            450.3,
+            241.15,
+            464.22,
+            260.79
+          ],
+          "dilated_bbox": [
+            448,
+            238,
+            467,
+            264
+          ],
+          "score": 0.2911,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            417.35,
+            250.26,
+            429.76,
+            267.5
+          ],
+          "dilated_bbox": [
+            415,
+            247,
+            432,
+            270
+          ],
+          "score": 0.2764,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            417.48,
+            263.01,
+            430.8,
+            281.58
+          ],
+          "dilated_bbox": [
+            415,
+            260,
+            433,
+            285
+          ],
+          "score": 0.2676,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 178,
+      "box_count": 5,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            395.88,
+            450.7,
+            425.55,
+            504.98
+          ],
+          "dilated_bbox": [
+            391,
+            443,
+            430,
+            513
+          ],
+          "score": 0.5791,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            449.62,
+            238.82,
+            465.27,
+            260.63
+          ],
+          "dilated_bbox": [
+            447,
+            235,
+            468,
+            264
+          ],
+          "score": 0.355,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            417.17,
+            263.69,
+            430.5,
+            282.5
+          ],
+          "dilated_bbox": [
+            415,
+            261,
+            433,
+            286
+          ],
+          "score": 0.2872,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            417.31,
+            250.34,
+            429.68,
+            267.22
+          ],
+          "dilated_bbox": [
+            415,
+            247,
+            432,
+            270
+          ],
+          "score": 0.2855,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            452.98,
+            228.66,
+            464.06,
+            245.22
+          ],
+          "dilated_bbox": [
+            451,
+            226,
+            466,
+            248
+          ],
+          "score": 0.2506,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 179,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            397.84,
+            452.11,
+            424.8,
+            499.57
+          ],
+          "dilated_bbox": [
+            394,
+            445,
+            429,
+            507
+          ],
+          "score": 0.5641,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            449.02,
+            238.17,
+            465.29,
+            260.68
+          ],
+          "dilated_bbox": [
+            446,
+            235,
+            468,
+            264
+          ],
+          "score": 0.4291,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            629.12,
+            263.22,
+            642.45,
+            281.27
+          ],
+          "dilated_bbox": [
+            627,
+            260,
+            645,
+            284
+          ],
+          "score": 0.3007,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            417.09,
+            250.4,
+            431.3,
+            271.89
+          ],
+          "dilated_bbox": [
+            415,
+            247,
+            434,
+            275
+          ],
+          "score": 0.2932,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 180,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            403.11,
+            446.87,
+            432.72,
+            494.94
+          ],
+          "dilated_bbox": [
+            398,
+            440,
+            437,
+            502
+          ],
+          "score": 0.7127,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            416.08,
+            251.32,
+            432.21,
+            274.19
+          ],
+          "dilated_bbox": [
+            413,
+            248,
+            435,
+            278
+          ],
+          "score": 0.4536,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            446.75,
+            235.49,
+            465.76,
+            260.82
+          ],
+          "dilated_bbox": [
+            444,
+            231,
+            469,
+            265
+          ],
+          "score": 0.4427,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            629.53,
+            262.9,
+            643.09,
+            282.02
+          ],
+          "dilated_bbox": [
+            627,
+            260,
+            645,
+            285
+          ],
+          "score": 0.2632,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 181,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            409.57,
+            441.45,
+            441.34,
+            496.49
+          ],
+          "dilated_bbox": [
+            405,
+            433,
+            446,
+            505
+          ],
+          "score": 0.7402,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            416.18,
+            251.3,
+            432.18,
+            274.21
+          ],
+          "dilated_bbox": [
+            413,
+            248,
+            435,
+            278
+          ],
+          "score": 0.3959,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            445.31,
+            237.76,
+            463.91,
+            261.11
+          ],
+          "dilated_bbox": [
+            442,
+            234,
+            467,
+            265
+          ],
+          "score": 0.334,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 182,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            412.08,
+            442.12,
+            447.79,
+            501.44
+          ],
+          "dilated_bbox": [
+            407,
+            433,
+            453,
+            510
+          ],
+          "score": 0.7522,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            749.65,
+            460.79,
+            790.48,
+            542.38
+          ],
+          "dilated_bbox": [
+            743,
+            449,
+            797,
+            554
+          ],
+          "score": 0.3513,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            445.59,
+            238.25,
+            466.41,
+            260.01
+          ],
+          "dilated_bbox": [
+            442,
+            235,
+            470,
+            264
+          ],
+          "score": 0.3017,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            416.33,
+            253.69,
+            431.94,
+            275.71
+          ],
+          "dilated_bbox": [
+            414,
+            250,
+            435,
+            279
+          ],
+          "score": 0.2591,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 183,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            415.92,
+            438.35,
+            454.11,
+            504.15
+          ],
+          "dilated_bbox": [
+            410,
+            429,
+            460,
+            514
+          ],
+          "score": 0.7948,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            748.12,
+            459.6,
+            790.75,
+            542.41
+          ],
+          "dilated_bbox": [
+            742,
+            448,
+            797,
+            555
+          ],
+          "score": 0.4394,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            444.42,
+            233.96,
+            464.28,
+            259.86
+          ],
+          "dilated_bbox": [
+            441,
+            230,
+            468,
+            264
+          ],
+          "score": 0.3155,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            416.54,
+            252.5,
+            432.26,
+            275.16
+          ],
+          "dilated_bbox": [
+            414,
+            249,
+            435,
+            279
+          ],
+          "score": 0.2846,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 184,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            416.92,
+            439.32,
+            453.79,
+            505.22
+          ],
+          "dilated_bbox": [
+            411,
+            430,
+            459,
+            515
+          ],
+          "score": 0.8182,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            749.43,
+            459.86,
+            790.6,
+            543.08
+          ],
+          "dilated_bbox": [
+            743,
+            448,
+            797,
+            555
+          ],
+          "score": 0.4561,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            446.23,
+            235.21,
+            465.23,
+            257.83
+          ],
+          "dilated_bbox": [
+            443,
+            232,
+            468,
+            261
+          ],
+          "score": 0.2945,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 185,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            418.4,
+            443.17,
+            452.41,
+            502.01
+          ],
+          "dilated_bbox": [
+            413,
+            434,
+            458,
+            511
+          ],
+          "score": 0.7726,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            443.94,
+            233.22,
+            464.92,
+            258.76
+          ],
+          "dilated_bbox": [
+            441,
+            229,
+            468,
+            263
+          ],
+          "score": 0.4378,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            748.7,
+            460.09,
+            790.84,
+            542.42
+          ],
+          "dilated_bbox": [
+            742,
+            448,
+            797,
+            554
+          ],
+          "score": 0.4223,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 186,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            746.52,
+            458.87,
+            790.97,
+            542.99
+          ],
+          "dilated_bbox": [
+            740,
+            447,
+            798,
+            555
+          ],
+          "score": 0.4744,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            419.66,
+            452.81,
+            453.57,
+            507.87
+          ],
+          "dilated_bbox": [
+            414,
+            445,
+            459,
+            516
+          ],
+          "score": 0.3269,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            452.02,
+            237.0,
+            466.79,
+            255.37
+          ],
+          "dilated_bbox": [
+            449,
+            234,
+            469,
+            258
+          ],
+          "score": 0.3254,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 187,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            745.64,
+            458.62,
+            791.12,
+            542.91
+          ],
+          "dilated_bbox": [
+            739,
+            446,
+            798,
+            555
+          ],
+          "score": 0.4737,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            449.6,
+            236.53,
+            465.66,
+            255.57
+          ],
+          "dilated_bbox": [
+            447,
+            233,
+            468,
+            259
+          ],
+          "score": 0.2992,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 188,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            416.7,
+            460.31,
+            457.82,
+            529.71
+          ],
+          "dilated_bbox": [
+            410,
+            450,
+            464,
+            540
+          ],
+          "score": 0.7817,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            746.4,
+            459.11,
+            790.95,
+            543.12
+          ],
+          "dilated_bbox": [
+            740,
+            447,
+            798,
+            555
+          ],
+          "score": 0.5428,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            447.14,
+            235.89,
+            465.13,
+            257.46
+          ],
+          "dilated_bbox": [
+            444,
+            232,
+            468,
+            261
+          ],
+          "score": 0.3645,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            412.01,
+            243.34,
+            430.16,
+            268.42
+          ],
+          "dilated_bbox": [
+            409,
+            239,
+            433,
+            272
+          ],
+          "score": 0.3282,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 189,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            416.27,
+            465.51,
+            454.26,
+            532.8
+          ],
+          "dilated_bbox": [
+            410,
+            456,
+            460,
+            543
+          ],
+          "score": 0.4988,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            747.35,
+            458.97,
+            790.97,
+            541.74
+          ],
+          "dilated_bbox": [
+            741,
+            447,
+            798,
+            554
+          ],
+          "score": 0.4111,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            444.98,
+            234.87,
+            463.54,
+            257.9
+          ],
+          "dilated_bbox": [
+            442,
+            231,
+            467,
+            262
+          ],
+          "score": 0.3294,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 190,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            443.71,
+            230.57,
+            462.13,
+            257.92
+          ],
+          "dilated_bbox": [
+            441,
+            226,
+            465,
+            262
+          ],
+          "score": 0.4993,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            747.01,
+            458.77,
+            791.06,
+            542.97
+          ],
+          "dilated_bbox": [
+            740,
+            446,
+            798,
+            555
+          ],
+          "score": 0.4577,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            454.23,
+            341.09,
+            471.73,
+            359.88
+          ],
+          "dilated_bbox": [
+            451,
+            338,
+            475,
+            363
+          ],
+          "score": 0.3995,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            413.92,
+            238.65,
+            430.84,
+            264.64
+          ],
+          "dilated_bbox": [
+            411,
+            235,
+            434,
+            269
+          ],
+          "score": 0.3158,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 191,
+      "box_count": 5,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            443.75,
+            233.04,
+            461.78,
+            257.94
+          ],
+          "dilated_bbox": [
+            441,
+            229,
+            465,
+            262
+          ],
+          "score": 0.5095,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            746.33,
+            458.88,
+            790.97,
+            543.06
+          ],
+          "dilated_bbox": [
+            740,
+            447,
+            798,
+            555
+          ],
+          "score": 0.4019,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            411.02,
+            471.1,
+            450.38,
+            539.2
+          ],
+          "dilated_bbox": [
+            405,
+            461,
+            456,
+            549
+          ],
+          "score": 0.3705,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            628.04,
+            263.82,
+            642.54,
+            284.02
+          ],
+          "dilated_bbox": [
+            626,
+            260,
+            645,
+            287
+          ],
+          "score": 0.3478,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            554.65,
+            245.99,
+            569.84,
+            264.58
+          ],
+          "dilated_bbox": [
+            552,
+            243,
+            572,
+            268
+          ],
+          "score": 0.3143,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 192,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            407.79,
+            479.39,
+            442.5,
+            540.64
+          ],
+          "dilated_bbox": [
+            402,
+            470,
+            448,
+            550
+          ],
+          "score": 0.4657,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            442.96,
+            234.78,
+            458.1,
+            257.06
+          ],
+          "dilated_bbox": [
+            440,
+            231,
+            461,
+            261
+          ],
+          "score": 0.3747,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            426.06,
+            220.02,
+            438.13,
+            235.11
+          ],
+          "dilated_bbox": [
+            424,
+            217,
+            440,
+            238
+          ],
+          "score": 0.3308,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            411.51,
+            239.28,
+            423.93,
+            254.27
+          ],
+          "dilated_bbox": [
+            409,
+            237,
+            426,
+            257
+          ],
+          "score": 0.2817,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 193,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            442.47,
+            231.34,
+            458.45,
+            257.18
+          ],
+          "dilated_bbox": [
+            440,
+            227,
+            461,
+            261
+          ],
+          "score": 0.4702,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            426.13,
+            220.62,
+            437.89,
+            235.66
+          ],
+          "dilated_bbox": [
+            424,
+            218,
+            440,
+            238
+          ],
+          "score": 0.3648,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 194,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            441.41,
+            236.19,
+            457.12,
+            257.09
+          ],
+          "dilated_bbox": [
+            439,
+            233,
+            460,
+            261
+          ],
+          "score": 0.5586,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            425.8,
+            220.13,
+            438.08,
+            235.04
+          ],
+          "dilated_bbox": [
+            424,
+            218,
+            440,
+            238
+          ],
+          "score": 0.3448,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 195,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            441.8,
+            233.3,
+            456.56,
+            256.34
+          ],
+          "dilated_bbox": [
+            439,
+            230,
+            459,
+            260
+          ],
+          "score": 0.4755,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            426.55,
+            220.92,
+            437.54,
+            234.93
+          ],
+          "dilated_bbox": [
+            425,
+            218,
+            440,
+            237
+          ],
+          "score": 0.3162,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 196,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            443.11,
+            237.29,
+            457.01,
+            255.46
+          ],
+          "dilated_bbox": [
+            441,
+            234,
+            459,
+            259
+          ],
+          "score": 0.4068,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            426.33,
+            221.2,
+            436.83,
+            234.14
+          ],
+          "dilated_bbox": [
+            424,
+            219,
+            439,
+            236
+          ],
+          "score": 0.3236,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 197,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            443.11,
+            238.74,
+            456.31,
+            256.36
+          ],
+          "dilated_bbox": [
+            441,
+            236,
+            459,
+            259
+          ],
+          "score": 0.4304,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            426.95,
+            222.84,
+            436.09,
+            234.22
+          ],
+          "dilated_bbox": [
+            425,
+            221,
+            438,
+            236
+          ],
+          "score": 0.3191,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 198,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            426.48,
+            222.63,
+            436.0,
+            234.26
+          ],
+          "dilated_bbox": [
+            425,
+            221,
+            438,
+            236
+          ],
+          "score": 0.2957,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            443.17,
+            238.22,
+            456.6,
+            256.31
+          ],
+          "dilated_bbox": [
+            441,
+            235,
+            459,
+            259
+          ],
+          "score": 0.2913,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 199,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            443.77,
+            234.1,
+            457.08,
+            254.52
+          ],
+          "dilated_bbox": [
+            441,
+            231,
+            459,
+            258
+          ],
+          "score": 0.2861,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            426.79,
+            222.47,
+            436.21,
+            234.19
+          ],
+          "dilated_bbox": [
+            425,
+            220,
+            438,
+            236
+          ],
+          "score": 0.2786,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 200,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            426.97,
+            222.88,
+            436.13,
+            234.22
+          ],
+          "dilated_bbox": [
+            425,
+            221,
+            438,
+            236
+          ],
+          "score": 0.2754,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 201,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            443.6,
+            231.99,
+            457.76,
+            253.81
+          ],
+          "dilated_bbox": [
+            441,
+            228,
+            460,
+            257
+          ],
+          "score": 0.3581,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            427.0,
+            221.96,
+            437.29,
+            234.73
+          ],
+          "dilated_bbox": [
+            425,
+            220,
+            439,
+            237
+          ],
+          "score": 0.2732,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 202,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            443.82,
+            234.55,
+            457.68,
+            254.62
+          ],
+          "dilated_bbox": [
+            441,
+            231,
+            460,
+            258
+          ],
+          "score": 0.3367,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            447.85,
+            224.97,
+            460.57,
+            242.86
+          ],
+          "dilated_bbox": [
+            446,
+            222,
+            463,
+            246
+          ],
+          "score": 0.2546,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            427.06,
+            222.24,
+            437.22,
+            234.78
+          ],
+          "dilated_bbox": [
+            425,
+            220,
+            439,
+            237
+          ],
+          "score": 0.2501,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 203,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            443.63,
+            237.07,
+            457.39,
+            255.16
+          ],
+          "dilated_bbox": [
+            441,
+            234,
+            460,
+            258
+          ],
+          "score": 0.4483,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            450.17,
+            224.02,
+            461.16,
+            238.27
+          ],
+          "dilated_bbox": [
+            448,
+            222,
+            463,
+            241
+          ],
+          "score": 0.2926,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            382.67,
+            232.82,
+            398.79,
+            251.63
+          ],
+          "dilated_bbox": [
+            380,
+            230,
+            402,
+            255
+          ],
+          "score": 0.262,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 204,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            444.03,
+            234.42,
+            458.34,
+            254.3
+          ],
+          "dilated_bbox": [
+            442,
+            231,
+            461,
+            258
+          ],
+          "score": 0.3742,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 205,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            444.26,
+            235.84,
+            458.27,
+            254.73
+          ],
+          "dilated_bbox": [
+            442,
+            233,
+            461,
+            258
+          ],
+          "score": 0.442,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            459.58,
+            584.87,
+            510.61,
+            659.5
+          ],
+          "dilated_bbox": [
+            452,
+            574,
+            518,
+            670
+          ],
+          "score": 0.3219,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 206,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            446.22,
+            235.97,
+            460.56,
+            255.03
+          ],
+          "dilated_bbox": [
+            444,
+            233,
+            463,
+            258
+          ],
+          "score": 0.3887,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            462.26,
+            586.88,
+            513.41,
+            669.0
+          ],
+          "dilated_bbox": [
+            455,
+            575,
+            521,
+            681
+          ],
+          "score": 0.2894,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            449.73,
+            223.99,
+            461.71,
+            239.56
+          ],
+          "dilated_bbox": [
+            448,
+            221,
+            464,
+            242
+          ],
+          "score": 0.2709,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 207,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            467.82,
+            602.42,
+            510.72,
+            669.93
+          ],
+          "dilated_bbox": [
+            461,
+            592,
+            517,
+            680
+          ],
+          "score": 0.7026,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            445.82,
+            236.76,
+            460.58,
+            255.37
+          ],
+          "dilated_bbox": [
+            443,
+            234,
+            463,
+            258
+          ],
+          "score": 0.4406,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            450.18,
+            222.3,
+            461.51,
+            236.41
+          ],
+          "dilated_bbox": [
+            448,
+            220,
+            464,
+            239
+          ],
+          "score": 0.3336,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 208,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            472.05,
+            621.5,
+            511.02,
+            687.12
+          ],
+          "dilated_bbox": [
+            466,
+            612,
+            517,
+            697
+          ],
+          "score": 0.6467,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            443.72,
+            235.53,
+            458.3,
+            254.93
+          ],
+          "dilated_bbox": [
+            441,
+            232,
+            461,
+            258
+          ],
+          "score": 0.416,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            450.74,
+            222.4,
+            462.21,
+            236.68
+          ],
+          "dilated_bbox": [
+            449,
+            220,
+            464,
+            239
+          ],
+          "score": 0.2881,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            556.61,
+            274.67,
+            568.88,
+            290.17
+          ],
+          "dilated_bbox": [
+            554,
+            272,
+            571,
+            293
+          ],
+          "score": 0.2743,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 209,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            474.81,
+            636.61,
+            512.49,
+            699.4
+          ],
+          "dilated_bbox": [
+            469,
+            627,
+            518,
+            709
+          ],
+          "score": 0.6365,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            444.13,
+            236.5,
+            458.54,
+            254.8
+          ],
+          "dilated_bbox": [
+            442,
+            233,
+            461,
+            258
+          ],
+          "score": 0.4263,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            450.46,
+            222.41,
+            461.73,
+            236.23
+          ],
+          "dilated_bbox": [
+            448,
+            220,
+            464,
+            239
+          ],
+          "score": 0.2579,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 210,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            443.97,
+            235.78,
+            458.46,
+            254.73
+          ],
+          "dilated_bbox": [
+            441,
+            233,
+            461,
+            258
+          ],
+          "score": 0.43,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            478.78,
+            662.44,
+            519.29,
+            734.97
+          ],
+          "dilated_bbox": [
+            473,
+            652,
+            525,
+            746
+          ],
+          "score": 0.3928,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            416.01,
+            259.99,
+            428.74,
+            275.82
+          ],
+          "dilated_bbox": [
+            414,
+            257,
+            431,
+            279
+          ],
+          "score": 0.3052,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            450.19,
+            222.51,
+            461.62,
+            236.99
+          ],
+          "dilated_bbox": [
+            448,
+            220,
+            464,
+            240
+          ],
+          "score": 0.2685,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 211,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            483.96,
+            686.23,
+            519.7,
+            744.12
+          ],
+          "dilated_bbox": [
+            478,
+            678,
+            525,
+            753
+          ],
+          "score": 0.7088,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            445.85,
+            236.72,
+            460.72,
+            255.28
+          ],
+          "dilated_bbox": [
+            443,
+            234,
+            463,
+            258
+          ],
+          "score": 0.4729,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            450.92,
+            222.38,
+            461.93,
+            236.36
+          ],
+          "dilated_bbox": [
+            449,
+            220,
+            464,
+            239
+          ],
+          "score": 0.3065,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            415.75,
+            260.27,
+            428.55,
+            276.37
+          ],
+          "dilated_bbox": [
+            413,
+            258,
+            431,
+            279
+          ],
+          "score": 0.2993,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 212,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            485.31,
+            700.02,
+            520.49,
+            747.2
+          ],
+          "dilated_bbox": [
+            480,
+            693,
+            526,
+            754
+          ],
+          "score": 0.5995,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            446.19,
+            235.98,
+            460.95,
+            256.08
+          ],
+          "dilated_bbox": [
+            444,
+            233,
+            464,
+            259
+          ],
+          "score": 0.4159,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            449.59,
+            224.44,
+            462.34,
+            242.14
+          ],
+          "dilated_bbox": [
+            447,
+            221,
+            465,
+            245
+          ],
+          "score": 0.2746,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 213,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            484.09,
+            705.39,
+            520.04,
+            768.45
+          ],
+          "dilated_bbox": [
+            479,
+            696,
+            526,
+            778
+          ],
+          "score": 0.6133,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            446.5,
+            234.83,
+            461.16,
+            255.93
+          ],
+          "dilated_bbox": [
+            444,
+            231,
+            464,
+            259
+          ],
+          "score": 0.431,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            449.52,
+            224.68,
+            462.43,
+            243.7
+          ],
+          "dilated_bbox": [
+            447,
+            222,
+            465,
+            247
+          ],
+          "score": 0.2935,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 214,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            485.94,
+            712.79,
+            520.93,
+            777.25
+          ],
+          "dilated_bbox": [
+            481,
+            703,
+            526,
+            787
+          ],
+          "score": 0.3772,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            447.15,
+            236.94,
+            461.66,
+            256.58
+          ],
+          "dilated_bbox": [
+            445,
+            234,
+            464,
+            260
+          ],
+          "score": 0.3252,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            449.48,
+            225.77,
+            462.21,
+            243.2
+          ],
+          "dilated_bbox": [
+            447,
+            223,
+            464,
+            246
+          ],
+          "score": 0.2505,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 215,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            484.73,
+            716.31,
+            522.02,
+            785.62
+          ],
+          "dilated_bbox": [
+            479,
+            706,
+            528,
+            796
+          ],
+          "score": 0.5725,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            447.58,
+            236.97,
+            462.07,
+            256.61
+          ],
+          "dilated_bbox": [
+            445,
+            234,
+            465,
+            260
+          ],
+          "score": 0.2893,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            449.49,
+            225.82,
+            462.1,
+            242.47
+          ],
+          "dilated_bbox": [
+            447,
+            223,
+            464,
+            245
+          ],
+          "score": 0.2605,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 216,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            484.83,
+            727.68,
+            522.63,
+            791.83
+          ],
+          "dilated_bbox": [
+            479,
+            718,
+            528,
+            801
+          ],
+          "score": 0.6906,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 217,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            484.36,
+            730.65,
+            523.23,
+            794.31
+          ],
+          "dilated_bbox": [
+            478,
+            721,
+            529,
+            804
+          ],
+          "score": 0.3916,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            446.45,
+            240.24,
+            461.36,
+            258.54
+          ],
+          "dilated_bbox": [
+            444,
+            237,
+            464,
+            262
+          ],
+          "score": 0.3354,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 218,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            485.03,
+            728.06,
+            524.47,
+            790.43
+          ],
+          "dilated_bbox": [
+            479,
+            719,
+            530,
+            800
+          ],
+          "score": 0.5882,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 219,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            483.02,
+            726.84,
+            523.42,
+            794.17
+          ],
+          "dilated_bbox": [
+            477,
+            717,
+            530,
+            804
+          ],
+          "score": 0.4606,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 220,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            484.65,
+            728.17,
+            524.09,
+            794.25
+          ],
+          "dilated_bbox": [
+            479,
+            718,
+            530,
+            804
+          ],
+          "score": 0.465,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 221,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            484.26,
+            727.44,
+            523.37,
+            791.77
+          ],
+          "dilated_bbox": [
+            478,
+            718,
+            529,
+            801
+          ],
+          "score": 0.3686,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 222,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            482.07,
+            726.87,
+            521.32,
+            793.66
+          ],
+          "dilated_bbox": [
+            476,
+            717,
+            527,
+            804
+          ],
+          "score": 0.7145,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 223,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            480.36,
+            722.46,
+            519.36,
+            791.09
+          ],
+          "dilated_bbox": [
+            474,
+            712,
+            525,
+            801
+          ],
+          "score": 0.7484,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 224,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            480.5,
+            718.52,
+            518.9,
+            782.52
+          ],
+          "dilated_bbox": [
+            475,
+            709,
+            525,
+            792
+          ],
+          "score": 0.6618,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 225,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            482.67,
+            710.68,
+            517.23,
+            765.22
+          ],
+          "dilated_bbox": [
+            477,
+            703,
+            523,
+            773
+          ],
+          "score": 0.7667,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 226,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            480.97,
+            703.9,
+            514.48,
+            755.57
+          ],
+          "dilated_bbox": [
+            476,
+            696,
+            520,
+            763
+          ],
+          "score": 0.6086,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 227,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            477.71,
+            690.04,
+            513.1,
+            750.56
+          ],
+          "dilated_bbox": [
+            472,
+            681,
+            519,
+            760
+          ],
+          "score": 0.6188,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 228,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            474.44,
+            672.35,
+            508.27,
+            726.63
+          ],
+          "dilated_bbox": [
+            469,
+            664,
+            514,
+            735
+          ],
+          "score": 0.31,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 229,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            471.84,
+            633.42,
+            507.41,
+            679.9
+          ],
+          "dilated_bbox": [
+            466,
+            626,
+            513,
+            687
+          ],
+          "score": 0.5202,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            465.09,
+            650.11,
+            501.17,
+            696.53
+          ],
+          "dilated_bbox": [
+            460,
+            643,
+            507,
+            704
+          ],
+          "score": 0.269,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 230,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            461.91,
+            628.99,
+            501.73,
+            693.39
+          ],
+          "dilated_bbox": [
+            456,
+            619,
+            508,
+            703
+          ],
+          "score": 0.4765,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 231,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            457.1,
+            610.12,
+            494.21,
+            672.12
+          ],
+          "dilated_bbox": [
+            451,
+            601,
+            500,
+            681
+          ],
+          "score": 0.6297,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 232,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            453.95,
+            594.09,
+            493.06,
+            671.68
+          ],
+          "dilated_bbox": [
+            448,
+            583,
+            499,
+            683
+          ],
+          "score": 0.721,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 233,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            451.35,
+            599.23,
+            491.79,
+            668.95
+          ],
+          "dilated_bbox": [
+            445,
+            589,
+            498,
+            679
+          ],
+          "score": 0.7183,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            449.45,
+            240.64,
+            461.23,
+            256.25
+          ],
+          "dilated_bbox": [
+            447,
+            238,
+            463,
+            259
+          ],
+          "score": 0.3395,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 234,
+      "box_count": 4,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            454.39,
+            609.01,
+            487.46,
+            669.15
+          ],
+          "dilated_bbox": [
+            449,
+            600,
+            493,
+            678
+          ],
+          "score": 0.4888,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            451.0,
+            222.76,
+            461.69,
+            237.08
+          ],
+          "dilated_bbox": [
+            449,
+            220,
+            464,
+            240
+          ],
+          "score": 0.338,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            450.99,
+            240.03,
+            462.39,
+            255.93
+          ],
+          "dilated_bbox": [
+            449,
+            237,
+            464,
+            259
+          ],
+          "score": 0.3012,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            285.58,
+            221.6,
+            300.79,
+            238.78
+          ],
+          "dilated_bbox": [
+            283,
+            219,
+            303,
+            242
+          ],
+          "score": 0.2637,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 235,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            450.35,
+            239.35,
+            461.79,
+            254.61
+          ],
+          "dilated_bbox": [
+            448,
+            237,
+            464,
+            257
+          ],
+          "score": 0.3726,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            416.64,
+            252.69,
+            432.1,
+            274.06
+          ],
+          "dilated_bbox": [
+            414,
+            249,
+            435,
+            278
+          ],
+          "score": 0.3708,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            451.18,
+            223.54,
+            461.41,
+            236.98
+          ],
+          "dilated_bbox": [
+            449,
+            221,
+            463,
+            239
+          ],
+          "score": 0.292,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 236,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            416.55,
+            252.76,
+            432.14,
+            274.62
+          ],
+          "dilated_bbox": [
+            414,
+            249,
+            435,
+            278
+          ],
+          "score": 0.3303,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            451.21,
+            223.44,
+            461.93,
+            236.99
+          ],
+          "dilated_bbox": [
+            449,
+            221,
+            464,
+            239
+          ],
+          "score": 0.3165,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            456.06,
+            628.77,
+            479.26,
+            660.13
+          ],
+          "dilated_bbox": [
+            452,
+            624,
+            483,
+            665
+          ],
+          "score": 0.297,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 237,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            374.86,
+            501.05,
+            395.52,
+            522.76
+          ],
+          "dilated_bbox": [
+            371,
+            498,
+            399,
+            526
+          ],
+          "score": 0.3812,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            448.26,
+            235.26,
+            462.77,
+            254.5
+          ],
+          "dilated_bbox": [
+            446,
+            232,
+            465,
+            258
+          ],
+          "score": 0.3184,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            416.64,
+            252.39,
+            432.07,
+            274.1
+          ],
+          "dilated_bbox": [
+            414,
+            249,
+            435,
+            278
+          ],
+          "score": 0.2974,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 238,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 239,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 240,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            445.58,
+            230.49,
+            461.42,
+            252.96
+          ],
+          "dilated_bbox": [
+            443,
+            227,
+            464,
+            257
+          ],
+          "score": 0.253,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 241,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            326.52,
+            224.58,
+            339.91,
+            241.83
+          ],
+          "dilated_bbox": [
+            324,
+            222,
+            342,
+            245
+          ],
+          "score": 0.2666,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            450.09,
+            223.49,
+            461.27,
+            238.14
+          ],
+          "dilated_bbox": [
+            448,
+            221,
+            463,
+            241
+          ],
+          "score": 0.2607,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 242,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 243,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            448.46,
+            235.93,
+            462.45,
+            253.89
+          ],
+          "dilated_bbox": [
+            446,
+            233,
+            465,
+            257
+          ],
+          "score": 0.3397,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 244,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            374.51,
+            502.61,
+            390.63,
+            521.33
+          ],
+          "dilated_bbox": [
+            372,
+            499,
+            393,
+            524
+          ],
+          "score": 0.3432,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            448.63,
+            236.41,
+            463.22,
+            254.7
+          ],
+          "dilated_bbox": [
+            446,
+            233,
+            466,
+            258
+          ],
+          "score": 0.3307,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 245,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            447.54,
+            235.54,
+            462.46,
+            254.58
+          ],
+          "dilated_bbox": [
+            445,
+            232,
+            465,
+            258
+          ],
+          "score": 0.2951,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 246,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            447.24,
+            235.4,
+            462.32,
+            254.0
+          ],
+          "dilated_bbox": [
+            445,
+            232,
+            465,
+            257
+          ],
+          "score": 0.3262,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 247,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            447.6,
+            235.83,
+            462.32,
+            253.96
+          ],
+          "dilated_bbox": [
+            445,
+            233,
+            465,
+            257
+          ],
+          "score": 0.335,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 248,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            445.43,
+            232.09,
+            461.38,
+            252.99
+          ],
+          "dilated_bbox": [
+            443,
+            229,
+            464,
+            256
+          ],
+          "score": 0.4121,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 249,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            403.77,
+            381.54,
+            430.59,
+            416.26
+          ],
+          "dilated_bbox": [
+            400,
+            376,
+            435,
+            422
+          ],
+          "score": 0.5559,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            446.89,
+            235.76,
+            460.76,
+            254.09
+          ],
+          "dilated_bbox": [
+            444,
+            233,
+            463,
+            257
+          ],
+          "score": 0.4038,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 250,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            446.08,
+            233.45,
+            460.56,
+            253.34
+          ],
+          "dilated_bbox": [
+            444,
+            230,
+            463,
+            257
+          ],
+          "score": 0.3334,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 251,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            446.11,
+            233.29,
+            460.53,
+            253.28
+          ],
+          "dilated_bbox": [
+            444,
+            230,
+            463,
+            257
+          ],
+          "score": 0.3361,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 252,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 253,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            447.69,
+            236.82,
+            461.37,
+            255.12
+          ],
+          "dilated_bbox": [
+            445,
+            234,
+            464,
+            258
+          ],
+          "score": 0.3028,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 254,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 255,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            447.35,
+            237.14,
+            460.51,
+            254.9
+          ],
+          "dilated_bbox": [
+            445,
+            234,
+            463,
+            258
+          ],
+          "score": 0.2862,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 256,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            447.29,
+            236.94,
+            460.84,
+            255.5
+          ],
+          "dilated_bbox": [
+            445,
+            234,
+            463,
+            259
+          ],
+          "score": 0.3561,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 257,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            447.08,
+            232.51,
+            461.62,
+            255.61
+          ],
+          "dilated_bbox": [
+            445,
+            229,
+            464,
+            259
+          ],
+          "score": 0.4019,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            448.5,
+            223.94,
+            461.62,
+            245.13
+          ],
+          "dilated_bbox": [
+            446,
+            220,
+            464,
+            249
+          ],
+          "score": 0.2905,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            1.16,
+            84.56,
+            162.96,
+            350.66
+          ],
+          "dilated_bbox": [
+            0,
+            47,
+            186,
+            388
+          ],
+          "score": 0.2617,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 258,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            447.42,
+            232.58,
+            461.93,
+            256.34
+          ],
+          "dilated_bbox": [
+            445,
+            229,
+            464,
+            260
+          ],
+          "score": 0.4818,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            419.26,
+            254.15,
+            434.03,
+            275.16
+          ],
+          "dilated_bbox": [
+            417,
+            251,
+            437,
+            279
+          ],
+          "score": 0.2822,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 259,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            852.75,
+            506.93,
+            872.3,
+            536.17
+          ],
+          "dilated_bbox": [
+            850,
+            502,
+            876,
+            541
+          ],
+          "score": 0.6144,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            446.58,
+            231.12,
+            461.6,
+            255.87
+          ],
+          "dilated_bbox": [
+            444,
+            227,
+            464,
+            260
+          ],
+          "score": 0.4762,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 260,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            849.07,
+            504.54,
+            869.57,
+            535.74
+          ],
+          "dilated_bbox": [
+            846,
+            500,
+            873,
+            541
+          ],
+          "score": 0.5219,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            446.72,
+            231.11,
+            461.76,
+            256.3
+          ],
+          "dilated_bbox": [
+            444,
+            227,
+            464,
+            260
+          ],
+          "score": 0.4909,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 261,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            445.85,
+            229.84,
+            461.86,
+            256.38
+          ],
+          "dilated_bbox": [
+            443,
+            226,
+            465,
+            261
+          ],
+          "score": 0.545,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 262,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            446.09,
+            230.34,
+            462.09,
+            256.48
+          ],
+          "dilated_bbox": [
+            443,
+            226,
+            465,
+            261
+          ],
+          "score": 0.5554,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 263,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            445.61,
+            229.54,
+            462.15,
+            256.5
+          ],
+          "dilated_bbox": [
+            443,
+            225,
+            465,
+            261
+          ],
+          "score": 0.5829,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            824.81,
+            507.12,
+            842.33,
+            533.25
+          ],
+          "dilated_bbox": [
+            822,
+            503,
+            845,
+            537
+          ],
+          "score": 0.3329,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 264,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            445.97,
+            229.06,
+            462.07,
+            255.97
+          ],
+          "dilated_bbox": [
+            443,
+            225,
+            465,
+            260
+          ],
+          "score": 0.5201,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            815.28,
+            496.41,
+            838.05,
+            525.26
+          ],
+          "dilated_bbox": [
+            812,
+            492,
+            842,
+            530
+          ],
+          "score": 0.2872,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 265,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            446.49,
+            233.47,
+            461.98,
+            256.23
+          ],
+          "dilated_bbox": [
+            444,
+            230,
+            465,
+            260
+          ],
+          "score": 0.3398,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            449.48,
+            226.84,
+            461.89,
+            245.56
+          ],
+          "dilated_bbox": [
+            447,
+            224,
+            464,
+            249
+          ],
+          "score": 0.2729,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 266,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            446.61,
+            234.58,
+            461.81,
+            256.24
+          ],
+          "dilated_bbox": [
+            444,
+            231,
+            464,
+            260
+          ],
+          "score": 0.2666,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            450.17,
+            225.32,
+            461.94,
+            242.27
+          ],
+          "dilated_bbox": [
+            448,
+            222,
+            464,
+            245
+          ],
+          "score": 0.2515,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 267,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            795.52,
+            485.24,
+            818.12,
+            516.65
+          ],
+          "dilated_bbox": [
+            792,
+            480,
+            822,
+            522
+          ],
+          "score": 0.3206,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 268,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            324.59,
+            423.42,
+            343.36,
+            457.46
+          ],
+          "dilated_bbox": [
+            321,
+            418,
+            346,
+            463
+          ],
+          "score": 0.3726,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 269,
+      "box_count": 0,
+      "boxes": []
+    },
+    {
+      "frame_index": 270,
+      "box_count": 2,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            312.64,
+            414.1,
+            338.35,
+            464.35
+          ],
+          "dilated_bbox": [
+            309,
+            407,
+            342,
+            472
+          ],
+          "score": 0.6533,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            780.8,
+            469.49,
+            801.04,
+            496.11
+          ],
+          "dilated_bbox": [
+            777,
+            465,
+            804,
+            500
+          ],
+          "score": 0.3288,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 271,
+      "box_count": 1,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            316.29,
+            428.82,
+            334.93,
+            466.36
+          ],
+          "dilated_bbox": [
+            313,
+            423,
+            338,
+            472
+          ],
+          "score": 0.6361,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 272,
+      "box_count": 3,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            315.36,
+            430.41,
+            334.09,
+            467.01
+          ],
+          "dilated_bbox": [
+            312,
+            425,
+            337,
+            473
+          ],
+          "score": 0.5037,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            451.46,
+            238.08,
+            465.1,
+            255.24
+          ],
+          "dilated_bbox": [
+            449,
+            235,
+            468,
+            258
+          ],
+          "score": 0.4862,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            417.11,
+            254.88,
+            431.39,
+            275.68
+          ],
+          "dilated_bbox": [
+            415,
+            251,
+            434,
+            279
+          ],
+          "score": 0.2659,
+          "source": "detection"
+        }
+      ]
+    },
+    {
+      "frame_index": 273,
+      "box_count": 5,
+      "boxes": [
+        {
+          "track_id": null,
+          "raw_bbox": [
+            315.49,
+            429.4,
+            336.62,
+            473.75
+          ],
+          "dilated_bbox": [
+            312,
+            423,
+            340,
+            480
+          ],
+          "score": 0.6861,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            451.75,
+            239.18,
+            464.93,
+            255.53
+          ],
+          "dilated_bbox": [
+            449,
+            236,
+            467,
+            258
+          ],
+          "score": 0.4987,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            416.94,
+            255.08,
+            431.4,
+            275.74
+          ],
+          "dilated_bbox": [
+            414,
+            252,
+            434,
+            279
+          ],
+          "score": 0.2816,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            451.65,
+            227.64,
+            463.2,
+            241.95
+          ],
+          "dilated_bbox": [
+            450,
+            225,
+            465,
+            244
+          ],
+          "score": 0.2654,
+          "source": "detection"
+        },
+        {
+          "track_id": null,
+          "raw_bbox": [
+            318.34,
+            210.2,
+            327.11,
+            221.09
+          ],
+          "dilated_bbox": [
+            317,
+            208,
+            329,
+            223
+          ],
+          "score": 0.255,
+          "source": "detection"
+        }
+      ]
+    }
+  ]
+}

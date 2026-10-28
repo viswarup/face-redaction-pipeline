@@ -137,6 +137,31 @@ Because static post-render verifiers share the primary detector's blind spots, *
 
 ---
 
+### Table 1B: Empirical Video Tracking Ablation (Detection-Only vs. Tracked Across 5 Demo Clips)
+
+| Clip | Frames | Mode A Flickers (Blinks) | Mode B Flickers | Flicker Drop (%) | Rescued Dropout Boxes | Jitter: Mode A (px) | Jitter: Mode B (px) | Flagged Leaks: Mode A | Flagged Leaks: Mode B |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Video 1** | 181 | 107 | 10 | **90.7%** | 756 | 6.25 px | **1.49 px** | 48 | **16** |
+| **Video 2** | 274 | 58 | 6 | **89.7%** | 673 | 3.85 px | **1.05 px** | 88 | **52** |
+| **Video 3** | 158 | 93 | 12 | **87.1%** | 800 | 3.19 px | **1.08 px** | 47 | **26** |
+| **Video 4** | 364 | 41 | 6 | **85.4%** | 425 | 5.94 px | **2.81 px** | 30 | **14** |
+| **Video 5** | 150 | 70 | 10 | **85.7%** | 447 | 2.75 px | **1.04 px** | 25 | **19** |
+
+---
+
+### Table 1C: Aggregate 5-Clip Video Tracking Ablation Summary
+
+| Evaluation Metric | Mode A: Detection-Only | Mode B: ByteTrack + Kalman Smoothing | Delta / Real-World Impact |
+|:---|:---:|:---:|:---|
+| **Total Decoded Video Frames** | 1,127 | 1,127 | 100% empirical evaluation across all 5 demo video clips |
+| **Dropout Face-Frames Rescued** | 0 (Dropped / Unblurred) | **3,101 boxes** | Bridges motion blur dropouts via Kalman velocity coasting |
+| **Unblurred Flicker Blink Events** | 369 blinks | **44 blinks** | **88.1% relative reduction** in rapid flicker leaks |
+| **Mean Box Acceleration Jitter** | 4.40 px | **1.49 px** | **66.0% smoother mask trajectories** (vital for robotics) |
+| **RetinaFace Flagged Leaks (Frames)** | 238 frames | **127 frames** | **46.6% reduction** in visible face leakage |
+| **Clips Quarantined (NEEDS_REVIEW)** | 5 / 5 | 5 / 5 | Fail-closed safety preserves strict compliance under both modes |
+
+---
+
 ### Table 1: Overall 3-Way Model Comparison (All 100 Hand-Annotated Images)
 
 | Model Architecture | Real Faces | Face Detection Recall (%) | Fully Protected (%) | Partially Covered (%) | Missed Faces (%) | Blur Overlap (IoU) | Avg Latency (ms) | Speed (FPS) |
@@ -175,22 +200,42 @@ Because static post-render verifiers share the primary detector's blind spots, *
 
 ---
 
-## 5. Visual 4-Panel Failure & Recovery Strips
+## 5. Visual Proof: Failure Gallery & Ablation Strips
+
+### A. 3-Panel Video Tracking vs. Detection-Only Strips
+To visually demonstrate the critical necessity of temporal tracking over per-frame detection, the pipeline exported side-by-side diagnostic strips comparing:
+`[1. Raw Bodycam Frame] | [2. Detection-Only (UNBLURRED FLICKER LEAK)] | [3. ByteTrack + Kalman Smoothing (SMOOTHLY OBSCURED)]`
+
+#### Strip 1: Rapid Head Movement & Turning (Video 1, Frame #143)
+![Tracking Ablation 1](data/outputs/failure_gallery/tracking_vs_notracking_01.jpg)
+*Figure 1: During rapid motion and abrupt head turning, Detection-Only (Panel 2) drops below the confidence threshold, causing an unblurred face flash (Red Box). ByteTrack with Kalman coasting (Panel 3) bridges the gap and maintains a continuous protective blur (Blue Box).*
+
+#### Strip 2: Low-Contrast Distant Face (Video 2, Frame #1)
+![Tracking Ablation 2](data/outputs/failure_gallery/tracking_vs_notracking_02.jpg)
+*Figure 2: In multi-subject surveillance scenes, Detection-Only misses distant subjects on initial frames. Tracked mode associates detections across time to eliminate flicker leaks.*
+
+#### Strip 3: Motion Blur During Camera Movement (Video 4, Frame #104)
+![Tracking Ablation 3](data/outputs/failure_gallery/tracking_vs_notracking_03.jpg)
+*Figure 3: Walking bounce and bodycam sensor shudder dissolve facial boundary contrast. The tracker maintains track continuity across 12-frame dropout windows, preventing catastrophic exposure.*
+
+---
+
+### B. 4-Panel Model Comparison & Pose Fusion Strips
 
 Below are representative 4-panel visual comparison strips exported to `data/outputs/failure_gallery/`. Each strip demonstrates the exact progression across the models:
 `[1. Raw + Hand GT (Green)] | [2. Base SCRFD-34G] | [3. RetinaFace] | [4. SCRFD-34G + Body/Head Pose (Rescued)]`
 
-### Comparison 1: Motion Blur & Extreme Low Light
+#### Comparison 1: Motion Blur & Extreme Low Light
 ![Comparison 1](data/outputs/failure_gallery/comparison_01.jpg)
-*Figure 1: In rapid bodycam motion and low light, facial keypoints dissolve. Both Base SCRFD-34G and RetinaFace miss the subject (Panel 2 & 3: Red "MISSED LEAK"). The YOLOv8-Pose body/head fusor triangulates the cranial position from the shoulders, applying full anonymization blur (Panel 4).*
+*Figure 4: In rapid bodycam motion and low light, facial keypoints dissolve. Both Base SCRFD-34G and RetinaFace miss the subject (Panel 2 & 3: Red "MISSED LEAK"). The YOLOv8-Pose body/head fusor triangulates the cranial position from the shoulders, applying full anonymization blur (Panel 4).*
 
-### Comparison 2: Partial Occlusion & Low Light Sensor Noise
+#### Comparison 2: Partial Occlusion & Low Light Sensor Noise
 ![Comparison 2](data/outputs/failure_gallery/comparison_02.jpg)
-*Figure 2: Distant subjects under ambient dusk lighting suffer from reduced facial contrast. Pose Fusion anchors the cranial region to eliminate the leak.*
+*Figure 5: Distant subjects under ambient dusk lighting suffer from reduced facial contrast. Pose Fusion anchors the cranial region to eliminate the leak.*
 
-### Comparison 3: High Angular Disparity & Camera Tilt
+#### Comparison 3: High Angular Disparity & Camera Tilt
 ![Comparison 3](data/outputs/failure_gallery/comparison_03.jpg)
-*Figure 3: Steep camera angles foreshorten the face, causing standalone face detectors to miss. Shoulder keypoints remain detectable, successfully recovering anonymization.*
+*Figure 6: Steep camera angles foreshorten the face, causing standalone face detectors to miss. Shoulder keypoints remain detectable, successfully recovering anonymization.*
 
 ---
 
@@ -242,7 +287,7 @@ To deploy this pipeline at municipal police department or transit authority scal
 
 A primary limitation of pure 2D face detectors (like SCRFD-34G or RetinaFace) is their total dependence on facial keypoints (eyes, nose, mouth). When a subject is viewed from a steep top-down angle (>45°), turned completely away, or blurred by rapid camera shake, facial landmarks vanish.
 
-To solve this, we implemented an optional **Fusion Layer** in [`app/pipeline/pose_head_fallback.py`](file:///Users/viswarup/Downloads/pronto_oct27/app/pipeline/pose_head_fallback.py) using `YOLOv8n-Pose`:
+To solve this, we implemented an optional **Fusion Layer** in `app/pipeline/pose_head_fallback.py` using `YOLOv8n-Pose`:
 1. **Cranial & Shoulder Keypoint Anchoring**: Detects body posture and extracts head keypoints (`0..4`: nose, eyes, ears) and shoulder keypoints (`5..6`: left/right shoulder).
 2. **Spatial Union on Overlap ($\text{IoU} \ge 0.20$)**: Expands tight facial bounding boxes to the full cranial boundary, eliminating residual chin and profile leaks.
 3. **Severe Occlusion Recovery ($\text{IoU} < 0.20$)**: If a subject's face is obscured or turned away, the shoulder span ($S_w$) dynamically scales and positions a cranial blur box over the head center.

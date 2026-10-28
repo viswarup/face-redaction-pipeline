@@ -192,6 +192,7 @@ def process_video_redaction(
     interpolation_window: Optional[int] = None,
     obfuscation_mode: str = "gaussian_or_mosaic",
     use_pose_fallback: bool = False,
+    use_tracker: bool = True,
 ) -> dict[str, Any]:
     """
     Stream and redact an input video file using detection + ByteTrack + two-pass trajectory smoothing.
@@ -266,7 +267,19 @@ def process_video_redaction(
 
         # Detect and Track
         dets = detector.detect(frame, conf_thresh=thresh)
-        tracked = tracker.update(dets)
+        if use_tracker:
+            tracked = tracker.update(dets)
+        else:
+            tracked = [
+                {
+                    "track_id": None,
+                    "bbox": d["bbox"],
+                    "score": d["score"],
+                    "source": "detection",
+                    "landmarks": d.get("landmarks", []),
+                }
+                for d in dets
+            ]
         raw_tracked_detections.append(tracked)
 
         frame_idx += 1
@@ -277,7 +290,10 @@ def process_video_redaction(
         raise RuntimeError(f"No frames could be read from video {in_path}")
 
     # Pass 2: Bidirectional Trajectory Smoothing (Gap interpolation + birth/death coasting)
-    smoothed_tracked_detections = smoother.smooth(raw_tracked_detections, (height, width))
+    if use_tracker:
+        smoothed_tracked_detections = smoother.smooth(raw_tracked_detections, (height, width))
+    else:
+        smoothed_tracked_detections = raw_tracked_detections
 
     # Pass 3: Apply Dilated Obfuscation and Encode Video
     ffmpeg_bin = shutil.which("ffmpeg")

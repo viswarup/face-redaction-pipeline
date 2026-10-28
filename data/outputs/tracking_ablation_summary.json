@@ -1,0 +1,236 @@
+{
+  "per_clip_breakdown": [
+    {
+      "event_id": "Video 1",
+      "clip_name": "Uni+ DVR_ch2_main_20250730080000_20250730090000-00.04.59.709-00.05.11.335-seg3.mp4",
+      "total_frames": 181,
+      "dropout_frames_rescued": 756,
+      "flicker_events_mode_a": 107,
+      "flicker_events_mode_b": 10,
+      "flicker_reduction_pct": 90.7,
+      "jitter_mode_a_px": 6.25,
+      "jitter_mode_b_px": 1.49,
+      "jitter_reduction_pct": 76.2,
+      "retinaface_flagged_mode_a": 48,
+      "retinaface_flagged_mode_b": 16,
+      "quarantine_mode_a": true,
+      "quarantine_mode_b": true,
+      "raw_clip_path": "data/video_snippets/demo_clips/Uni+ DVR_ch2_main_20250730080000_20250730090000-00.04.59.709-00.05.11.335-seg3.mp4",
+      "mode_a_path": "data/outputs/ablation_no_track/clip_1_notrack.mp4",
+      "mode_b_path": "data/outputs/redacted_videos/job_edb8399b7d37_redacted.mp4"
+    },
+    {
+      "event_id": "Video 2",
+      "clip_name": "Uni+ DVR_ch3_main_20250730200000_20250730210000-00.02.54.750-00.03.12.576-seg2.mp4",
+      "total_frames": 274,
+      "dropout_frames_rescued": 673,
+      "flicker_events_mode_a": 58,
+      "flicker_events_mode_b": 6,
+      "flicker_reduction_pct": 89.7,
+      "jitter_mode_a_px": 3.85,
+      "jitter_mode_b_px": 1.05,
+      "jitter_reduction_pct": 72.6,
+      "retinaface_flagged_mode_a": 88,
+      "retinaface_flagged_mode_b": 52,
+      "quarantine_mode_a": true,
+      "quarantine_mode_b": true,
+      "raw_clip_path": "data/video_snippets/demo_clips/Uni+ DVR_ch3_main_20250730200000_20250730210000-00.02.54.750-00.03.12.576-seg2.mp4",
+      "mode_a_path": "data/outputs/ablation_no_track/clip_2_notrack.mp4",
+      "mode_b_path": "data/outputs/redacted_videos/job_da9a5ff7eb78_redacted.mp4"
+    },
+    {
+      "event_id": "Video 3",
+      "clip_name": "Uni+ DVR_ch3_main_20250730200000_20250730210000-00.05.49.973-00.05.59.973-seg6.mp4",
+      "total_frames": 158,
+      "dropout_frames_rescued": 800,
+      "flicker_events_mode_a": 93,
+      "flicker_events_mode_b": 12,
+      "flicker_reduction_pct": 87.1,
+      "jitter_mode_a_px": 3.19,
+      "jitter_mode_b_px": 1.08,
+      "jitter_reduction_pct": 66.1,
+      "retinaface_flagged_mode_a": 47,
+      "retinaface_flagged_mode_b": 26,
+      "quarantine_mode_a": true,
+      "quarantine_mode_b": true,
+      "raw_clip_path": "data/video_snippets/demo_clips/Uni+ DVR_ch3_main_20250730200000_20250730210000-00.05.49.973-00.05.59.973-seg6.mp4",
+      "mode_a_path": "data/outputs/ablation_no_track/clip_3_notrack.mp4",
+      "mode_b_path": "data/outputs/redacted_videos/job_540bd9eaee74_redacted.mp4"
+    },
+    {
+      "event_id": "Video 4",
+      "clip_name": "Uni+ DVR_ch4_main_20250730080000_20250730090000-00.25.23.018-00.25.46.715-seg2.mp4",
+      "total_frames": 364,
+      "dropout_frames_rescued": 425,
+      "flicker_events_mode_a": 41,
+      "flicker_events_mode_b": 6,
+      "flicker_reduction_pct": 85.4,
+      "jitter_mode_a_px": 5.94,
+      "jitter_mode_b_px": 2.81,
+      "jitter_reduction_pct": 52.7,
+      "retinaface_flagged_mode_a": 30,
+      "retinaface_flagged_mode_b": 14,
+      "quarantine_mode_a": true,
+      "quarantine_mode_b": true,
+      "raw_clip_path": "data/video_snippets/demo_clips/Uni+ DVR_ch4_main_20250730080000_20250730090000-00.25.23.018-00.25.46.715-seg2.mp4",
+      "mode_a_path": "data/outputs/ablation_no_track/clip_4_notrack.mp4",
+      "mode_b_path": "data/outputs/redacted_videos/job_5eb85c6efc1d_redacted.mp4"
+    },
+    {
+      "event_id": "Video 5",
+      "clip_name": "clip_low_light_01.mp4",
+      "total_frames": 150,
+      "dropout_frames_rescued": 447,
+      "flicker_events_mode_a": 70,
+      "flicker_events_mode_b": 10,
+      "flicker_reduction_pct": 85.7,
+      "jitter_mode_a_px": 2.75,
+      "jitter_mode_b_px": 1.04,
+      "jitter_reduction_pct": 62.3,
+      "retinaface_flagged_mode_a": 25,
+      "retinaface_flagged_mode_b": 19,
+      "quarantine_mode_a": true,
+      "quarantine_mode_b": true,
+      "raw_clip_path": "data/video_snippets/demo_clips/clip_low_light_01.mp4",
+      "mode_a_path": "data/outputs/ablation_no_track/clip_5_notrack.mp4",
+      "mode_b_path": "data/outputs/redacted_videos/job_6b99c51deee6_redacted.mp4"
+    }
+  ],
+  "table_1_headers": [
+    "Clip",
+    "Frames",
+    "Mode A Flickers (Blinks)",
+    "Mode B Flickers",
+    "Flicker Drop (%)",
+    "Rescued Dropout Boxes",
+    "Jitter: Mode A (px)",
+    "Jitter: Mode B (px)",
+    "Flagged Leaks: Mode A",
+    "Flagged Leaks: Mode B"
+  ],
+  "table_1_rows": [
+    [
+      "Video 1",
+      181,
+      107,
+      10,
+      "90.7%",
+      756,
+      "6.25 px",
+      "1.49 px",
+      48,
+      16
+    ],
+    [
+      "Video 2",
+      274,
+      58,
+      6,
+      "89.7%",
+      673,
+      "3.85 px",
+      "1.05 px",
+      88,
+      52
+    ],
+    [
+      "Video 3",
+      158,
+      93,
+      12,
+      "87.1%",
+      800,
+      "3.19 px",
+      "1.08 px",
+      47,
+      26
+    ],
+    [
+      "Video 4",
+      364,
+      41,
+      6,
+      "85.4%",
+      425,
+      "5.94 px",
+      "2.81 px",
+      30,
+      14
+    ],
+    [
+      "Video 5",
+      150,
+      70,
+      10,
+      "85.7%",
+      447,
+      "2.75 px",
+      "1.04 px",
+      25,
+      19
+    ]
+  ],
+  "aggregate_summary": {
+    "total_frames": 1127,
+    "dropout_frames_rescued": 3101,
+    "flicker_events_mode_a": 369,
+    "flicker_events_mode_b": 44,
+    "flicker_reduction_pct": 88.1,
+    "mean_jitter_mode_a_px": 4.4,
+    "mean_jitter_mode_b_px": 1.49,
+    "jitter_reduction_pct": 66.0,
+    "retinaface_flagged_mode_a": 238,
+    "retinaface_flagged_mode_b": 127,
+    "quarantined_mode_a": "5/5",
+    "quarantined_mode_b": "5/5"
+  },
+  "table_2_headers": [
+    "Evaluation Metric",
+    "Mode A: Detection-Only",
+    "Mode B: ByteTrack + Kalman Smoothing",
+    "Delta / Real-World Impact"
+  ],
+  "table_2_rows": [
+    [
+      "Total Decoded Video Frames",
+      1127,
+      1127,
+      "100% empirical evaluation across all 5 demo video clips"
+    ],
+    [
+      "Dropout Face-Frames Rescued",
+      "0 (Dropped / Unblurred)",
+      "3101 boxes",
+      "Bridges motion blur dropouts via Kalman velocity coasting"
+    ],
+    [
+      "Unblurred Flicker Blink Events",
+      "369 blinks",
+      "44 blinks",
+      "88.1% reduction in rapid flicker leaks"
+    ],
+    [
+      "Mean Box Acceleration Jitter",
+      "4.40 px",
+      "1.49 px",
+      "66.0% smoother mask trajectories (vital for robotics)"
+    ],
+    [
+      "RetinaFace Flagged Leaks (Frames)",
+      "238 frames",
+      "127 frames",
+      "46.6% reduction in visible face leakage"
+    ],
+    [
+      "Clips Quarantined (NEEDS_REVIEW)",
+      "5 / 5",
+      "5 / 5",
+      "Fail-closed safety preserves strict compliance under both modes"
+    ]
+  ],
+  "visual_proof_strips": [
+    "tracking_vs_notracking_01.jpg",
+    "tracking_vs_notracking_02.jpg",
+    "tracking_vs_notracking_03.jpg"
+  ]
+}
